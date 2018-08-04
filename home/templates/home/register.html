@@ -1,0 +1,254 @@
+<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<style>
+
+  /*dark background to support form theme*/
+  body{
+    background:url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_wall.png);
+  }
+
+  /*sass variables used*/
+  $full:100%;
+  $auto:0 auto;
+  $align:center;
+
+  @mixin disable{
+    outline:none;
+    border:none;
+  }
+
+  @mixin easeme{
+    -webkit-transition:1s ease;
+    -moz-transition:1s ease;
+    -o-transition:1s ease;
+    -ms-transition:1s ease;
+    transition:1s ease;
+  }
+
+  /*site container*/
+  .wrapper{
+    position: fixed;
+    text-align: center;
+    width: 420px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+
+  }
+
+  h1{
+    text-align:$align;
+    padding:30px 0px 0px 0px;
+    font:25px Oswald;
+    color:#FFF;
+    text-transform:uppercase;
+    text-shadow:#000 0px 1px 5px;
+    margin:0px;
+  }
+
+  p{
+    font:13px Open Sans;
+    color:#6E6E6E;
+    text-shadow:#000 0px 1px 5px;
+    margin-bottom:30px;
+  }
+
+  .form{
+    width:$full;
+  }
+
+  input[type="text"],input[type="email"],input[type="password"]{
+    width:98%;
+    padding:15px 0px 15px 8px;
+    border-radius:5px;
+    box-shadow:inset 4px 6px 10px -4px rgba(0,0,0,0.3), 0 1px 1px -1px rgba(255,255,255,0.3);
+    background:rgba(0,0,0,0.2);
+    @include disable;
+    border:1px solid rgba(0,0,0,1);
+    margin-bottom:10px;
+    color:#6E6E6E;
+    text-shadow:#000 0px 1px 5px;
+  }
+
+  input[type="submit"]{
+    width:100%;
+    padding:15px;
+    border-radius:5px;
+    @include disable;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#28D2DE), to(#1A878F));
+    background-image: -webkit-linear-gradient(#28D2DE 0%, #1A878F 100%);
+    background-image: -moz-linear-gradient(#28D2DE 0%, #1A878F 100%);
+    background-image: -o-linear-gradient(#28D2DE 0%, #1A878F 100%);
+    background-image: linear-gradient(#28D2DE 0%, #1A878F 100%);
+    font:14px Oswald;
+    color:#FFF;
+    text-transform:uppercase;
+    text-shadow:#000 0px 1px 5px;
+    border:1px solid #000;
+    opacity:0.7;
+    -webkit-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
+    -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
+    box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
+    border-top:1px solid rgba(255,255,255,0.8)!important;
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)));
+  }
+
+  input:focus{
+    box-shadow:inset 4px 6px 10px -4px rgba(0,0,0,0.7), 0 1px 1px -1px rgba(255,255,255,0.3);
+    background:rgba(0,0,0,0.3);
+    @include easeme;
+  }
+
+  input[type="submit"]:hover{
+    opacity:1;
+    cursor:pointer;
+  }
+
+  .username-help,.email-help,.password-help,.confirm_password-help{
+    display:none;
+    padding:0px;
+    margin:0px 0px 15px 0px;
+  }
+
+  .buttons {
+  position: relative;
+  white-space: nowrap;
+  min-height: 33px;
+  margin-bottom: 30px;
+  top: 100px;
+  margin-left: 50px }
+
+  .buttons a {
+    animation: bounceInDown 900ms 200ms ease-in-out both;
+    width: 50px;
+    height: 33px;
+    text-decoration: none;
+    float: left;
+    padding-top: 9px;
+    outline-width: 0px;
+    z-index: 990;
+    color: #a675b3;
+    text-align: center;
+    line-height: 26px;
+    display: block; }
+
+  .buttons a:not(.active) {
+      box-shadow: inset 0 1px 1px rgba(111, 55, 125, 0.8), inset 0 -1px 0px rgba(63, 59, 113, 0.2), 0 9px16px 0 rgba(0, 0, 0, 0.3), 0 4px 3px 0 rgba(0, 0, 0, 0.3), 0 0 0 1px #150a1e;
+      background: rgba(0,0,0,0.2);
+      text-shadow: 0 0 21px rgba(223, 206, 228, 0.5), 0 -1px 0 #311d47; }
+
+  .buttons a:not(.active):hover, .buttons a:not(.active):focus {
+        transition: color 200ms linear;
+        transition: text-shadow 500ms linear;
+        color: #caadd2;
+        text-shadow: 0 0 21px rgba(223, 206, 228, 0.5), 0 0 10px rgba(223, 206, 228, 0.4), 0 0 2px #2a153c; }
+
+  .buttons a.active, .buttons a:active {
+      box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.1), 0 0 0 1px #170c22, 0 2px 1px 0 rgba(121, 65, 135, 0.5), inset 0 0 4px 3px rgba(15, 8, 22, 0.2);
+      background: rgba(0,0,0,0.3);
+      text-shadow: 0 0 21px rgba(223, 206, 228, 0.5), 0 0 10px rgba(223, 206, 228, 0.4), 0 0 2px #2a153c;
+      color: #e4e3ce; }
+
+  #button1 {
+  border-radius: 7px 0 0 7px;
+  width: 300px;
+  margin-left: 400px;
+  }
+
+  #button2 {
+  border-radius: 0 7px 7px 0;
+  width: 300px;
+  }
+
+</style>
+
+  <div class='buttons'>
+        <a id="button1">Login</a>
+        <a id="button2" class="active">Sign up</a>
+  </div>
+
+  <div class="wrapper">
+    <h1>Register For An Account</h1>
+    <p>To sign-up for a free basic account please provide us with some basic information using
+    the contact form below. Please use valid credentials.</p>
+
+    <form class="form" method="post" action="">
+      {% csrf_token %}
+      <input type="text" class="username" name="username" placeholder="Username">
+      <div>
+        <p class="username-help">Please enter your Username.</p>
+      </div>
+      <input type="email" class="email" name="email" placeholder="Email">
+       <div>
+        <p class="email-help">Please enter your current email address.</p>
+      </div>
+      <input type="password" class="password" name="password" placeholder="Password">
+       <div>
+        <p class="password-help">Please enter your password.</p>
+       </div>
+       <input type="password" class="confirm_password" placeholder="Confirm Password">
+        <div>
+         <p class="confirm_password-help">Please enter your password again for confirmation.</p>
+        </div>
+      <input type="submit" class="submit" value="Register">
+    </form>
+  </div>
+
+<script>
+
+  $(".username")
+    .focus(function(){
+      $(".username-help").slideDown(500);
+  })
+  .blur(function(){
+    $(".username-help").slideUp(500);
+  });
+
+  $(".email")
+    .focus(function(){
+      $(".email-help").slideDown(500);
+  })
+  .blur(function(){
+    $(".email-help").slideUp(500);
+  });
+
+  $(".password")
+    .focus(function(){
+      $(".password-help").slideDown(500);
+  })
+  .blur(function(){
+    $(".password-help").slideUp(500);
+  });
+
+  $(".confirm_password")
+    .focus(function(){
+      $(".confirm_password-help").slideDown(500);
+  })
+  .blur(function(){
+    $(".confirm_password-help").slideUp(500);
+  });
+
+  $("#button1").click(function () {
+     $(this).addClass("active");
+     $("#button2").removeClass("active");
+  });
+
+  $("#button2").click(function () {
+    $(this).addClass("active");
+    $("#button1").removeClass("active");
+  });
+
+  document.getElementById("button1").onclick = function () {
+    location.href = "login";
+  };
+  document.getElementById("button2").onclick = function () {
+    location.href = "register";
+  };
+
+</script>
