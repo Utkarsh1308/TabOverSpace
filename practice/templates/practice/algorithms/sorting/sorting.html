@@ -32,101 +32,45 @@
   <link rel="stylesheet" type="text/css" href="{% static 'home/assets/dropdown/css/style.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'home/assets/theme/css/style.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'home/assets/mobirise/css/mbr-additional.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'practice/assets/css/main.css' %}">
+  
+    <script>
+           var app = angular.module("myApp",[]);
+               app.controller("myCtrl", function($scope){
 
-  <style type="text/css">
+               /*    $scope.myObj = {
+                       "1" : "Sanyog Ghosh",
+                       "2":"Rushil Gupta",
+                       "3":"Hodor Sharma",
+                       "4":"Shashwat Mishra",
+                       "5":"Siddharth Mittal",
+                       "6":"Satyam Singh"
+                   }
+                 */
+                    $scope.myObj = [
+                      {selection:"no", name:"Searching", link:"../algorithms.html"},
+                      {selection:"yes", name:"Sorting",link:"../sorting/sorting.html"},
+                       {selection:"no", name:"Greedy Algorithms", link:"../greedy_algorithms/greedy_algorithms.html"},
+                       {selection:"no", name:"Graphs", link:"../graphs/graphs.html"},
+                       {selection:"no", name:"String Algorithms", points:"20", link:"../string_algorithms/string_algorithms.html"},
+                      {selection:"no", name:"Dynamic Programming", points:"1", link:"../dynamic_programming/dynamic_programming.html"}
+                   ]
 
-      .login {
-        color: aqua;
-      }
-
-      .sign-in {
-        color: aqua;
-      }
-
-      .practice-box{
-          box-shadow: 1px 1px 1px #888888;
-          padding: 12px;
-          border-radius: 4px;
-          color: white;
-          background-image: url('{% static "home/assets/images/markus-spiske-153537-unsplash.jpg" %}');
-          background-size: cover;
-          align-content: flex-end;
-          border-color: aliceblue;
-      }
-      .box{
-          width:80px;
-          height: 1px;
-          background-color: aqua;
-          margin: auto;
-      }
-      .line{
-          width: 40%;
-          height: 1px;
-          background-color: aqua;
-          margin: auto;
-      }
-
-     .practice-box:hover {
-         transition: 0.5s;
-          transform: translate(0, -5px);
-      }
-
-      .table_options{
-          color:aliceblue;
-          margin-left: 12px;
-      }
-
-      .table_first{
-          background-color: aqua;
-          width: 10px;
-          height:5px;
-      }
-
-      table {
-            border-collapse: collapse;
-      }
-
-      td {
-            padding-top: 10px;
-            padding-bottom: 10px;
-      }
-
-      .box2{
-          margin-left: 80px;
-      }
-
-      .question-box{
-          border: solid white;
-          color: black;
-          border-radius: 2px;
-          background-color: white;
-          height: 150px;
-          width: 800px;
-          padding: 12px;
-          min-width: 600px;
-      }
-
-      .green{
-          height: 35px;
-          width: 80px;
-          padding: 4px;
-          text-align: center;
-          color: white;
-          float: left;
-          background-color: grey;
-          border-radius: 2px;
-          margin-left: 536px;
-      }
-
-       .usually{
-          float: left;
-          margin-top: 8px;
-          color: black;
-      }
-
-    </style>
+                     $scope.myObj2 = [
+                      {usually:"10 min", question:"I think its easy", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", difficulty:"Easy"},
+                      {usually:"20 min", question:"Maximum Sum of Building Speed",link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", difficulty:"Moderate"},
+                       {usually:"30 min", question:"Old keypad in a foreign land", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", difficulty:"Hard"},
+                       {usually:"35 min", question:"Monk and Sorting Algorithm", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", difficulty:"Hard"},
+                       {usually:"15 min", question:"Cube Change", points:"20", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", difficulty:"Easy"},
+                      {usually:"20 min", question:"Chandu and chandni's secret chat", points:"1", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", difficulty:"Moderate"},
+                      {usually:"10 min", question:"Descending Weights", points:"0", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", difficulty:"Easy"},
+                       {usually:"25 min", question:"Finding Pairs", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", difficulty:"Moderate"},
+                           {usually:"20 min", question:"Shil and Birthday present", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", difficulty:"Easy"}
+                   ]
+               });
+   </script>
 </head>
-<body style="background:#1C363E">
+<body style="background:#1C363E;font-family:'Raleway', 'sans-serif'">
 
   <section class="menu cid-qNIIFHaxZY" once="menu" id="menu1-e">
 
@@ -182,14 +126,17 @@
               </li>
 
               {% if user.username %}
-                <li class="nav-item">
-                    <div class="dropdown">
-                            <a class="dropdown-item dropdown-toggle text-white display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false">{{ user.username }}</a>
-                            <div class="dropdown-menu dropdown-submenu">
-                              <a class="dropdown-item text-white display-4" href="{% url 'home:logout_user' %}">Logout</a>       
-                            </div>
-                    </div>
-                </li>
+                 <li class="nav-item dropdown">
+                    <a class="nav-link link dropdown-toggle display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false" style="color:aqua">{{user.username}}</a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item text-white display-4" href="" aria-expanded="false"></a>
+                          <div class="">
+                            <a class="dropdown-item text-white display-4" href="{% url 'home:logout_user' %}" aria-expanded="false" >Logout</a>
+                            <div style="width:80%;height:1px;background:white;margin:auto"></div>
+                            <a class="dropdown-item text-white display-4"  aria-expanded="false"><span style="color:aqua">28</span> Points</a>
+                          </div>
+                      </div>
+              </li>
               {% else %}
                 <li class="nav-item">
                   <a class="nav-link link login display-4" href="{% url 'home:login' %}" aria-expanded="false">Login</a>
@@ -205,9 +152,9 @@
     </nav>
 </section>
 
-<div id="Leaderboard" class="raleway" style="text-align:center; margin-top:150px; color:aqua;margin-bottom:px;"><h1>Data Structures</h1></div>
+<div id="Leaderboard" class="raleway" style="text-align:center; margin-top:150px; color:aqua;margin-bottom:px;"><h1>Algorithms</h1></div>
                 <div class="container" >
-                    <p style="color:grey;text-align:center;margin-top:20px;">Practicing Topic : <span style="color:white"> &nbsp;Data Structures - Arrays </span></p>
+                    <p style="color:grey;text-align:center;margin-top:20px;">Practicing Topic : <span style="color:white"> &nbsp;Algorithms - Sorting </span></p>
 
                     <div class="line"></div>
 
@@ -221,16 +168,16 @@
                         <td style="color:aqua;margin-top:20px;font-size:20px">SubTopics</td>
                         <td></td>
                       </tr>
-                        <tr ng-repeat="x in myObj" class="table_options">
+                        <tr ng-repeat="x in myObj" ng-cloak class="table_options" >
                         <td style="background-color:aqua;width:1px;opacity:0" ng-style="{ 'background' : (x.selection == 'yes') ? 'aqua' : '#1C363E'}"></td>
                         <td ng-style="{ 'color' : (x.selection == 'yes') ? 'white' : 'white',
-                                      'border' : (x.selection == 'yes') ? 'solid aqua' : '0px'}">&nbsp;&nbsp;&nbsp;{{x.name}}</td>
+                                      'border' : (x.selection == 'yes') ? 'solid aqua' : '0px'}"><a style="text-decoration:none;color:white;padding-right:10px"  href="{{x.link}}">&nbsp;&nbsp;&nbsp;{{x.name}}</a></td>
                         </tr>
                         </table>
                                                                                                 <div class="box2"></div>
                         <table>
                                         <td style="color:aqua;top:20px;font-size:20px">Questions</td>
-                        <tr ng-repeat="x in myObj2" class="table_options">
+                        <tr ng-repeat="x in myObj2" class="table_options" ng-cloak>
                         <td >
                         <div class="question-box">
                             <h1>{{x.question}}</h1>
@@ -240,7 +187,7 @@
                                 Takes Usually : <span style="color:grey">{{x.usually}}</span>
                             </div>
                             <div class="green">
-                                Attempt
+                                <a style="text-decoration:none;color:white" href="{{x.link}}">Attempt</a>
                             </div>
 
                         </div>
@@ -348,41 +295,7 @@
     </div>
 </section>
 
-<script>
-           var app = angular.module("myApp",[]);
-               app.controller("myCtrl", function($scope){
 
-               /*    $scope.myObj = {
-                       "1" : "Sanyog Ghosh",
-                       "2":"Rushil Gupta",
-                       "3":"Hodor Sharma",
-                       "4":"Shashwat Mishra",
-                       "5":"Siddharth Mittal",
-                       "6":"Satyam Singh"
-                   }
-                 */
-                    $scope.myObj = [
-                      {selection:"yes", name:"Searching", link:""},
-                      {selection:"no", name:"Sorting",link:""},
-                       {selection:"no", name:"Greedy Algorithms", link:""},
-                       {selection:"no", name:"Graphs", link:""},
-                       {selection:"no", name:"String ALgorithms", points:"20", link:""},
-                      {selection:"no", name:"Dynamic Programming", points:"1", link:""}
-                   ]
-
-                    $scope.myObj2 = [
-                      {usually:"10 min", question:"Micro and Array Update", link:"", difficulty:"Easy"},
-                      {usually:"20 min", question:"Sumit's Happiness",link:"", difficulty:"Moderate"},
-                       {usually:"30 min", question:"Monk and Welcome Problem", link:"", difficulty:"Hard"},
-                       {usually:"35 min", question:"Binary Queries", link:"", difficulty:"Hard"},
-                       {usually:"15 min", question:"Memorise Me!", points:"20", link:"", difficulty:"Easy"},
-                      {usually:"20 min", question:"Last Occurence", points:"1", link:"", difficulty:"Moderate"},
-                      {usually:"10 min", question:"Hamiltonian and Lagrangian", points:"0", link:"", difficulty:"Easy"},
-                       {usually:"25 min", question:"Speed", link:"", difficulty:"Moderate"},
-                           {usually:"20 min", question:"Monk and Lucky Minimum", link:"", difficulty:"Easy"}
-                   ]
-               });
-   </script>
 
   {% load staticfiles %}
   <script type="text/javascript" src="{% static 'home/assets/web/assets/jquery/jquery.min.js' %}"></script>
