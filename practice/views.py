@@ -14,8 +14,14 @@ def algorithms1(request):
 def data_structures(request):
     return render(request, 'practice/data_structures.html', {})
 
-def programming_languages(request):
-    return render(request, 'practice/programming_languages.html', {})
+def python(request):
+    return render(request, 'practice/python.html', {})
+
+def java(request):
+    return render(request, 'practice/java.html', {})
+
+def c(request):
+    return render(request, 'practice/c.html', {})
 
 def codemirror(request):
     return render(request, 'practice/codemirror.html', {})
