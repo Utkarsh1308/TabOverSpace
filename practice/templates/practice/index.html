@@ -109,13 +109,13 @@
                           <div class="dropdown">
                             <a class="dropdown-item dropdown-toggle text-white display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false">Programming Languages</a>
                             <div class="dropdown-menu dropdown-submenu">
-                              <a class="dropdown-item text-white display-4" href="">Java</a>
-                              <a class="dropdown-item text-white display-4" href="">Python</a>
-                              <a class="dropdown-item text-white display-4" href="">C++</a>
+                              <a class="dropdown-item text-white display-4" href="{% url 'practice:java' %}">Java</a>
+                              <a class="dropdown-item text-white display-4" href="{% url 'practice:python' %}">Python</a>
+                              <a class="dropdown-item text-white display-4" href="{% url 'practice:c' %}">C++</a>
                             </div>
                           </div>
-                        <a class="dropdown-item text-white display-4" href="" aria-expanded="false">Algorithms<br></a>
-                        <a class="dropdown-item text-white display-4" href="" aria-expanded="false">Data-Structures</a>
+                        <a class="dropdown-item text-white display-4" href="{% url 'practice:algorithms' %}" aria-expanded="false">Algorithms<br></a>
+                        <a class="dropdown-item text-white display-4" href="{% url 'practice:data_structures' %}" aria-expanded="false">Data-Structures</a>
                         <a class="dropdown-item text-white display-4" href="" aria-expanded="false">BioInformatics</a>
                       </div>
               </li>
@@ -170,7 +170,7 @@
 
                         <div class="box"></div>
 
-                        <a class="col-md-2 practice-box" href="{% url 'practice:programming_languages' %}"><span style="display: block;">
+                        <a class="col-md-2 practice-box" href=""><span style="display: block;">
                           Practice <span style="color:aqua"><br>Programming Languages</span><br><br><br><span style="font-size:12px;">
                           A programming language is a formal language that specifies a set of instructions that can be used to produce various kinds of output. Programming languages generally consist of instructions for a computer.
                         </span></span>
@@ -199,15 +199,17 @@
         <div class="media-container-row content mbr-white">
             <div class="col-md-3 col-sm-4">
                 <div class="mb-3 img-logo">
-                    <a href="">
+                    <a href="{% url 'home:index' %}">
                         <img src="{% static 'home/assets/images/imageedit-2.gif' %}" alt="Mobirise" title="">
                     </a>
                 </div>
-                <p class="mb-3 mbr-fonts-style foot-title display-7">
+                <a href="{% url 'home:index' %}" class="text-white">
                     TabOverSpace
-                </p>
-                <p class="mbr-text mbr-fonts-style mbr-links-column display-7">Compete<br><a href="#" class="text-white">Explore </a>
-                    <br>Practice<br>Leaderboard</p>
+                </a><br><br>
+                <a href="#" class="text-white">Compete</a><br>
+                <a href="#" class="text-white">Explore</a><br>
+                <a href="{% url 'practice:index' %}" class="text-white">Practice</a><br>
+                <a href="#" class="text-white">Leaderboard</a>
             </div>
             <div class="col-md-4 col-sm-8">
                 <p class="mb-4 foot-title mbr-fonts-style display-7">
@@ -263,20 +265,6 @@
                         </div>
 
 
-                </div>
-            </div>
-        </div>
-        <div class="footer-lower">
-            <div class="media-container-row">
-                <div class="col-sm-12">
-                    <hr>
-                </div>
-            </div>
-            <div class="media-container-row mbr-white">
-                <div class="col-sm-12 copyright">
-                    <p class="mbr-text mbr-fonts-style display-7">
-                        © Copyright 2017 Mobirise - All Rights Reserved
-                    </p>
                 </div>
             </div>
         </div>

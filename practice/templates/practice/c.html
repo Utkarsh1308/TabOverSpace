@@ -106,6 +106,14 @@
           min-width: 600px;
       }
 
+      .subdomain {
+        color: solid white;
+      }
+
+      .subdomain:hover {
+        color: aqua;
+      }
+
       .green{
         border: none;
         color: white;
@@ -212,7 +220,7 @@
 
 <div id="Leaderboard" class="raleway" style="text-align:center; margin-top:150px; color:aqua;margin-bottom:px;"><h1>Practice</h1></div>
                 <div class="container" >
-                    <p style="color:grey;text-align:center;margin-top:20px;">Practicing Topic : <span style="color:white"> &nbsp;Algorithms - Sorting </span></p>
+                    <p style="color:grey;text-align:center;margin-top:20px;">Practicing Topic : <span style="color:white"> &nbsp;C++ - Sorting </span></p>
 
                     <div class="line"></div>
 
@@ -229,7 +237,9 @@
                         <tr ng-repeat="x in myObj" class="table_options">
                         <td style="background-color:aqua;width:1px;opacity:0" ng-style="{ 'background' : (x.selection == 'yes') ? 'aqua' : '#1C363E'}"></td>
                         <td ng-style="{ 'color' : (x.selection == 'yes') ? 'white' : 'white',
-                                      'border' : (x.selection == 'yes') ? 'solid aqua' : '0px'}" class="table1">&nbsp;&nbsp;&nbsp;{{x.name}}</td>
+                                      'border' : (x.selection == 'yes') ? 'solid aqua' : '0px'}">
+                          <a class="subdomain" href="">&nbsp;&nbsp;&nbsp;{{x.name}}</a>
+                        </td>
                         </tr>
                         </table>
                                                                                                 <div class="box2"></div>
@@ -364,8 +374,8 @@
                       {selection:"no", name:"Strings", link:""},
                       {selection:"yes", name:"Sorting", link:""},
                       {selection:"no", name:"Search", points:"20", link:""},
-                      {selection:"no", name:"Graph Theory", points:"1", link:""},
-                      {selection:"no", name:"Greedy", points:"0", link:""},
+                      {selection:"no", name:"Graph Theory", link:""},
+                      {selection:"no", name:"Greedy", link:""},
                       {selection:"no", name:"Dynamic Programming", link:""},
                       {selection:"no", name:"Recursion", link:""},
                       {selection:"no", name:"Constructive Algorithms", link:""},
@@ -378,28 +388,13 @@
                       {usually:"20 min", question:"Simple Array Sum",link:"", difficulty:"Moderate"},
                       {usually:"30 min", question:"Compare the Triplets", link:"", difficulty:"Hard"},
                       {usually:"35 min", question:"A Very Big Sum", link:"", difficulty:"Hard"},
-                      {usually:"15 min", question:"Diagonal Difference", points:"20", link:"", difficulty:"Easy"},
-                      {usually:"20 min", question:"Plus Minus", points:"1", link:"", difficulty:"Moderate"},
-                      {usually:"10 min", question:"Staircase", points:"0", link:"", difficulty:"Easy"},
+                      {usually:"15 min", question:"Diagonal Difference", link:"", difficulty:"Easy"},
+                      {usually:"20 min", question:"Plus Minus", link:"", difficulty:"Moderate"},
+                      {usually:"10 min", question:"Staircase", link:"", difficulty:"Easy"},
                       {usually:"25 min", question:"Mini-Max Sum", link:"", difficulty:"Moderate"},
                       {usually:"20 min", question:"Birthday Cake Candles", link:"", difficulty:"Easy"}
                    ]
-
-
-
                });
-    </script>
-
-    <script>
-
-      $('.table1').click(function() {
-        var id1 = this.id;
-      	var all = document.getElementsByClassName('table1');
-        for (var i = 0; i < all.length; i++) {
-        		all[i].style.border = 'none';
-        }
-        document.getElementById(id1).style.border = 'solid aqua';
-        });
 
 
 
