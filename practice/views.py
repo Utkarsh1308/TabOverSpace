@@ -6,7 +6,9 @@ def index(request):
     return render(request, 'practice/index.html', {})
 
 def algorithms(request):
-    return render(request, 'practice/algorithms.html', {})
+    return render(request, 'practice/algorithms.html', {
+    "subdomain": 3,
+    })
 
 def constructive_algorithms(request):
     return render(request, 'practice/algorithms/constructive_algorithms.html', {
@@ -64,13 +66,21 @@ def warmup(request):
     })
 
 def data_structures(request):
-    return render(request, 'practice/data_structures.html', {})
+    return render(request, 'practice/data_structures.html', {
+    "subdomain": 3,
+    })
 
 def python(request):
-    return render(request, 'practice/python.html', {})
+    return render(request, 'practice/python.html', {
+    "subdomain": 3,
+    })
 
 def java(request):
-    return render(request, 'practice/java.html', {})
+    return render(request, 'practice/java.html', {
+    "subdomain": 3,
+    })
 
 def c(request):
-    return render(request, 'practice/c.html', {})
+    return render(request, 'practice/c.html', {
+    "subdomain": 3,
+    })
