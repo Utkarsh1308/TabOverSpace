@@ -209,19 +209,19 @@
 
 
                   {% verbatim %}
-                    <div class="row" style="margin-bottom:20px;" ng-app="myApp" ng-controller="myCtrl" >
+                    <div class="row" style="margin-bottom:20px;" ng-app="myApp" ng-controller="myCtrl" ng-cloak >
 
                         <table>
                     <tr>
                         <td></td>
                         <td style="color:aqua;margin-top:20px;font-size:20px">Subdomains</td>
                         <td></td>
-                      </tr>
-                        <tr ng-repeat="x in myObj" class="table_options">
+                    </tr>
+                    <tr ng-repeat="x in myObj" class="table_options">
                         <td style="background-color:aqua;width:1px;opacity:0" ng-style="{ 'background' : (x.selection == 'yes') ? 'aqua' : '#1C363E'}"></td>
-                        <td ng-style="{ 'color' : (x.selection == 'yes') ? 'white' : 'white',
-                                      'border' : (x.selection == 'yes') ? 'solid aqua' : '0px'}" class="table1">&nbsp;&nbsp;&nbsp;{{x.name}}</td>
-                        </tr>
+                        <td ng-click="update(x)" ng-style="{ 'color' : (x.selection == 'yes') ? 'white' : 'white',
+                                      'border' : (x.selection == 'yes') ? 'solid aqua' : '0px'}" class="table1">&nbsp;&nbsp;&nbsp;<a href={{x.link}}>{{x.name}}</a></td>
+                    </tr>
                         </table>
                                                                                                 <div class="box2"></div>
                         <table>
@@ -332,24 +332,41 @@
 </section>
 
 <script>
+
+          var subdomains = [
+
+            {selection:"no", name:"Warmup", link:"{% url 'practice:warmup' %}"},
+            {selection:"no", name:"Implementation",link:"{% url 'practice:implementation' %}"},
+            {selection:"no", name:"Strings", link:"{% url 'practice:strings' %}"},
+            {selection:"no", name:"Sorting", link:"{% url 'practice:sorting' %}"},
+            {selection:"no", name:"Search", points:"20", link:"{% url 'practice:search' %}"},
+            {selection:"no", name:"Graph Theory", points:"1", link:"{% url 'practice:graph_theory' %}"},
+            {selection:"no", name:"Greedy", points:"0", link:"{% url 'practice:greedy' %}"},
+            {selection:"no", name:"Dynamic Programming", link:"{% url 'practice:dynamic_programming' %}"},
+            {selection:"no", name:"Recursion", link:"{% url 'practice:recursion' %}"},
+            {selection:"no", name:"Constructive Algorithms", link:"{% url 'practice:constructive_algorithms' %}"},
+            {selection:"no", name:"NP Complete", link:"{% url 'practice:np_complete' %}"}
+
+          ]
+
+          subdomains[{{ subdomain }}].selection = 'yes';
+
+
            var app = angular.module("myApp",[]);
                app.controller("myCtrl", function($scope){
 
-                    $scope.myObj = [
-                      {selection:"no", name:"Warmup", link:""},
-                      {selection:"no", name:"Implementation",link:""},
-                      {selection:"no", name:"Strings", link:""},
-                      {selection:"yes", name:"Sorting", link:""},
-                      {selection:"no", name:"Search", points:"20", link:""},
-                      {selection:"no", name:"Graph Theory", points:"1", link:""},
-                      {selection:"no", name:"Greedy", points:"0", link:""},
-                      {selection:"no", name:"Dynamic Programming", link:""},
-                      {selection:"no", name:"Recursion", link:""},
-                      {selection:"no", name:"Constructive Algorithms", link:""},
-                      {selection:"no", name:"NP Complete", link:""}
+                   $scope.myObj = subdomains
 
-                   ]
+                   /*
+                   $scope.update = function(x) {
+			                  for(var i = 0; i<$scope.myObj.length; i++){
+				                $scope.myObj[i].selection = 'no';
+			                  }
+			                  x.selection = 'yes'
 
+		               }
+                   */
+                   
                     $scope.myObj2 = [
                       {usually:"10 min", question:"Solve Me First", link:"", difficulty:"Easy"},
                       {usually:"20 min", question:"Simple Array Sum",link:"", difficulty:"Moderate"},
