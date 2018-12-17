@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html lang="en">
 <head>
   <!-- Site made with Mobirise Website Builder v4.6.7, https://mobirise.com -->
   <meta charset="UTF-8">
@@ -8,18 +8,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assets/images/imageedit-2.gif" type="image/x-icon">
   <meta name="description" content="">
-  <title>Home</title>
-<!--
-  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
-  <link rel="stylesheet" href="assets/tether/tether.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/socicon/css/styles.css">
-  <link rel="stylesheet" href="assets/dropdown/css/style.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css"> -->
+  <title>{% block title %}{% endblock %}</title>
 
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
   {% load staticfiles %}
   <link rel="stylesheet" type="text/css" href="{% static 'home/assets/web/assets/mobirise-icons/mobirise-icons.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'home/assets/tether/tether.min.css' %}">
@@ -67,10 +59,71 @@
      .practice-box:hover {
          transition: 0.5s;
           transform: translate(0, -5px);
-        }
+      }
 
-    </style>
+      .table_options{
+          color:aliceblue;
+          margin-left: 12px;
+      }
+
+      .table_first{
+          background-color: aqua;
+          width: 10px;
+          height:5px;
+      }
+
+      table {
+            border-collapse: collapse;
+      }
+
+      td {
+            padding-top: 10px;
+            padding-bottom: 10px;
+      }
+
+      .box2{
+          margin-left: 80px;
+      }
+
+      .question-box{
+          border: solid white;
+          color: black;
+          border-radius: 2px;
+          background-color: white;
+          height: 150px;
+          width: 800px;
+          padding: 12px;
+          min-width: 600px;
+      }
+
+      .green{
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        float: right;
+        background-color: #4CAF50;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+      }
+
+      .green:hover {
+        background-color: #119137; /* Green */
+        color: white;
+      }
+
+       .usually{
+          float: left;
+          margin-top: 8px;
+          color: black;
+      }
+
+  </style>
 </head>
+
 <body style="background:#1C363E">
 
   <section class="menu cid-qNIIFHaxZY" once="menu" id="menu1-e">
@@ -149,46 +202,55 @@
 </section>
 
 <div id="Leaderboard" class="raleway" style="text-align:center; margin-top:150px; color:aqua;margin-bottom:px;"><h1>Practice</h1></div>
-                <div class="container">
-                    <p style="color:grey;text-align:center;margin-top:20px;">Last topic you practiced : <span style="color:white"> &nbsp;Algorithms - Merge Sort </span></p>
+                <div class="container" >
+                    <p style="color:grey;text-align:center;margin-top:20px;">Practicing Topic : <span style="color:white"> &nbsp;{% block content %}{% endblock %} </span></p>
+
                     <div class="line"></div>
-                    <div class="row" style="margin:12px;padding:20px;margin-bottom:20px;">
 
-                        <a class="col-md-2 practice-box" href="{% url 'practice:sorting' %}"><span style="display: block;">
-                          Practice <span style="color:aqua"><br>Algorithms</span><br><br><br><span style="font-size:12px;">
-                          In mathematics and computer science, an algorithm is an unambiguous specification of how to solve a class of problems. Algorithms can perform calculation, data processing and automated reasoning tasks.
-                        </span></span>
-                        </a>
 
-                        <div class="box"></div>
+                  {% verbatim %}
+                    <div class="row" style="margin-bottom:20px;" ng-app="myApp" ng-controller="myCtrl" ng-cloak >
 
-                        <a class="col-md-2 practice-box" href="{% url 'practice:data_structures' %}"><span style="display: block;">
-                          Practice <span style="color:aqua"><br>Data Structures</span><br><br><br><span style="font-size:12px;">
-                          In computer science, a data structure is a particular way of organizing and storing data in a computer so that it can be accessed and modified efficiently.
-                        </span></span>
-                        </a>
+                        <table>
+                    <tr>
+                        <td></td>
+                        <td style="color:aqua;margin-top:20px;font-size:20px">Subdomains</td>
+                        <td></td>
+                    </tr>
+                    <tr ng-repeat="x in myObj" class="table_options">
+                        <td style="background-color:aqua;width:1px;opacity:0" ng-style="{ 'background' : (x.selection == 'yes') ? 'aqua' : '#1C363E'}"></td>
+                        <td ng-click="update(x)" ng-style="{ 'color' : (x.selection == 'yes') ? 'white' : 'white',
+                                      'border' : (x.selection == 'yes') ? 'solid aqua' : '0px'}" class="table1">&nbsp;&nbsp;&nbsp;<a href={{x.link}}>{{x.name}}</a></td>
+                    </tr>
+                        </table>
+                                                                                                <div class="box2"></div>
+                        <table>
+                                        <td style="color:aqua;top:20px;font-size:20px">Questions</td>
+                        <tr ng-repeat="x in myObj2" class="table_options">
+                        <td >
+                        <div class="question-box">
+                            <h3 class="question">{{x.question}}</h3>
+                            <p><span style="color:#1C363E;font-weight:500">Difficulty: {{x.difficulty}}</span> </p>
 
-                        <div class="box"></div>
+                            <div class="usually">
+                                Takes Usually : <span style="color:grey">{{x.usually}}</span>
+                            </div>
 
-                        <a class="col-md-2 practice-box" href=""><span style="display: block;">
-                          Practice <span style="color:aqua"><br>Programming Languages</span><br><br><br><span style="font-size:12px;">
-                          A programming language is a formal language that specifies a set of instructions that can be used to produce various kinds of output. Programming languages generally consist of instructions for a computer.
-                        </span></span>
-                        </a>
+                            <button class="green">
+                                Attempt
+                            </button>
 
-                        <div class="box"></div>
-
-                        <div class="col-md-2 practice-box">
-                        Practice <span style="color:aqua"><br>BioInformatics</span> <br><br><br><span style="font-size:12px;">
-                          Bioinformatics is an interdisciplinary field that develops methods and software tools for understanding biological data.
-                            </span>
                         </div>
+
+                        </td>
+                        </tr>
+                        </table>
                       </div>
                 </div>
+              {% endverbatim %}
 
+  <section class="engine"><a href="https://mobirise.ws">Mobirise</a></section><script src="assets/web/assets/jquery/jquery.min.js"></script>
 
-
-                  <section class="engine"><a href="https://mobirise.ws">Mobirise</a></section><script src="assets/web/assets/jquery/jquery.min.js"></script>
 <section class="footer4 cid-qNJ6q8uWVQ" id="footer4-p">
 
 
@@ -199,17 +261,15 @@
         <div class="media-container-row content mbr-white">
             <div class="col-md-3 col-sm-4">
                 <div class="mb-3 img-logo">
-                    <a href="{% url 'home:index' %}">
+                    <a href="">
                         <img src="{% static 'home/assets/images/imageedit-2.gif' %}" alt="Mobirise" title="">
                     </a>
                 </div>
-                <a href="{% url 'home:index' %}" class="text-white">
+                <p class="mb-3 mbr-fonts-style foot-title display-7">
                     TabOverSpace
-                </a><br><br>
-                <a href="#" class="text-white">Compete</a><br>
-                <a href="{% url 'explore:index' %}" class="text-white">Explore</a><br>
-                <a href="{% url 'practice:index' %}" class="text-white">Practice</a><br>
-                <a href="#" class="text-white">Leaderboard</a>
+                </p>
+                <p class="mbr-text mbr-fonts-style mbr-links-column display-7">Compete<br><a href="#" class="text-white">Explore </a>
+                    <br>Practice<br>Leaderboard</p>
             </div>
             <div class="col-md-4 col-sm-8">
                 <p class="mb-4 foot-title mbr-fonts-style display-7">
@@ -270,6 +330,70 @@
         </div>
     </div>
 </section>
+
+<script>
+
+          var subdomains = [
+
+            {selection:"no", name:"Introduction", link:"{% url 'practice:warmup' %}"},
+            {selection:"no", name:"Strings",link:"{% url 'practice:implementation' %}"},
+            {selection:"no", name:"Classes", link:"{% url 'practice:strings' %}"},
+            {selection:"no", name:"STL", link:"{% url 'practice:sorting' %}"},
+            {selection:"no", name:"Inheritance", points:"20", link:"{% url 'practice:search' %}"},
+            {selection:"no", name:"Debugging", points:"1", link:"{% url 'practice:graph_theory' %}"},
+            {selection:"no", name:"Other Concepts", points:"0", link:"{% url 'practice:greedy' %}"}
+
+          ]
+
+          subdomains[{{ subdomain }}].selection = 'yes';
+
+
+           var app = angular.module("myApp",[]);
+               app.controller("myCtrl", function($scope){
+
+                   $scope.myObj = subdomains
+
+                   /*
+                   $scope.update = function(x) {
+			                  for(var i = 0; i<$scope.myObj.length; i++){
+				                $scope.myObj[i].selection = 'no';
+			                  }
+			                  x.selection = 'yes'
+
+		               }
+                   */
+
+                    $scope.myObj2 = [
+                      {usually:"10 min", question:"Solve Me First", link:"", difficulty:"Easy"},
+                      {usually:"20 min", question:"Simple Array Sum",link:"", difficulty:"Moderate"},
+                      {usually:"30 min", question:"Compare the Triplets", link:"", difficulty:"Hard"},
+                      {usually:"35 min", question:"A Very Big Sum", link:"", difficulty:"Hard"},
+                      {usually:"15 min", question:"Diagonal Difference", points:"20", link:"", difficulty:"Easy"},
+                      {usually:"20 min", question:"Plus Minus", points:"1", link:"", difficulty:"Moderate"},
+                      {usually:"10 min", question:"Staircase", points:"0", link:"", difficulty:"Easy"},
+                      {usually:"25 min", question:"Mini-Max Sum", link:"", difficulty:"Moderate"},
+                      {usually:"20 min", question:"Birthday Cake Candles", link:"", difficulty:"Easy"}
+                   ]
+
+
+
+               });
+    </script>
+
+    <script>
+
+      $('.table1').click(function() {
+        var id1 = this.id;
+      	var all = document.getElementsByClassName('table1');
+        for (var i = 0; i < all.length; i++) {
+        		all[i].style.border = 'none';
+        }
+        document.getElementById(id1).style.border = 'solid aqua';
+        });
+
+
+
+   </script>
 
   {% load staticfiles %}
   <script type="text/javascript" src="{% static 'home/assets/web/assets/jquery/jquery.min.js' %}"></script>

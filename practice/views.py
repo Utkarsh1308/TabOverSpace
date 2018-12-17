@@ -5,11 +5,6 @@ from .forms import ContactForm
 def index(request):
     return render(request, 'practice/index.html', {})
 
-def algorithms(request):
-    return render(request, 'practice/algorithms.html', {
-    "subdomain": 3,
-    })
-
 def constructive_algorithms(request):
     return render(request, 'practice/algorithms/constructive_algorithms.html', {
     "subdomain": 9,

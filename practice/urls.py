@@ -6,7 +6,6 @@ app_name="practice"
 urlpatterns = [
 
     path('', views.index, name='index'),
-    path('algorithms', views.algorithms, name='algorithms'),
     path('data_structures', views.data_structures, name='data_structures'),
     path('python', views.python, name='python'),
     path('java', views.java, name='java'),
