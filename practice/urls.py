@@ -6,7 +6,6 @@ app_name="practice"
 urlpatterns = [
 
     path('', views.index, name='index'),
-    path('data_structures', views.data_structures, name='data_structures'),
     path('algorithms/constructive_algorithms', views.constructive_algorithms, name='constructive_algorithms'),
     path('algorithms/dynamic_programming', views.dynamic_programming, name='dynamic_programming'),
     path('algorithms/graph_theory', views.graph_theory, name='graph_theory'),
@@ -40,6 +39,13 @@ urlpatterns = [
     path('python/sets', views.sets, name='sets'),
     path('python/strings', views.strings_python, name='strings_python'),
     path('python/xml', views.xml, name='xml'),
+    path('data_structures/advanced', views.advanced_ds, name='advanced_ds'),
+    path('data_structures/arrays', views.arrays, name='arrays'),
+    path('data_structures/heap', views.heap, name='heap'),
+    path('data_structures/queues', views.queues, name='queues'),
+    path('data_structures/stacks', views.stacks, name='stacks'),
+    path('data_structures/trees', views.trees, name='trees'),
+    path('data_structures/trie', views.trie, name='trie'),
 
 
 ]

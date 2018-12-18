@@ -168,7 +168,7 @@
                             </div>
                           </div>
                         <a class="dropdown-item text-white display-4" href="{% url 'practice:sorting' %}" aria-expanded="false">Algorithms<br></a>
-                        <a class="dropdown-item text-white display-4" href="{% url 'practice:data_structures' %}" aria-expanded="false">Data-Structures</a>
+                        <a class="dropdown-item text-white display-4" href="{% url 'practice:stacks' %}" aria-expanded="false">Data-Structures</a>
                         <a class="dropdown-item text-white display-4" href="" aria-expanded="false">BioInformatics</a>
                       </div>
               </li>
@@ -335,17 +335,13 @@
 
           var subdomains = [
 
-            {selection:"no", name:"Warmup", link:"{% url 'practice:warmup' %}"},
-            {selection:"no", name:"Implementation",link:"{% url 'practice:implementation' %}"},
-            {selection:"no", name:"Strings", link:"{% url 'practice:strings' %}"},
-            {selection:"no", name:"Sorting", link:"{% url 'practice:sorting' %}"},
-            {selection:"no", name:"Search", points:"20", link:"{% url 'practice:search' %}"},
-            {selection:"no", name:"Graph Theory", points:"1", link:"{% url 'practice:graph_theory' %}"},
-            {selection:"no", name:"Greedy", points:"0", link:"{% url 'practice:greedy' %}"},
-            {selection:"no", name:"Dynamic Programming", link:"{% url 'practice:dynamic_programming' %}"},
-            {selection:"no", name:"Recursion", link:"{% url 'practice:recursion' %}"},
-            {selection:"no", name:"Constructive Algorithms", link:"{% url 'practice:constructive_algorithms' %}"},
-            {selection:"no", name:"NP Complete", link:"{% url 'practice:np_complete' %}"}
+            {selection:"no", name:"Advanced", link:"{% url 'practice:advanced_ds' %}"},
+            {selection:"no", name:"Arrays",link:"{% url 'practice:arrays' %}"},
+            {selection:"no", name:"Heap", link:"{% url 'practice:heap' %}"},
+            {selection:"no", name:"Queues", link:"{% url 'practice:queues' %}"},
+            {selection:"no", name:"Stacks", points:"20", link:"{% url 'practice:stacks' %}"},
+            {selection:"no", name:"Trees", points:"1", link:"{% url 'practice:trees' %}"},
+            {selection:"no", name:"Trie", points:"0", link:"{% url 'practice:trie' %}"}
 
           ]
 

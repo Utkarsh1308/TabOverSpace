@@ -60,16 +60,6 @@ def warmup(request):
     "subdomain": 0,
     })
 
-def data_structures(request):
-    return render(request, 'practice/data_structures.html', {
-    "subdomain": 3,
-    })
-
-def python(request):
-    return render(request, 'practice/python.html', {
-    "subdomain": 3,
-    })
-
 def classes(request):
     return render(request, 'practice/c/classes.html', {
     "subdomain": 2,
@@ -178,4 +168,39 @@ def strings_python(request):
 def xml(request):
     return render(request, 'practice/python/xml.html', {
     "subdomain": 9,
+    })
+
+def advanced_ds(request):
+    return render(request, 'practice/data_structures/advanced.html', {
+    "subdomain": 0,
+    })
+
+def arrays(request):
+    return render(request, 'practice/data_structures/arrays.html', {
+    "subdomain": 1,
+    })
+
+def heap(request):
+    return render(request, 'practice/data_structures/heap.html', {
+    "subdomain": 2,
+    })
+
+def queues(request):
+    return render(request, 'practice/data_structures/queues.html', {
+    "subdomain": 3,
+    })
+
+def stacks(request):
+    return render(request, 'practice/data_structures/stacks.html', {
+    "subdomain": 4,
+    })
+
+def trees(request):
+    return render(request, 'practice/data_structures/trees.html', {
+    "subdomain": 5,
+    })
+
+def trie(request):
+    return render(request, 'practice/data_structures/trie.html', {
+    "subdomain": 6,
     })
