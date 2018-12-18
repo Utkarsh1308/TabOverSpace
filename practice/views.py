@@ -75,7 +75,32 @@ def java(request):
     "subdomain": 3,
     })
 
-def c(request):
-    return render(request, 'practice/c.html', {
+def classes(request):
+    return render(request, 'practice/c/classes.html', {
+    "subdomain": 2,
+    })
+
+def debugging(request):
+    return render(request, 'practice/c/debugging.html', {
+    "subdomain": 5,
+    })
+
+def inheritance(request):
+    return render(request, 'practice/c/inheritance.html', {
+    "subdomain": 4,
+    })
+
+def introduction(request):
+    return render(request, 'practice/c/introduction.html', {
+    "subdomain": 0,
+    })
+
+def stl(request):
+    return render(request, 'practice/c/stl.html', {
     "subdomain": 3,
+    })
+
+def strings_cpp(request):
+    return render(request, 'practice/c/strings.html', {
+    "subdomain": 1,
     })
