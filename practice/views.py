@@ -129,3 +129,53 @@ def strings_java(request):
     return render(request, 'practice/java/strings.html', {
     "subdomain": 5,
     })
+
+def classes_python(request):
+    return render(request, 'practice/python/classes.html', {
+    "subdomain": 0,
+    })
+
+def collections(request):
+    return render(request, 'practice/python/collections.html', {
+    "subdomain": 1,
+    })
+
+def debugging_python(request):
+    return render(request, 'practice/python/debugging.html', {
+    "subdomain": 2,
+    })
+
+def introduction_python(request):
+    return render(request, 'practice/python/introduction.html', {
+    "subdomain": 3,
+    })
+
+def itertools(request):
+    return render(request, 'practice/python/itertools.html', {
+    "subdomain": 4,
+    })
+
+def math(request):
+    return render(request, 'practice/python/math.html', {
+    "subdomain": 5,
+    })
+
+def numpy(request):
+    return render(request, 'practice/python/numpy.html', {
+    "subdomain": 6,
+    })
+
+def sets(request):
+    return render(request, 'practice/python/sets.html', {
+    "subdomain": 7,
+    })
+
+def strings_python(request):
+    return render(request, 'practice/python/strings.html', {
+    "subdomain": 8,
+    })
+
+def xml(request):
+    return render(request, 'practice/python/xml.html', {
+    "subdomain": 9,
+    })

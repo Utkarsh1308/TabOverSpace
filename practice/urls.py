@@ -7,7 +7,6 @@ urlpatterns = [
 
     path('', views.index, name='index'),
     path('data_structures', views.data_structures, name='data_structures'),
-    path('python', views.python, name='python'),
     path('algorithms/constructive_algorithms', views.constructive_algorithms, name='constructive_algorithms'),
     path('algorithms/dynamic_programming', views.dynamic_programming, name='dynamic_programming'),
     path('algorithms/graph_theory', views.graph_theory, name='graph_theory'),
@@ -31,5 +30,16 @@ urlpatterns = [
     path('java/exception_handling', views.exception_handling, name='exception_handling'),
     path('java/introduction', views.introduction_java, name='introduction_java'),
     path('java/strings', views.strings_java, name='strings_java'),
+    path('python/classes', views.classes_python, name='classes_python'),
+    path('python/collections', views.collections, name='collections'),
+    path('python/debugging', views.debugging_python, name='debugging_python'),
+    path('python/introduction', views.introduction_python, name='introduction_python'),
+    path('python/itertools', views.itertools, name='itertools'),
+    path('python/math', views.math, name='math'),
+    path('python/numpy', views.numpy, name='numpy'),
+    path('python/sets', views.sets, name='sets'),
+    path('python/strings', views.strings_python, name='strings_python'),
+    path('python/xml', views.xml, name='xml'),
+
 
 ]

@@ -163,7 +163,7 @@
                             <a class="dropdown-item dropdown-toggle text-white display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false">Programming Languages</a>
                             <div class="dropdown-menu dropdown-submenu">
                               <a class="dropdown-item text-white display-4" href="{% url 'practice:advanced' %}">Java</a>
-                              <a class="dropdown-item text-white display-4" href="{% url 'practice:python' %}">Python</a>
+                              <a class="dropdown-item text-white display-4" href="{% url 'practice:itertools' %}">Python</a>
                               <a class="dropdown-item text-white display-4" href="{% url 'practice:classes' %}">C++</a>
                             </div>
                           </div>
@@ -335,17 +335,16 @@
 
           var subdomains = [
 
-            {selection:"no", name:"Warmup", link:"{% url 'practice:warmup' %}"},
-            {selection:"no", name:"Implementation",link:"{% url 'practice:implementation' %}"},
-            {selection:"no", name:"Strings", link:"{% url 'practice:strings' %}"},
-            {selection:"no", name:"Sorting", link:"{% url 'practice:sorting' %}"},
-            {selection:"no", name:"Search", points:"20", link:"{% url 'practice:search' %}"},
-            {selection:"no", name:"Graph Theory", points:"1", link:"{% url 'practice:graph_theory' %}"},
-            {selection:"no", name:"Greedy", points:"0", link:"{% url 'practice:greedy' %}"},
-            {selection:"no", name:"Dynamic Programming", link:"{% url 'practice:dynamic_programming' %}"},
-            {selection:"no", name:"Recursion", link:"{% url 'practice:recursion' %}"},
-            {selection:"no", name:"Constructive Algorithms", link:"{% url 'practice:constructive_algorithms' %}"},
-            {selection:"no", name:"NP Complete", link:"{% url 'practice:np_complete' %}"}
+            {selection:"no", name:"Classes", link:"{% url 'practice:classes' %}"},
+            {selection:"no", name:"Collections",link:"{% url 'practice:collections' %}"},
+            {selection:"no", name:"Debugging", link:"{% url 'practice:debugging_python' %}"},
+            {selection:"no", name:"Introduction", link:"{% url 'practice:introduction_python' %}"},
+            {selection:"no", name:"Itertools", points:"20", link:"{% url 'practice:itertools' %}"},
+            {selection:"no", name:"Math", points:"1", link:"{% url 'practice:math' %}"},
+            {selection:"no", name:"Numpy", points:"0", link:"{% url 'practice:numpy' %}"},
+            {selection:"no", name:"Sets", link:"{% url 'practice:sets' %}"},
+            {selection:"no", name:"Strings", link:"{% url 'practice:strings_python' %}"},
+            {selection:"no", name:"XML", link:"{% url 'practice:xml' %}"}
 
           ]
 
