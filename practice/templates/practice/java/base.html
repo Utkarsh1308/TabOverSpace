@@ -162,7 +162,7 @@
                           <div class="dropdown">
                             <a class="dropdown-item dropdown-toggle text-white display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false">Programming Languages</a>
                             <div class="dropdown-menu dropdown-submenu">
-                              <a class="dropdown-item text-white display-4" href="{% url 'practice:java' %}">Java</a>
+                              <a class="dropdown-item text-white display-4" href="{% url 'practice:advanced' %}">Java</a>
                               <a class="dropdown-item text-white display-4" href="{% url 'practice:python' %}">Python</a>
                               <a class="dropdown-item text-white display-4" href="{% url 'practice:classes' %}">C++</a>
                             </div>
@@ -335,17 +335,12 @@
 
           var subdomains = [
 
-            {selection:"no", name:"Warmup", link:"{% url 'practice:warmup' %}"},
-            {selection:"no", name:"Implementation",link:"{% url 'practice:implementation' %}"},
-            {selection:"no", name:"Strings", link:"{% url 'practice:strings' %}"},
-            {selection:"no", name:"Sorting", link:"{% url 'practice:sorting' %}"},
-            {selection:"no", name:"Search", points:"20", link:"{% url 'practice:search' %}"},
-            {selection:"no", name:"Graph Theory", points:"1", link:"{% url 'practice:graph_theory' %}"},
-            {selection:"no", name:"Greedy", points:"0", link:"{% url 'practice:greedy' %}"},
-            {selection:"no", name:"Dynamic Programming", link:"{% url 'practice:dynamic_programming' %}"},
-            {selection:"no", name:"Recursion", link:"{% url 'practice:recursion' %}"},
-            {selection:"no", name:"Constructive Algorithms", link:"{% url 'practice:constructive_algorithms' %}"},
-            {selection:"no", name:"NP Complete", link:"{% url 'practice:np_complete' %}"}
+            {selection:"no", name:"Advanced", link:"{% url 'practice:advanced' %}"},
+            {selection:"no", name:"Big Number",link:"{% url 'practice:bignumber' %}"},
+            {selection:"no", name:"Data Structures", link:"{% url 'practice:data_structures' %}"},
+            {selection:"no", name:"Exception Handling", link:"{% url 'practice:exception_handling' %}"},
+            {selection:"no", name:"Introduction", points:"20", link:"{% url 'practice:introduction_java' %}"},
+            {selection:"no", name:"Strings", points:"1", link:"{% url 'practice:strings_java' %}"}
 
           ]
 

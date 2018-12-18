@@ -8,7 +8,6 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('data_structures', views.data_structures, name='data_structures'),
     path('python', views.python, name='python'),
-    path('java', views.java, name='java'),
     path('algorithms/constructive_algorithms', views.constructive_algorithms, name='constructive_algorithms'),
     path('algorithms/dynamic_programming', views.dynamic_programming, name='dynamic_programming'),
     path('algorithms/graph_theory', views.graph_theory, name='graph_theory'),
@@ -26,5 +25,11 @@ urlpatterns = [
     path('c/introduction', views.introduction, name='introduction'),
     path('c/stl', views.stl, name='stl'),
     path('c/strings', views.strings_cpp, name='strings_cpp'),
+    path('java/advanced', views.advanced, name='advanced'),
+    path('java/bignumber', views.bignumber, name='bignumber'),
+    path('java/data_structures', views.data_structures_java, name='data_structures_java'),
+    path('java/exception_handling', views.exception_handling, name='exception_handling'),
+    path('java/introduction', views.introduction_java, name='introduction_java'),
+    path('java/strings', views.strings_java, name='strings_java'),
 
 ]

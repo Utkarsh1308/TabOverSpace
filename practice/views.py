@@ -70,11 +70,6 @@ def python(request):
     "subdomain": 3,
     })
 
-def java(request):
-    return render(request, 'practice/java.html', {
-    "subdomain": 3,
-    })
-
 def classes(request):
     return render(request, 'practice/c/classes.html', {
     "subdomain": 2,
@@ -103,4 +98,34 @@ def stl(request):
 def strings_cpp(request):
     return render(request, 'practice/c/strings.html', {
     "subdomain": 1,
+    })
+
+def advanced(request):
+    return render(request, 'practice/java/advanced.html', {
+    "subdomain": 0,
+    })
+
+def bignumber(request):
+    return render(request, 'practice/java/bignumber.html', {
+    "subdomain": 1,
+    })
+
+def data_structures_java(request):
+    return render(request, 'practice/java/data_structures.html', {
+    "subdomain": 2,
+    })
+
+def exception_handling(request):
+    return render(request, 'practice/java/exception_handling.html', {
+    "subdomain": 3,
+    })
+
+def introduction_java(request):
+    return render(request, 'practice/java/introduction.html', {
+    "subdomain": 4,
+    })
+
+def strings_java(request):
+    return render(request, 'practice/java/strings.html', {
+    "subdomain": 5,
     })
