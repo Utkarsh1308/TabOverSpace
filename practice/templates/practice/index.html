@@ -47,7 +47,7 @@
           text-align: center;
           border-radius: 4px;
           color: white;
-          background-image: url('{% static "home/assets/images/blake-connally-373084-unsplash-2000x1333.jpg" %}');
+          background-image: url('{% static "home/assets/images/domain-background.png" %}');
           background-size: cover;
           align-content: flex-end;
           border-color: aliceblue;
@@ -55,7 +55,6 @@
       .box{
           width:80px;
           height: 1px;
-          background-color: aqua;
           margin: auto;
       }
       .line{
@@ -64,11 +63,6 @@
           background-color: aqua;
           margin: auto;
       }
-
-     .practice-box:hover {
-         transition: 0.5s;
-          transform: translate(0, -5px);
-        }
 
     </style>
 </head>
@@ -155,35 +149,24 @@
                     <div class="line"></div>
                     <div class="row" style="margin:12px;padding:20px;margin-bottom:20px;">
 
-                        <a class="col-md-2 practice-box" href="{% url 'practice:sorting' %}"><span style="display: block;">
-                          <span style="color:aqua"><br>Algorithms</span><br><br><br><span style="font-size:12px;">
-                          In mathematics and computer science, an algorithm is an unambiguous specification of how to solve a class of problems. Algorithms can perform calculation, data processing and automated reasoning tasks.
-                        </span></span>
-                        </a>
+                        <p class="col-md-2 practice-box" ><span style="display: block;">
+                            Problem Solving<br><br><a href="{% url 'practice:sorting' %}"><span style="color:aqua">Algorithms</span></a><br>
+                            <br><a href="{% url 'practice:stacks' %}"><span style="color:aqua">Data Structures</span></a><br><br></span>
+                        </p>
 
                         <div class="box"></div>
 
-                        <a class="col-md-2 practice-box" href="{% url 'practice:stacks' %}"><span style="display: block;">
-                          <span style="color:aqua"><br>Data Structures</span><br><br><br><span style="font-size:12px;">
-                          In computer science, a data structure is a particular way of organizing and storing data in a computer so that it can be accessed and modified efficiently.
-                        </span></span>
-                        </a>
+                        <p class="col-md-2 practice-box"><span style="display: block;">
+                            Languages<br><br><a href = ""><span style="color:aqua">C++</span></a><br><br><a href = ""><span style="color:aqua">Java</span></a><br><br><a href = ""><span style="color:aqua">Python</span></a><br><br><br></span>
+                        </p>
 
                         <div class="box"></div>
 
-                        <a class="col-md-2 practice-box" href=""><span style="display: block;">
-                          <span style="color:aqua"><br>Programming Languages</span><br><br><br><span style="font-size:12px;">
-                          A programming language is a formal language that specifies a set of instructions that can be used to produce various kinds of output. Programming languages generally consist of instructions for a computer.
-                        </span></span>
-                        </a>
+                        <p class="col-md-2 practice-box"><span style="display: block;">
+                          Specialized Skills<br><br><a href = ""><span style="color:aqua">Bioinformatics</span></a><br><br></span>
+                        </p>
 
-                        <div class="box"></div>
-
-                        <a class="col-md-2 practice-box" href=""><span style="display: block;">
-                          <span style="color:aqua"><br>BioInformatics</span> <br><br><br><span style="font-size:12px;">
-                          Bioinformatics is an interdisciplinary field that develops methods and software tools for understanding biological data.
-                        </span></span>
-                        </a>
+                        
                       </div>
                 </div>
 
