@@ -10,6 +10,9 @@ from django.contrib.auth.models import User
 def index(request):
     return render(request, 'home/index.html', {})
 
+def leaderboard(request):
+    return render(request, 'home/leaderboard.html', {})
+
 def register(request):
     form = UserForm(request.POST or None)
     if form.is_valid():
