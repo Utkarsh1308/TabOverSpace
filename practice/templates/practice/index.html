@@ -44,9 +44,10 @@
       .practice-box{
           box-shadow: 1px 1px 1px #888888;
           padding: 12px;
+          text-align: center;
           border-radius: 4px;
           color: white;
-          background-image: url('{% static "home/assets/images/markus-spiske-153537-unsplash.jpg" %}');
+          background-image: url('{% static "home/assets/images/blake-connally-373084-unsplash-2000x1333.jpg" %}');
           background-size: cover;
           align-content: flex-end;
           border-color: aliceblue;
@@ -131,7 +132,7 @@
                   <a class="nav-link link login display-4" href="" aria-expanded="false">{{ user.username }}</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link link sign-in display-4" href="{% url 'home:logout_user' %}" aria-expanded="false">logout</a>
+                  <a class="nav-link link sign-in display-4" href="{% url 'home:logout_user' %}" aria-expanded="false">Logout</a>
                 </li>
               {% else %}
                 <li class="nav-item">
@@ -155,7 +156,7 @@
                     <div class="row" style="margin:12px;padding:20px;margin-bottom:20px;">
 
                         <a class="col-md-2 practice-box" href="{% url 'practice:sorting' %}"><span style="display: block;">
-                          Practice <span style="color:aqua"><br>Algorithms</span><br><br><br><span style="font-size:12px;">
+                          <span style="color:aqua"><br>Algorithms</span><br><br><br><span style="font-size:12px;">
                           In mathematics and computer science, an algorithm is an unambiguous specification of how to solve a class of problems. Algorithms can perform calculation, data processing and automated reasoning tasks.
                         </span></span>
                         </a>
@@ -163,7 +164,7 @@
                         <div class="box"></div>
 
                         <a class="col-md-2 practice-box" href="{% url 'practice:stacks' %}"><span style="display: block;">
-                          Practice <span style="color:aqua"><br>Data Structures</span><br><br><br><span style="font-size:12px;">
+                          <span style="color:aqua"><br>Data Structures</span><br><br><br><span style="font-size:12px;">
                           In computer science, a data structure is a particular way of organizing and storing data in a computer so that it can be accessed and modified efficiently.
                         </span></span>
                         </a>
@@ -171,18 +172,18 @@
                         <div class="box"></div>
 
                         <a class="col-md-2 practice-box" href=""><span style="display: block;">
-                          Practice <span style="color:aqua"><br>Programming Languages</span><br><br><br><span style="font-size:12px;">
+                          <span style="color:aqua"><br>Programming Languages</span><br><br><br><span style="font-size:12px;">
                           A programming language is a formal language that specifies a set of instructions that can be used to produce various kinds of output. Programming languages generally consist of instructions for a computer.
                         </span></span>
                         </a>
 
                         <div class="box"></div>
 
-                        <div class="col-md-2 practice-box">
-                        Practice <span style="color:aqua"><br>BioInformatics</span> <br><br><br><span style="font-size:12px;">
+                        <a class="col-md-2 practice-box" href=""><span style="display: block;">
+                          <span style="color:aqua"><br>BioInformatics</span> <br><br><br><span style="font-size:12px;">
                           Bioinformatics is an interdisciplinary field that develops methods and software tools for understanding biological data.
-                            </span>
-                        </div>
+                        </span></span>
+                        </a>
                       </div>
                 </div>
 
