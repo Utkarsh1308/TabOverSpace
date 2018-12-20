@@ -27,6 +27,12 @@
         .claa{
             background-image: url()
         }
+        .question-box{
+            width:800px;
+            margin-bottom: 20px;
+            background-color: white;
+            height:800px;
+        }
     </style>
   <link rel="stylesheet" type="text/css" href="{% static 'home/assets/web/assets/mobirise-icons/mobirise-icons.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'home/assets/tether/tether.min.css' %}">
@@ -63,19 +69,27 @@
 
 
                     $scope.myObj2 = [
-                      {usually:"10 min", question:"How To Develop a Chatbot From Scratch", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", difficulty:"15 Min Read", background:"../../../../../static/practice/assets/images/1_RD1s9xBIvd_ycJUnX12Tyw@2x.png"},
-                      {usually:"20 min", question:" 5 Ways to Make AI Work for Your Organization",link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", difficulty:"5 Min Read",background:"../../../../../static/practice/assets/images/download.jpg"},
-                       {usually:"30 min", question:"Manna's First Name", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", difficulty:"Hard",background:"../../../../../static/practice/assets/images/image-1-1200x667.jpg"},
-                       {usually:"35 min", question:"Simple Search", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", difficulty:"Hard"},
-                       {usually:"15 min", question:"BooBoo and Upsolving", points:"20", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", difficulty:"Easy"},
-                      {usually:"20 min", question:"Gaurav And Sub-array", points:"1", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", difficulty:"Moderate"},
-                      {usually:"10 min", question:"Round Table Meeting", points:"0", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", difficulty:"Easy"},
-                       {usually:"25 min", question:"Sumit and Chocolates", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", difficulty:"Moderate"},
-                           {usually:"20 min", question:"Puzzled Grid", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", difficulty:"Easy"}
+                      {usually:"10 min", question:"How To Develop a Chatbot From Scratch", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", duration:"15 Min Read", background:"https://cdn-images-1.medium.com/max/1200/0*oz2e-hQtsHOWzoB4."},
+                      {usually:"20 min", question:" 5 Ways to Make AI Work for Your Organization",link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", duration:"5 Min Read",background:"https://images.idgesg.net/images/article/2018/10/ai_artificial-intelligence_circuit-board_circuitry_mother-board_nodes_computer-chips-100777423-large.jpg"},
+                       {usually:"30 min", question:"Manna's First Name", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", duration:"15 Min Read",background:"../../../../../explore/static/home/assets/images/image-1-1200x667.jpg"},
+                       {usually:"35 min", question:"Simple Search", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", duration:"15 Min Read"},
+                       {usually:"15 min", question:"BooBoo and Upsolving", points:"20", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", duration:"15 Min Read"},
+                      {usually:"20 min", question:"Gaurav And Sub-array", points:"1", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", duration:"15 Min Read"},
+                      {usually:"10 min", question:"Round Table Meeting", points:"0", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", duration:"15 Min Read"},
+                       {usually:"25 min", question:"Sumit and Chocolates", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", duration:"15 Min Read"},
+                           {usually:"20 min", question:"Puzzled Grid", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", duration:"15 Min Read"}
                    ]
                });
    </script>
 
+<style>
+    .table_optionsA{
+      width: 200px;
+      height: 200px;
+      margin-bottom: 0px;
+    }
+
+</style>
 
 </head>
 <body style="background:#1C363E;font-family:'Raleway', 'sans-serif'">
@@ -109,23 +123,7 @@
               <li class="nav-item">
                 <a class="nav-link link text-white display-4" href="{% url 'explore:index' %}" aria-expanded="false"><span class="mbri-globe mbr-iconfont mbr-iconfont-btn"></span>Explore</a>
               </li>
-              <li class="nav-item dropdown">
-                    <a class="nav-link link dropdown-toggle text-white display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false"><span class="mbri-edit2 mbr-iconfont mbr-iconfont-btn"></span>Practice</a>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item text-white display-4" href="" aria-expanded="false"></a>
-                          <div class="dropdown">
-                            <a class="dropdown-item dropdown-toggle text-white display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false">Programming Languages</a>
-                            <div class="dropdown-menu dropdown-submenu">
-                              <a class="dropdown-item text-white display-4" href="{% url 'practice:advanced' %}">Java</a>
-                              <a class="dropdown-item text-white display-4" href="{% url 'practice:itertools' %}">Python</a>
-                              <a class="dropdown-item text-white display-4" href="{% url 'practice:classes' %}">C++</a>
-                            </div>
-                          </div>
-                        <a class="dropdown-item text-white display-4" href="{% url 'practice:sorting' %}" aria-expanded="false">Algorithms<br></a>
-                        <a class="dropdown-item text-white display-4" href="{% url 'practice:stacks' %}" aria-expanded="false">Data-Structures</a>
-                        <a class="dropdown-item text-white display-4" href="" aria-expanded="false">BioInformatics</a>
-                      </div>
-              </li>
+
               <li class="nav-item">
                 <a class="nav-link link text-white display-4" href="" aria-expanded="false"><span class="mbri-rocket mbr-iconfont mbr-iconfont-btn"></span>Leaderboard &nbsp;&nbsp;</a>
               </li>
@@ -183,35 +181,29 @@
                         </tr>
                         </table>
                                                                                                 <div class="box2"></div>
-                        <table>
-                                        <td style="color:aqua;top:20px;font-size:20px">Articles</td>
-                        <tr ng-repeat="x in myObj2" class="table_options" ng-cloak>
-                        <td >
-                        <div class="question-box" style="padding:0px !important;height:200px">
-                            <div class="row">
-                            <div class="col-md-2">
-                                                              <div style="width:200px;height:194px;background-size:cover" ng-style="{'background-image':'url({{x.background}})'}"></div>
-                            </div>
-                            <div class="col-md-6" style="margin-left:70px;padding:20px">
-
-                                        <p style="font-size:32px;font-weight:600">{{x.question}}</p>
-                                        <p><span style="color:#1C363E;font-weight:500">{{x.difficulty}}</span> </p>
-
-                                </div>
-                            </div>
-
-
-
-                        </div>
-
-                        </td>
-                        </tr>
+                        <table style="margin-left:40px">
+                          <td style="color:aqua;font-size:20px">Articles</td>
+                          <tr ng-repeat="x in myObj2" class="table_optionsA" ng-cloak>
+                          <td style="margin-bottom:200px;">
+                          <div class="question-box" style="padding:0px !important;height:200px">
+                              <div class="row">
+                              <div class="col-md-2">
+                              <div style="width:200px;height:194px;background-size:cover" ng-style="{'background-image':'url({{x.background}})'}"></div>
+                              </div>
+                              <div class="col-md-6" style="margin-left:70px;padding:20px">
+                                    <p style="font-size:32px;font-weight:600">{{x.question}}</p>
+                                    <p><span style="color:#1C363E;font-weight:500">{{x.duration}}</span> </p>
+                              </div>
+                              </div>
+                          </div>
+                          </td>
+                          </tr>
                         </table>
                       </div>
                 </div>
               {% endverbatim %}
 
-  <section class="engine"><a href="https://mobirise.ws">Mobirise</a></section><script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <section class="engine"><a href="https://mobirise.ws">Mobirise</a></section>
 
 <section class="footer4 cid-qNJ6q8uWVQ" id="footer4-p">
 
