@@ -38,7 +38,7 @@
           padding: 12px;
           border-radius: 4px;
           color: white;
-          background-image: url('{% static "home/assets/images/markus-spiske-153537-unsplash.jpg" %}');
+          background-image: url('{% static "home/assets/images/blake-connally-373084-unsplash-2000x1333.jpg" %}');
           background-size: cover;
           align-content: flex-end;
           border-color: aliceblue;
@@ -184,7 +184,7 @@
                   <a class="nav-link link login display-4" href="" aria-expanded="false">{{ user.username }}</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link link sign-in display-4" href="{% url 'home:logout_user' %}" aria-expanded="false">logout</a>
+                  <a class="nav-link link sign-in display-4" href="{% url 'home:logout_user' %}" aria-expanded="false">Logout</a>
                 </li>
               {% else %}
                 <li class="nav-item">
