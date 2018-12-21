@@ -21,4 +21,5 @@ urlpatterns = [
     path('home/', include('home.urls')),
     path('practice/', include('practice.urls')),
     path('explore/', include('explore.urls')),
+    path('leaderboard/', include('leaderboard.urls')),
 ]

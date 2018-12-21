@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'practice.apps.PracticeConfig',
     'explore.apps.ExploreConfig',
+    'leaderboard.apps.LeaderboardConfig',
 ]
 
 MIDDLEWARE = [
