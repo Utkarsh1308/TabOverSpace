@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html >
 <head>
   <!-- Site made with Mobirise Website Builder v4.6.7, https://mobirise.com -->
   <meta charset="UTF-8">
@@ -8,11 +8,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assets/images/imageedit-2.gif" type="image/x-icon">
   <meta name="description" content="">
-  <title>{% block title %}{% endblock %}</title>
+  <title>Explore</title>
+<!--
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css"> -->
 
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
   {% load staticfiles %}
+    <style>
+        .claa{
+            background-image: url()
+        }
+        .question-box{
+            width:800px;
+            margin-bottom: 20px;
+            background-color: white;
+            height:800px;
+        }
+    </style>
   <link rel="stylesheet" type="text/css" href="{% static 'home/assets/web/assets/mobirise-icons/mobirise-icons.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'home/assets/tether/tether.min.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'home/assets/bootstrap/css/bootstrap.min.css' %}">
@@ -22,109 +43,62 @@
   <link rel="stylesheet" type="text/css" href="{% static 'home/assets/dropdown/css/style.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'home/assets/theme/css/style.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'home/assets/mobirise/css/mbr-additional.css' %}">
+ <script>
 
-  <style type="text/css">
+          var subdomains = [
 
-      .login {
-        color: aqua;
-      }
+            {selection:"no", name:"AI", link:"{% url 'explore:ai' %}"},
+            {selection:"no", name:"CyberSecurity",link:"{% url 'explore:cyber_security' %}"},
+            {selection:"no", name:"Big-Data Analytics", link:"{% url 'explore:big_data_analytics' %}"},
+            {selection:"no", name:"BioInformatics", link:"{% url 'explore:bioinformatics' %}"},
+            {selection:"no", name:"Machine Learning", points:"20", link:"{% url 'explore:machine_learning' %}"},
+            {selection:"no", name:"Cryptography", points:"1", link:"{% url 'explore:cryptography' %}"}
 
-      .sign-in {
-        color: aqua;
-      }
+          ]
 
-      .practice-box{
-          box-shadow: 1px 1px 1px #888888;
-          padding: 12px;
-          border-radius: 4px;
-          color: white;
-          background-image: url('{% static "home/assets/images/blake-connally-373084-unsplash-2000x1333.jpg" %}');
-          background-size: cover;
-          align-content: flex-end;
-          border-color: aliceblue;
-      }
-      .box{
-          width:80px;
-          height: 1px;
-          background-color: aqua;
-          margin: auto;
-      }
-      .line{
-          width: 40%;
-          height: 1px;
-          background-color: aqua;
-          margin: auto;
-      }
+          subdomains[{{ subdomain }}].selection = 'yes';
 
-     .practice-box:hover {
-         transition: 0.5s;
-          transform: translate(0, -5px);
-      }
+           var app = angular.module("myApp",[]);
+               app.controller("myCtrl", function($scope){
 
-      .table_options{
-          color:aliceblue;
-          margin-left: 12px;
-      }
+               /*    $scope.myObj = {
+                       "1" : "Sanyog Ghosh",
+                       "2":"Rushil Gupta",
+                       "3":"Hodor Sharma",
+                       "4":"Shashwat Mishra",
+                       "5":"Siddharth Mittal",
+                       "6":"Satyam Singh"
+                   }
+                 */
 
-      .table_first{
-          background-color: aqua;
-          width: 10px;
-          height:5px;
-      }
+                    $scope.myObj = subdomains
 
-      table {
-            border-collapse: collapse;
-      }
 
-      td {
-            padding-top: 10px;
-            padding-bottom: 10px;
-      }
+                    $scope.myObj2 = [
+                      {usually:"10 min", question:"How To Develop a Chatbot From Scratch", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", duration:"15 Min Read", background:"https://cdn-images-1.medium.com/max/1200/0*oz2e-hQtsHOWzoB4."},
+                      {usually:"20 min", question:" 5 Ways to Make AI Work for Your Organization",link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", duration:"5 Min Read",background:"https://images.idgesg.net/images/article/2018/10/ai_artificial-intelligence_circuit-board_circuitry_mother-board_nodes_computer-chips-100777423-large.jpg"},
+                      {usually:"30 min", question:"Manna's First Name", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", duration:"15 Min Read", background:"{% static 'home/assets/images/image-1-1200x667.jpg' %}"},
+                      {usually:"35 min", question:"Simple Search", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", duration:"15 Min Read", background:"{% static 'home/assets/images/image-1-1200x667.jpg' %}"},
+                      {usually:"15 min", question:"BooBoo and Upsolving", points:"20", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", duration:"15 Min Read", background:"{% static 'home/assets/images/image-1-1200x667.jpg' %}"},
+                      {usually:"20 min", question:"Gaurav And Sub-array", points:"1", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", duration:"15 Min Read", background:"{% static 'home/assets/images/image-1-1200x667.jpg' %}"},
+                      {usually:"10 min", question:"Round Table Meeting", points:"0", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", duration:"15 Min Read", background:"{% static 'home/assets/images/image-1-1200x667.jpg' %}"},
+                      {usually:"25 min", question:"Sumit and Chocolates", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", duration:"15 Min Read", background:"{% static 'home/assets/images/image-1-1200x667.jpg' %}"},
+                      {usually:"20 min", question:"Puzzled Grid", link:"../dynamic_programming/questions/Sherlock and Coprime Subset.html", duration:"15 Min Read", background:"{% static 'home/assets/images/image-1-1200x667.jpg' %}"}
+                   ]
+               });
+   </script>
 
-      .box2{
-          margin-left: 80px;
-      }
+<style>
+    .table_optionsA{
+      width: 200px;
+      height: 200px;
+      margin-bottom: 0px;
+    }
 
-      .question-box{
-          border: solid white;
-          color: black;
-          border-radius: 2px;
-          background-color: white;
-          height: 150px;
-          width: 800px;
-          padding: 12px;
-          min-width: 600px;
-      }
+</style>
 
-      .green{
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        float: right;
-        background-color: #4CAF50;
-        -webkit-transition-duration: 0.4s; /* Safari */
-        transition-duration: 0.4s;
-      }
-
-      .green:hover {
-        background-color: #119137; /* Green */
-        color: white;
-      }
-
-       .usually{
-          float: left;
-          margin-top: 8px;
-          color: black;
-      }
-
-  </style>
 </head>
-
-<body style="background:#1C363E">
+<body style="background:#1C363E;font-family:'Raleway', 'sans-serif'">
 
   <section class="menu cid-qNIIFHaxZY" once="menu" id="menu1-e">
 
@@ -180,12 +154,17 @@
               </li>
 
               {% if user.username %}
-                <li class="nav-item">
-                  <a class="nav-link link login display-4" href="" aria-expanded="false">{{ user.username }}</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link link sign-in display-4" href="{% url 'home:logout_user' %}" aria-expanded="false">Logout</a>
-                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link link dropdown-toggle display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false" style="color:aqua">{{user.username}}</a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item text-white display-4" href="" aria-expanded="false"></a>
+                          <div class="">
+                            <a class="dropdown-item text-white display-4" href="{% url 'home:logout_user' %}" aria-expanded="false" >Logout</a>
+                            <div style="width:80%;height:1px;background:white;margin:auto"></div>
+                            <a class="dropdown-item text-white display-4"  aria-expanded="false"><span style="color:aqua">28</span> Points</a>
+                          </div>
+                      </div>
+              </li>
               {% else %}
                 <li class="nav-item">
                   <a class="nav-link link login display-4" href="{% url 'home:login' %}" aria-expanded="false">Login</a>
@@ -201,55 +180,52 @@
     </nav>
 </section>
 
-<div id="Leaderboard" class="raleway" style="text-align:center; margin-top:150px; color:aqua;margin-bottom:px;"><h1>Practice</h1></div>
+<div id="Leaderboard" class="raleway" style="text-align:center; margin-top:150px; color:aqua;margin-bottom:px;"><h1>Explore</h1></div>
                 <div class="container" >
-                    <p style="color:grey;text-align:center;margin-top:20px;">Practicing Topic : <span style="color:white"> &nbsp;{% block content %}{% endblock %} </span></p>
+                    <p style="color:grey;text-align:center;margin-top:20px;">Last Topic Explored : <span style="color:white"> &nbsp;How To Develop a Chatbot From Scratch </span></p>
 
                     <div class="line"></div>
 
 
                   {% verbatim %}
-                    <div class="row" style="margin-bottom:20px;" ng-app="myApp" ng-controller="myCtrl" ng-cloak >
+                    <div class="row" style="margin-bottom:20px;" ng-app="myApp" ng-controller="myCtrl" >
 
                         <table>
                     <tr>
                         <td></td>
-                        <td style="color:aqua;margin-top:20px;font-size:20px">Subdomains</td>
+                        <td style="color:aqua;margin-top:20px;font-size:20px">SubTopics</td>
                         <td></td>
-                    </tr>
-                    <tr ng-repeat="x in myObj" class="table_options">
+                      </tr>
+                        <tr ng-repeat="x in myObj" ng-cloak class="table_options" >
                         <td style="background-color:aqua;width:1px;opacity:0" ng-style="{ 'background' : (x.selection == 'yes') ? 'aqua' : '#1C363E'}"></td>
-                        <td ng-click="update(x)" ng-style="{ 'color' : (x.selection == 'yes') ? 'white' : 'white',
-                                      'border' : (x.selection == 'yes') ? 'solid aqua' : '0px'}" class="table1">&nbsp;&nbsp;&nbsp;<a href={{x.link}}>{{x.name}}</a></td>
-                    </tr>
+                        <td ng-style="{ 'color' : (x.selection == 'yes') ? 'white' : 'white',
+                                      'border' : (x.selection == 'yes') ? 'solid aqua' : '0px'}"><a style="text-decoration:none;color:white;padding-right:10px"  href="{{x.link}}">&nbsp;&nbsp;&nbsp;{{x.name}}</a></td>
+                        </tr>
                         </table>
                                                                                                 <div class="box2"></div>
-                        <table>
-                                        <td style="color:aqua;top:20px;font-size:20px">Questions</td>
-                        <tr ng-repeat="x in myObj2" class="table_options">
-                        <td >
-                        <div class="question-box">
-                            <h3 class="question">{{x.question}}</h3>
-                            <p><span style="color:#1C363E;font-weight:500">Difficulty: {{x.difficulty}}</span> </p>
-
-                            <div class="usually">
-                                Takes Usually : <span style="color:grey">{{x.usually}}</span>
-                            </div>
-
-                            <button class="green">
-                                Attempt
-                            </button>
-
-                        </div>
-
-                        </td>
-                        </tr>
+                        <table style="margin-left:40px">
+                          <td style="color:aqua;font-size:20px">Articles</td>
+                          <tr ng-repeat="x in myObj2" class="table_optionsA" ng-cloak>
+                          <td style="margin-bottom:200px;">
+                          <div class="question-box" style="padding:0px !important;height:200px">
+                              <div class="row">
+                              <div class="col-md-2">
+                              <div style="width:200px;height:194px;background-size:cover" ng-style="{'background-image':'url({{x.background}})'}"></div>
+                              </div>
+                              <div class="col-md-6" style="margin-left:70px;padding:20px">
+                                    <p style="font-size:32px;font-weight:600">{{x.question}}</p>
+                                    <p><span style="color:#1C363E;font-weight:500">{{x.duration}}</span> </p>
+                              </div>
+                              </div>
+                          </div>
+                          </td>
+                          </tr>
                         </table>
                       </div>
                 </div>
               {% endverbatim %}
 
-  <section class="engine"><a href="https://mobirise.ws">Mobirise</a></section><script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <section class="engine"><a href="https://mobirise.ws">Mobirise</a></section>
 
 <section class="footer4 cid-qNJ6q8uWVQ" id="footer4-p">
 
@@ -265,9 +241,9 @@
                         <img src="{% static 'home/assets/images/imageedit-2.gif' %}" alt="Mobirise" title="">
                     </a>
                 </div>
-                <a href="{% url 'home:index' %}" class="text-white">
+                <p class="mb-3 mbr-fonts-style foot-title display-7">
                     TabOverSpace
-                </a><br><br>
+                </p>
                 <a href="#" class="text-white">Compete</a><br>
                 <a href="{% url 'explore:index' %}" class="text-white">Explore</a><br>
                 <a href="{% url 'practice:index' %}" class="text-white">Practice</a><br>
@@ -333,73 +309,6 @@
     </div>
 </section>
 
-<script>
-
-          var subdomains = [
-
-            {selection:"no", name:"Warmup", link:"{% url 'practice:warmup' %}"},
-            {selection:"no", name:"Implementation",link:"{% url 'practice:implementation' %}"},
-            {selection:"no", name:"Strings", link:"{% url 'practice:strings' %}"},
-            {selection:"no", name:"Sorting", link:"{% url 'practice:sorting' %}"},
-            {selection:"no", name:"Search", points:"20", link:"{% url 'practice:search' %}"},
-            {selection:"no", name:"Graph Theory", points:"1", link:"{% url 'practice:graph_theory' %}"},
-            {selection:"no", name:"Greedy", points:"0", link:"{% url 'practice:greedy' %}"},
-            {selection:"no", name:"Dynamic Programming", link:"{% url 'practice:dynamic_programming' %}"},
-            {selection:"no", name:"Recursion", link:"{% url 'practice:recursion' %}"},
-            {selection:"no", name:"Constructive Algorithms", link:"{% url 'practice:constructive_algorithms' %}"},
-            {selection:"no", name:"NP Complete", link:"{% url 'practice:np_complete' %}"}
-
-          ]
-
-          subdomains[{{ subdomain }}].selection = 'yes';
-
-
-           var app = angular.module("myApp",[]);
-               app.controller("myCtrl", function($scope){
-
-                   $scope.myObj = subdomains
-
-                   /*
-                   $scope.update = function(x) {
-			                  for(var i = 0; i<$scope.myObj.length; i++){
-				                $scope.myObj[i].selection = 'no';
-			                  }
-			                  x.selection = 'yes'
-
-		               }
-                   */
-
-                    $scope.myObj2 = [
-                      {usually:"10 min", question:"Solve Me First", link:"", difficulty:"Easy"},
-                      {usually:"20 min", question:"Simple Array Sum",link:"", difficulty:"Moderate"},
-                      {usually:"30 min", question:"Compare the Triplets", link:"", difficulty:"Hard"},
-                      {usually:"35 min", question:"A Very Big Sum", link:"", difficulty:"Hard"},
-                      {usually:"15 min", question:"Diagonal Difference", points:"20", link:"", difficulty:"Easy"},
-                      {usually:"20 min", question:"Plus Minus", points:"1", link:"", difficulty:"Moderate"},
-                      {usually:"10 min", question:"Staircase", points:"0", link:"", difficulty:"Easy"},
-                      {usually:"25 min", question:"Mini-Max Sum", link:"", difficulty:"Moderate"},
-                      {usually:"20 min", question:"Birthday Cake Candles", link:"", difficulty:"Easy"}
-                   ]
-
-
-
-               });
-    </script>
-
-    <script>
-
-      $('.table1').click(function() {
-        var id1 = this.id;
-      	var all = document.getElementsByClassName('table1');
-        for (var i = 0; i < all.length; i++) {
-        		all[i].style.border = 'none';
-        }
-        document.getElementById(id1).style.border = 'solid aqua';
-        });
-
-
-
-   </script>
 
   {% load staticfiles %}
   <script type="text/javascript" src="{% static 'home/assets/web/assets/jquery/jquery.min.js' %}"></script>
