@@ -2,7 +2,9 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return render(request, 'explore/index.html', {})
+    return render(request, 'explore/index.html', {
+    "subdomain": 0,
+    })
 
 def ai(request):
     return render(request, 'explore/ai.html', {
