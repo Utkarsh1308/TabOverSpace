@@ -162,13 +162,13 @@
                           <div class="dropdown">
                             <a class="dropdown-item dropdown-toggle text-white display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false">Programming Languages</a>
                             <div class="dropdown-menu dropdown-submenu">
-                              <a class="dropdown-item text-white display-4" href="{% url 'practice:advanced' %}">Java</a>
-                              <a class="dropdown-item text-white display-4" href="{% url 'practice:itertools' %}">Python</a>
-                              <a class="dropdown-item text-white display-4" href="{% url 'practice:classes' %}">C++</a>
+                              <a class="dropdown-item text-white display-4" href="">Java</a>
+                              <a class="dropdown-item text-white display-4" href="">Python</a>
+                              <a class="dropdown-item text-white display-4" href="">C++</a>
                             </div>
                           </div>
-                        <a class="dropdown-item text-white display-4" href="{% url 'practice:sorting' %}" aria-expanded="false">Algorithms<br></a>
-                        <a class="dropdown-item text-white display-4" href="{% url 'practice:stacks' %}" aria-expanded="false">Data-Structures</a>
+                        <a class="dropdown-item text-white display-4" href="" aria-expanded="false">Algorithms<br></a>
+                        <a class="dropdown-item text-white display-4" href="" aria-expanded="false">Data-Structures</a>
                         <a class="dropdown-item text-white display-4" href="" aria-expanded="false">BioInformatics</a>
                       </div>
               </li>
@@ -333,26 +333,34 @@
     </div>
 </section>
 
+
+
 <script>
+          var list = []
+          {% for x in Subdomains %}
+            list.push("{{ x.name }}")
+          {% endfor %}
 
           var subdomains = [
 
-            {selection:"no", name:"Warmup", link:"{% url 'practice:warmup' %}"},
-            {selection:"no", name:"Implementation",link:"{% url 'practice:implementation' %}"},
-            {selection:"no", name:"Strings", link:"{% url 'practice:strings' %}"},
-            {selection:"no", name:"Sorting", link:"{% url 'practice:sorting' %}"},
-            {selection:"no", name:"Search", points:"20", link:"{% url 'practice:search' %}"},
-            {selection:"no", name:"Graph Theory", points:"1", link:"{% url 'practice:graph_theory' %}"},
-            {selection:"no", name:"Greedy", points:"0", link:"{% url 'practice:greedy' %}"},
-            {selection:"no", name:"Dynamic Programming", link:"{% url 'practice:dynamic_programming' %}"},
-            {selection:"no", name:"Recursion", link:"{% url 'practice:recursion' %}"},
-            {selection:"no", name:"Constructive Algorithms", link:"{% url 'practice:constructive_algorithms' %}"},
-            {selection:"no", name:"NP Complete", link:"{% url 'practice:np_complete' %}"}
+            {selection:"no", name:list[0], link:"{% url 'practice:subdomain' track='algorithms' subdomain='warmup' %}"},
+            {selection:"no", name:list[1],link:"{% url 'practice:subdomain' track='algorithms' subdomain='implementation' %}"},
+            {selection:"no", name:list[2], link:"{% url 'practice:subdomain' track='algorithms' subdomain='strings' %}"},
+            {selection:"no", name:list[3], link:"{% url 'practice:subdomain' track='algorithms' subdomain='sorting' %}"},
+            {selection:"no", name:list[4], points:"20", link:"{% url 'practice:subdomain' track='algorithms' subdomain='search' %}"},
+            {selection:"no", name:list[5], points:"1", link:"{% url 'practice:subdomain' track='algorithms' subdomain='graph_theory' %}"},
+            {selection:"no", name:list[6],link:"{% url 'practice:subdomain' track='algorithms' subdomain='greedy' %}"},
+            {selection:"no", name:list[7], link:"{% url 'practice:subdomain' track='algorithms' subdomain='dynamic_programming' %}"},
+            {selection:"no", name:list[8], link:"{% url 'practice:subdomain' track='algorithms' subdomain='recursion' %}"},
+            {selection:"no", name:list[9], points:"20", link:"{% url 'practice:subdomain' track='algorithms' subdomain='constructive_algorithms' %}"},
 
           ]
 
-          subdomains[{{ subdomain }}].selection = 'yes';
-
+          for (var x = 0; x < subdomains.length; x++) {
+            if (subdomains[x].name=='{{ section.name }}') {
+                subdomains[x].selection = 'yes';
+            }
+          }
 
            var app = angular.module("myApp",[]);
                app.controller("myCtrl", function($scope){

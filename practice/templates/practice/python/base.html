@@ -162,13 +162,13 @@
                           <div class="dropdown">
                             <a class="dropdown-item dropdown-toggle text-white display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false">Programming Languages</a>
                             <div class="dropdown-menu dropdown-submenu">
-                              <a class="dropdown-item text-white display-4" href="{% url 'practice:advanced' %}">Java</a>
-                              <a class="dropdown-item text-white display-4" href="{% url 'practice:itertools' %}">Python</a>
-                              <a class="dropdown-item text-white display-4" href="{% url 'practice:classes' %}">C++</a>
+                              <a class="dropdown-item text-white display-4" href="">Java</a>
+                              <a class="dropdown-item text-white display-4" href="">Python</a>
+                              <a class="dropdown-item text-white display-4" href="">C++</a>
                             </div>
                           </div>
-                        <a class="dropdown-item text-white display-4" href="{% url 'practice:sorting' %}" aria-expanded="false">Algorithms<br></a>
-                        <a class="dropdown-item text-white display-4" href="{% url 'practice:stacks' %}" aria-expanded="false">Data-Structures</a>
+                        <a class="dropdown-item text-white display-4" href="" aria-expanded="false">Algorithms<br></a>
+                        <a class="dropdown-item text-white display-4" href="" aria-expanded="false">Data-Structures</a>
                         <a class="dropdown-item text-white display-4" href="" aria-expanded="false">BioInformatics</a>
                       </div>
               </li>
@@ -337,20 +337,23 @@
 
           var subdomains = [
 
-            {selection:"no", name:"Classes", link:"{% url 'practice:classes_python' %}"},
-            {selection:"no", name:"Collections",link:"{% url 'practice:collections' %}"},
-            {selection:"no", name:"Debugging", link:"{% url 'practice:debugging_python' %}"},
-            {selection:"no", name:"Introduction", link:"{% url 'practice:introduction_python' %}"},
-            {selection:"no", name:"Itertools", points:"20", link:"{% url 'practice:itertools' %}"},
-            {selection:"no", name:"Math", points:"1", link:"{% url 'practice:math' %}"},
-            {selection:"no", name:"Numpy", points:"0", link:"{% url 'practice:numpy' %}"},
-            {selection:"no", name:"Sets", link:"{% url 'practice:sets' %}"},
-            {selection:"no", name:"Strings", link:"{% url 'practice:strings_python' %}"},
-            {selection:"no", name:"XML", link:"{% url 'practice:xml' %}"}
+            {selection:"no", name:"Classes", link:"{% url 'practice:subdomain' track='python' subdomain='classes' %}"},
+            {selection:"no", name:"Collections",link:"{% url 'practice:subdomain' track='python' subdomain='collections' %}"},
+            {selection:"no", name:"Debugging", link:"{% url 'practice:subdomain' track='python' subdomain='debugging' %}"},
+            {selection:"no", name:"Introduction", link:"{% url 'practice:subdomain' track='python' subdomain='introduction' %}"},
+            {selection:"no", name:"Itertools", points:"20", link:"{% url 'practice:subdomain' track='python' subdomain='itertools' %}"},
+            {selection:"no", name:"Math", points:"1", link:"{% url 'practice:subdomain' track='python' subdomain='math' %}"},
+            {selection:"no", name:"Numpy", points:"0", link:"{% url 'practice:subdomain' track='python' subdomain='numpy' %}"},
+            {selection:"no", name:"Sets", link:"{% url 'practice:subdomain' track='python' subdomain='sets' %}"},
+            {selection:"no", name:"Strings", link:"{% url 'practice:subdomain' track='python' subdomain='strings' %}"},
 
           ]
 
-          subdomains[{{ subdomain }}].selection = 'yes';
+          for (var x = 0; x < subdomains.length; x++) {
+            if (subdomains[x].name=='{{ section.name }}') {
+                subdomains[x].selection = 'yes';
+            }
+          }
 
 
            var app = angular.module("myApp",[]);

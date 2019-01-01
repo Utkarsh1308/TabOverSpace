@@ -162,13 +162,13 @@
                           <div class="dropdown">
                             <a class="dropdown-item dropdown-toggle text-white display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false">Programming Languages</a>
                             <div class="dropdown-menu dropdown-submenu">
-                              <a class="dropdown-item text-white display-4" href="{% url 'practice:advanced' %}">Java</a>
-                              <a class="dropdown-item text-white display-4" href="{% url 'practice:itertools' %}">Python</a>
-                              <a class="dropdown-item text-white display-4" href="{% url 'practice:classes' %}">C++</a>
+                              <a class="dropdown-item text-white display-4" href="">Java</a>
+                              <a class="dropdown-item text-white display-4" href="">Python</a>
+                              <a class="dropdown-item text-white display-4" href="">C++</a>
                             </div>
                           </div>
-                        <a class="dropdown-item text-white display-4" href="{% url 'practice:sorting' %}" aria-expanded="false">Algorithms<br></a>
-                        <a class="dropdown-item text-white display-4" href="{% url 'practice:stacks' %}" aria-expanded="false">Data-Structures</a>
+                        <a class="dropdown-item text-white display-4" href="" aria-expanded="false">Algorithms<br></a>
+                        <a class="dropdown-item text-white display-4" href="" aria-expanded="false">Data-Structures</a>
                         <a class="dropdown-item text-white display-4" href="" aria-expanded="false">BioInformatics</a>
                       </div>
               </li>
@@ -337,16 +337,19 @@
 
           var subdomains = [
 
-            {selection:"no", name:"Introduction", link:"{% url 'practice:introduction' %}"},
-            {selection:"no", name:"Strings",link:"{% url 'practice:strings_cpp' %}"},
-            {selection:"no", name:"Classes", link:"{% url 'practice:classes' %}"},
-            {selection:"no", name:"STL", link:"{% url 'practice:stl' %}"},
-            {selection:"no", name:"Inheritance", points:"20", link:"{% url 'practice:inheritance' %}"},
-            {selection:"no", name:"Debugging", points:"1", link:"{% url 'practice:debugging' %}"}
+            {selection:"no", name:"Introduction", link:"{% url 'practice:subdomain' track='cpp' subdomain='introduction' %}"},
+            {selection:"no", name:"Strings",link:"{% url 'practice:subdomain' track='cpp' subdomain='strings' %}"},
+            {selection:"no", name:"Classes", link:"{% url 'practice:subdomain' track='cpp' subdomain='classes' %}"},
+            {selection:"no", name:"Inheritance", points:"20", link:"{% url 'practice:subdomain' track='cpp' subdomain='inheritance' %}"},
+            {selection:"no", name:"Debugging", points:"1", link:"{% url 'practice:subdomain' track='cpp' subdomain='debugging' %}"}
 
           ]
 
-          subdomains[{{ subdomain }}].selection = 'yes';
+          for (var x = 0; x < subdomains.length; x++) {
+            if (subdomains[x].name=='{{ section.name }}') {
+                subdomains[x].selection = 'yes';
+            }
+          }
 
 
            var app = angular.module("myApp",[]);

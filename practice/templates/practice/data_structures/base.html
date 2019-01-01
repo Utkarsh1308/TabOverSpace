@@ -162,13 +162,13 @@
                           <div class="dropdown">
                             <a class="dropdown-item dropdown-toggle text-white display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false">Programming Languages</a>
                             <div class="dropdown-menu dropdown-submenu">
-                              <a class="dropdown-item text-white display-4" href="{% url 'practice:advanced' %}">Java</a>
-                              <a class="dropdown-item text-white display-4" href="{% url 'practice:itertools' %}">Python</a>
-                              <a class="dropdown-item text-white display-4" href="{% url 'practice:classes' %}">C++</a>
+                              <a class="dropdown-item text-white display-4" href="">Java</a>
+                              <a class="dropdown-item text-white display-4" href="">Python</a>
+                              <a class="dropdown-item text-white display-4" href="">C++</a>
                             </div>
                           </div>
-                        <a class="dropdown-item text-white display-4" href="{% url 'practice:sorting' %}" aria-expanded="false">Algorithms<br></a>
-                        <a class="dropdown-item text-white display-4" href="{% url 'practice:stacks' %}" aria-expanded="false">Data-Structures</a>
+                        <a class="dropdown-item text-white display-4" href="" aria-expanded="false">Algorithms<br></a>
+                        <a class="dropdown-item text-white display-4" href="" aria-expanded="false">Data-Structures</a>
                         <a class="dropdown-item text-white display-4" href="" aria-expanded="false">BioInformatics</a>
                       </div>
               </li>
@@ -337,17 +337,21 @@
 
           var subdomains = [
 
-            {selection:"no", name:"Advanced", link:"{% url 'practice:advanced_ds' %}"},
-            {selection:"no", name:"Arrays",link:"{% url 'practice:arrays' %}"},
-            {selection:"no", name:"Heap", link:"{% url 'practice:heap' %}"},
-            {selection:"no", name:"Queues", link:"{% url 'practice:queues' %}"},
-            {selection:"no", name:"Stacks", points:"20", link:"{% url 'practice:stacks' %}"},
-            {selection:"no", name:"Trees", points:"1", link:"{% url 'practice:trees' %}"},
-            {selection:"no", name:"Trie", points:"0", link:"{% url 'practice:trie' %}"}
+            {selection:"no", name:"Advanced", link:"{% url 'practice:subdomain' track='data_structures' subdomain='advanced' %}"},
+            {selection:"no", name:"Arrays",link:"{% url 'practice:subdomain' track='data_structures' subdomain='arrays' %}"},
+            {selection:"no", name:"Heap", link:"{% url 'practice:subdomain' track='data_structures' subdomain='heap' %}"},
+            {selection:"no", name:"Queues", link:"{% url 'practice:subdomain' track='data_structures' subdomain='queues' %}"},
+            {selection:"no", name:"Stacks", points:"20", link:"{% url 'practice:subdomain' track='data_structures' subdomain='stacks' %}"},
+            {selection:"no", name:"Trees", points:"1", link:"{% url 'practice:subdomain' track='data_structures' subdomain='trees' %}"},
+            {selection:"no", name:"Trie", points:"0", link:"{% url 'practice:subdomain' track='data_structures' subdomain='trie' %}"}
 
           ]
 
-          subdomains[{{ subdomain }}].selection = 'yes';
+          for (var x = 0; x < subdomains.length; x++) {
+            if (subdomains[x].name=='{{ section.name }}') {
+                subdomains[x].selection = 'yes';
+            }
+          }
 
 
            var app = angular.module("myApp",[]);
