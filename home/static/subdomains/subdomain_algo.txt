@@ -1,7 +1,0 @@
-Searching
-Sorting
-Greedy Algorithms
-Graphs
-String Algorithms
-Dynamic Programming
-                        

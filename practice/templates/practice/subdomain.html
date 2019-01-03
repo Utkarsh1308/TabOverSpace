@@ -121,6 +121,15 @@
           color: black;
       }
 
+      a.button {
+          -webkit-appearance: button;
+          -moz-appearance: button;
+          appearance: button;
+
+          text-decoration: none;
+          color: initial;
+      }
+
   </style>
 </head>
 
@@ -235,10 +244,8 @@
                             <div class="usually">
                                 Takes Usually : <span style="color:grey">{{x.usually}}</span>
                             </div>
-
-                            <button class="green">
-                                Attempt
-                            </button>
+                {% endverbatim %}
+                            <a class="green" id="button" href="{% url 'practice:question' track=track subdomain=section.name question='question' %}">Attempt</a>
 
                         </div>
 
@@ -247,7 +254,7 @@
                         </table>
                       </div>
                 </div>
-              {% endverbatim %}
+
 
   <section class="engine"><a href="https://mobirise.ws">Mobirise</a></section><script src="assets/web/assets/jquery/jquery.min.js"></script>
 
@@ -359,6 +366,11 @@
             }
           }
 
+          var questions = []
+          {% for x in section.question_set.all %}
+            questions.push({usually:"10 min", question:'{{ x.question }}', link:"", difficulty:"Easy"},)
+          {% endfor %}
+
            var app = angular.module("myApp",[]);
                app.controller("myCtrl", function($scope){
 
@@ -374,6 +386,7 @@
 		               }
                    */
 
+                    /*
                     $scope.myObj2 = [
                       {usually:"10 min", question:"Solve Me First", link:"", difficulty:"Easy"},
                       {usually:"20 min", question:"Simple Array Sum",link:"", difficulty:"Moderate"},
@@ -385,7 +398,8 @@
                       {usually:"25 min", question:"Mini-Max Sum", link:"", difficulty:"Moderate"},
                       {usually:"20 min", question:"Birthday Cake Candles", link:"", difficulty:"Easy"}
                    ]
-
+                  */
+                  $scope.myObj2 = questions
 
 
                });

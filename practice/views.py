@@ -25,5 +25,6 @@ def subdomain(request, track, subdomain):
     }
     return render(request, 'practice/subdomain.html', context)
 
-def question(request):
-    return render(request, 'practice/index.html', {})
+def question(request, subdomain, question, track):
+
+    return render(request, 'practice/question.html', {})
