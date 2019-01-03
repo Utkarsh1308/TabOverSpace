@@ -93,13 +93,13 @@
                           <div class="dropdown">
                             <a class="dropdown-item dropdown-toggle text-white display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false">Programming Languages</a>
                             <div class="dropdown-menu dropdown-submenu">
-                              <a class="dropdown-item text-white display-4" href="">Java</a>
-                              <a class="dropdown-item text-white display-4" href="">Python</a>
-                              <a class="dropdown-item text-white display-4" href="">C++</a>
+                              <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='java' subdomain='advanced' %}">Java</a>
+                              <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='python' subdomain='classes' %}">Python</a>
+                              <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='cpp' subdomain='introduction' %}">C++</a>
                             </div>
                           </div>
-                        <a class="dropdown-item text-white display-4" href="" aria-expanded="false">Algorithms<br></a>
-                        <a class="dropdown-item text-white display-4" href="" aria-expanded="false">Data-Structures</a>
+                        <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='algorithms' subdomain='warmup' %}" aria-expanded="false">Algorithms<br></a>
+                        <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='data_structures' subdomain='advanced' %}" aria-expanded="false">Data-Structures</a>
                         <a class="dropdown-item text-white display-4" href="" aria-expanded="false">BioInformatics</a>
                       </div>
               </li>
