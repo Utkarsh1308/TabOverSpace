@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  {% load custom_url %}
   <!-- Site made with Mobirise Website Builder v4.6.7, https://mobirise.com -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -244,11 +245,11 @@
                             <div class="usually">
                                 Takes Usually : <span style="color:grey">{{x.usually}}</span>
                             </div>
-                {% endverbatim %}
-                            <a class="green" id="button" href="{% url 'practice:question' track=track subdomain=section.name question='question' %}">Attempt</a>
+
+                            <a class="green" id="button" href={{x.link}}>Attempt</a>
 
                         </div>
-
+                      {% endverbatim %}
                         </td>
                         </tr>
                         </table>
@@ -368,7 +369,7 @@
 
           var questions = []
           {% for x in section.question_set.all %}
-            questions.push({usually:"10 min", question:'{{ x.question }}', link:"", difficulty:"Easy"},)
+            questions.push({usually:"10 min", question:'{{ x.question }}', link:"{% url 'practice:question' track=track subdomain=section.name question=x.question|custom_url %}", difficulty:"Easy"},)
           {% endfor %}
 
            var app = angular.module("myApp",[]);

@@ -26,5 +26,31 @@ def subdomain(request, track, subdomain):
     return render(request, 'practice/subdomain.html', context)
 
 def question(request, subdomain, question, track):
+    def question_name(x):
+        if '_' in str(x):
+            sections = x.split('_')
+            y = ""
+            for i in sections:
+                y += i.capitalize() + " "
+            return y
+        return x.capitalize()
 
-    return render(request, 'practice/question.html', {})
+    question = question_name(question)
+
+    def section(x):
+        if '_' in str(x):
+            sections = x.split('_')
+            y = sections[0].capitalize() + " " + sections[1].capitalize()
+            return y
+        return x.capitalize()
+
+    Subdomains = Subdomain.objects.all()
+
+    section = get_object_or_404(Subdomain, name=section(subdomain), track__name=section(track))
+    context = {
+    'section': section,
+    'Subdomains': Subdomains,
+    'track': track,
+    'question': question,
+    }
+    return render(request, 'practice/question.html', context)
