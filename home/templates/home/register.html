@@ -148,14 +148,14 @@
 
   .buttons a.active, .buttons a:active {
       box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.1), 0 0 0 1px #170c22, 0 2px 1px 0 rgba(121, 65, 135, 0.5), inset 0 0 4px 3px rgba(15, 8, 22, 0.2);
-      background: rgba(0,0,0,0.3);
+      background: aqua;
       text-shadow: 0 0 21px rgba(223, 206, 228, 0.5), 0 0 10px rgba(223, 206, 228, 0.4), 0 0 2px #2a153c;
-      color: aqua; }
+      color: black; }
 
   #button1 {
   border-radius: 20px 0 0 20px;
   width: 300px;
-  background-color: aqua;
+  background-color: #14262B;
   display: inline-block;
   }
 
@@ -180,9 +180,8 @@
   </div>
 
   <div class="wrapper font-class">
-    <p style="font-size:40px;color:white;">Register For An Account</p>
-    <p>To sign-up for a free basic account please provide us with some basic information using
-    the contact form below. Please use valid credentials.</p>
+    <p style="font-size:40px;color:white;">Register Account</p>
+    <p>To sign-up with us, please fill the contact form below.</p>
 
     <form class="form font-class" method="post" action="">
       {% csrf_token %}
