@@ -25,7 +25,7 @@
   <link rel="stylesheet" type="text/css" href="{% static 'home/assets/mobirise/css/mbr-additional.css' %}">
 
   <style type="text/css">
-
+   @import url('https://fonts.googleapis.com/css?family=Raleway');
       .login {
         color: aqua;
       }
@@ -33,7 +33,9 @@
       .sign-in {
         color: aqua;
       }
-
+      .raleway {
+        font-family:'Raleway', 'sans-serif';
+      }
       .practice-box{
           box-shadow: 1px 1px 1px #888888;
           padding: 12px;
@@ -91,20 +93,20 @@
           color: black;
           border-radius: 2px;
           background-color: white;
-          height: 150px;
+          height: 120px;
           width: 800px;
-          padding: 12px;
+          padding: 6px;
           min-width: 600px;
       }
 
       .green{
         border: none;
         color: white;
-        padding: 15px 32px;
+        padding: 4px 20px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 16px;
+        font-size: 15px;
         float: right;
         background-color: #4CAF50;
         -webkit-transition-duration: 0.4s; /* Safari */
@@ -121,7 +123,6 @@
           margin-top: 8px;
           color: black;
       }
-
       a.button {
           -webkit-appearance: button;
           -moz-appearance: button;
@@ -212,7 +213,7 @@
 </section>
 
 <div id="Leaderboard" class="raleway" style="text-align:center; margin-top:150px; color:aqua;margin-bottom:px;"><h1>Practice</h1></div>
-                <div class="container" >
+                <div class="container raleway" >
                     <p style="color:grey;text-align:center;margin-top:20px;">Practicing Topic : <span style="color:white"> &nbsp;{{ section.track }} - {{ section.name }} </span></p>
 
                     <div class="line"></div>
@@ -239,14 +240,14 @@
                         <tr ng-repeat="x in myObj2" class="table_options">
                         <td >
                         <div class="question-box">
-                            <h3 class="question">{{x.question}}</h3>
-                            <p><span style="color:#1C363E;font-weight:500">Difficulty: {{x.difficulty}}</span> </p>
+                            <h5 class="question" style="margin-left:4px;margin-top:4px">{{x.question}}</h3>
+                            <p><span style="color:#1C363E;font-weight:500;font-size:15px;margin-left:4px;">{{x.difficulty}}</span> </p>
 
-                            <div class="usually">
-                                Takes Usually : <span style="color:grey">{{x.usually}}</span>
+                            <div class="usually" style="font-size:15px !important;margin-left:4px;">
+                                <span style="color:black">{{x.usually}}</span> tabs
                             </div>
 
-                            <a class="green" id="button" href={{x.link}}>Attempt</a>
+                            <a class="green" style="font-weight:800" id="button" href={{x.link}}>Attempt</a>
 
                         </div>
                       {% endverbatim %}
@@ -369,7 +370,7 @@
 
           var questions = []
           {% for x in section.question_set.all %}
-            questions.push({usually:"10 min", question:'{{ x.question }}', link:"{% url 'practice:question' track=track subdomain=section.name question=x.question|custom_url %}", difficulty:"Easy"},)
+            questions.push({usually:"10", question:'{{ x.question }}', link:"{% url 'practice:question' track=track subdomain=section.name question=x.question|custom_url %}", difficulty:"Easy"},)
           {% endfor %}
 
            var app = angular.module("myApp",[]);
