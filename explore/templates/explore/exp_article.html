@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html >
 <head>
-  {% load custom_url %}
   <!-- Site made with Mobirise Website Builder v4.6.7, https://mobirise.com -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,11 +8,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assets/images/imageedit-2.gif" type="image/x-icon">
   <meta name="description" content="">
-  <title>Practice</title>
+  <title>Explore</title>
+<!--
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css"> -->
 
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
   {% load staticfiles %}
+    <style>
+        .claa{
+            background-image: url()
+        }
+        .question-box{
+            width:800px;
+            margin-bottom: 20px;
+            background-color: white;
+            height:800px;
+        }
+        #container{
+            position: relative;
+            width: 100%;
+        }
+        .main_image{
+            width:100%;
+            position: absolute;
+            padding: 16px;
+            height:400px;
+            opacity: 1;
+            margin-top: 12px;
+            border-radius: 4px 4px 0px 0px;
+            background-image: url(https://spectrum.ieee.org/image/MzA2NzUxNA.jpeg);
+            background-position: center center;
+            background-size: cover;
+            -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+        }
+        .heading{
+           position: absolute;
+           color: white;
+           padding: 16px;
+           z-index: 10;
+        }
+        .main_content{
+            width:100%;
+            margin-top: 40px;
+            height: 400px;
+            padding: 16px;
+            background-color: white;
+            font: black;
+            border-radius: 0px 0px 4px 4px;
+        }
+    </style>
+    <script >
+
+
+      </script>
   <link rel="stylesheet" type="text/css" href="{% static 'home/assets/web/assets/mobirise-icons/mobirise-icons.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'home/assets/tether/tether.min.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'home/assets/bootstrap/css/bootstrap.min.css' %}">
@@ -24,118 +81,18 @@
   <link rel="stylesheet" type="text/css" href="{% static 'home/assets/theme/css/style.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'home/assets/mobirise/css/mbr-additional.css' %}">
 
-  <style type="text/css">
-   @import url('https://fonts.googleapis.com/css?family=Raleway');
-      .login {
-        color: aqua;
-      }
 
-      .sign-in {
-        color: aqua;
-      }
-      .raleway {
-        font-family:'Raleway', 'sans-serif';
-      }
-      .practice-box{
-          box-shadow: 1px 1px 1px #888888;
-          padding: 12px;
-          border-radius: 4px;
-          color: white;
-          background-image: url('{% static "home/assets/images/markus-spiske-153537-unsplash.jpg" %}');
-          background-size: cover;
-          align-content: flex-end;
-          border-color: aliceblue;
-      }
-      .box{
-          width:80px;
-          height: 1px;
-          background-color: aqua;
-          margin: auto;
-      }
-      .line{
-          width: 40%;
-          height: 1px;
-          background-color: aqua;
-          margin: auto;
-      }
+<style>
+    .table_optionsA{
+      width: 200px;
+      height: 200px;
+      margin-bottom: 0px;
+    }
 
-     .practice-box:hover {
-         transition: 0.5s;
-          transform: translate(0, -5px);
-      }
+</style>
 
-      .table_options{
-          color:aliceblue;
-          margin-left: 12px;
-      }
-
-      .table_first{
-          background-color: aqua;
-          width: 10px;
-          height:5px;
-      }
-
-      table {
-            border-collapse: collapse;
-      }
-
-      td {
-            padding-top: 10px;
-            padding-bottom: 10px;
-      }
-
-      .box2{
-          margin-left: 80px;
-      }
-
-      .question-box{
-          border: solid white;
-          color: black;
-          border-radius: 2px;
-          background-color: white;
-          height: 120px;
-          width: 800px;
-          padding: 6px;
-          min-width: 600px;
-      }
-
-      .green{
-        border: none;
-        color: white;
-        padding: 4px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 15px;
-        float: right;
-        background-color: #4CAF50;
-        -webkit-transition-duration: 0.4s; /* Safari */
-        transition-duration: 0.4s;
-      }
-
-      .green:hover {
-        background-color: #119137; /* Green */
-        color: white;
-      }
-
-       .usually{
-          float: left;
-          margin-top: 8px;
-          color: black;
-      }
-      a.button {
-          -webkit-appearance: button;
-          -moz-appearance: button;
-          appearance: button;
-
-          text-decoration: none;
-          color: initial;
-      }
-
-  </style>
 </head>
-
-<body style="background:#1C363E">
+<body style="background:#1C363E;font-family:'Raleway', 'sans-serif'">
 
   <section class="menu cid-qNIIFHaxZY" once="menu" id="menu1-e">
 
@@ -191,12 +148,17 @@
               </li>
 
               {% if user.username %}
-                <li class="nav-item">
-                  <a class="nav-link link login display-4" href="" aria-expanded="false">{{ user.username }}</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link link sign-in display-4" href="{% url 'home:logout_user' %}" aria-expanded="false">logout</a>
-                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link link dropdown-toggle display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false" style="color:aqua">{{user.username}}</a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item text-white display-4" href="" aria-expanded="false"></a>
+                          <div class="">
+                            <a class="dropdown-item text-white display-4" href="{% url 'home:logout_user' %}" aria-expanded="false" >Logout</a>
+                            <div style="width:80%;height:1px;background:white;margin:auto"></div>
+                            <a class="dropdown-item text-white display-4"  aria-expanded="false"><span style="color:aqua">28</span> Points</a>
+                          </div>
+                      </div>
+              </li>
               {% else %}
                 <li class="nav-item">
                   <a class="nav-link link login display-4" href="{% url 'home:login' %}" aria-expanded="false">Login</a>
@@ -212,59 +174,59 @@
     </nav>
 </section>
 
-<div id="Leaderboard" class="raleway" style="text-align:center; margin-top:150px; color:aqua;margin-bottom:px;"><h1>Practice</h1></div>
-                <div class="container raleway" >
-                    <p style="color:grey;text-align:center;margin-top:20px;">Practicing Topic : <span style="color:white"> &nbsp;{{ section.track }} - {{ section.name }} </span></p>
+<div id="Leaderboard" class="raleway" style="text-align:center; margin-top:150px; color:aqua;margin-bottom:px;"><h1>Explore</h1></div>
+                <div class="container" >
+                    <p style="color:grey;text-align:center;margin-top:20px;">Topic :  <span style="color:white"> &nbsp;How To Develop a Chatbot From Scratch </span></p>
 
                     <div class="line"></div>
 
 
                   {% verbatim %}
-                    <div class="row" style="margin-bottom:20px;" ng-app="myApp" ng-controller="myCtrl" ng-cloak >
-
-                        <table>
-                    <tr>
-                        <td></td>
-                        <td style="color:aqua;margin-top:20px;font-size:20px">Subdomains</td>
-                        <td></td>
-                    </tr>
-                    <tr ng-repeat="x in myObj" class="table_options">
-                        <td style="background-color:aqua;width:1px;opacity:0" ng-style="{ 'background' : (x.selection == 'yes') ? 'aqua' : '#1C363E'}"></td>
-                        <td ng-click="update(x)" ng-style="{ 'color' : (x.selection == 'yes') ? 'white' : 'white',
-                                      'border' : (x.selection == 'yes') ? 'solid aqua' : '0px'}" class="table1">&nbsp;&nbsp;&nbsp;<a href={{x.link}}>{{x.name}}</a></td>
-                    </tr>
-                        </table>
-                                                                                                <div class="box2"></div>
-                        <table>
-                                        <td style="color:aqua;top:20px;font-size:20px">Questions</td>
-                        <tr ng-repeat="x in myObj2" class="table_options">
-                        <td >
-                        <div class="question-box">
-                            <h5 class="question" style="margin-left:4px;margin-top:4px">{{x.question}}</h3>
-                            <p><span style="color:#1C363E;font-weight:500;font-size:15px;margin-left:4px;">{{x.difficulty}}</span> </p>
-
-                            <div class="usually" style="font-size:15px !important;margin-left:4px;">
-                                <span style="color:black">{{x.usually}}</span> tabs
+                    <div class="row" style="margin-bottom:20px;" ng-app="myApp" ng-controller="myCtrl" >
+                        <div class="box2"></div>
+                        <table style="margin-left:40px">
+                          <tr>
+                            <div id="container">
+                              <div class="main_image"></div>
+                              <h2 class="heading" style="margin-top:250px">How to Develop a <br> Chatbot from Scratch</h1>
+                              <p style="color:black;margin-top:320px;padding:16px;color:white">By Sanyog Ghosh</p>
                             </div>
+                          </tr>
+                          <tr>
+                            <div class="main_content">
+                              <p>Those interactions can be straightforward, like asking a bot about the weather report, or more complex, like having a bot troubleshoot a problem with your internet service.
 
-                            <a class="green" style="font-weight:800" id="button" href={{x.link}}>Attempt</a>
+Here are some tutorials to get you started:
 
-                        </div>
-                      {% endverbatim %}
-                        </td>
-                        </tr>
+    If you are a beginner, read articles on Chatbot Magazine or start with “The Complete Guide To Chatbots — Development To Promotions.”
+    Prepare a chatbot conversation — “How to design a conversation for chatbot?” and “Design Framework for Chatbots.”
+    For building a chatbot, read “The Complete Guide To Bot Frameworks” and “14 most powerful platforms to build a chatbot.”
+    For business — 100 Best Bots For Brands & Businesses
+    For making an AI based intelligent chatbot — “How to make chatbot intelligent?”
+    NLP & Machine Learning Tutorial with Code & Github: “Ultimate Guide to Leveraging NLP & Machine Learning for your Chatbot”
+
+We have written this answer for a generic chatbot which can be published on any platform such as Facebook, Kik, Slack, Telegram or website.
+
+The following steps will be helpful when developing a chatbot:
+
+    Identify the opportunities for an AI-based chatbot
+    Understanding what are the goals of building a chatbot
+    Designing a chatbot conversation
+    Building a chatbot using frameworks or development (non-coding) platforms
+
+1. Identify the Opportunities For an AI-Based Chatbot
+
+Before building a chatbot, you should first understand the opportunities for an AI-based chatbot.</p>
+                            </div>
+                          </tr>
                         </table>
                       </div>
                 </div>
+              {% endverbatim %}
 
-
-  <section class="engine"><a href="https://mobirise.ws">Mobirise</a></section><script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <section class="engine"><a href="https://mobirise.ws">Mobirise</a></section>
 
 <section class="footer4 cid-qNJ6q8uWVQ" id="footer4-p">
-
-
-
-
 
     <div class="container">
         <div class="media-container-row content mbr-white">
@@ -274,9 +236,9 @@
                         <img src="{% static 'home/assets/images/imageedit-2.gif' %}" alt="Mobirise" title="">
                     </a>
                 </div>
-                <a href="{% url 'home:index' %}" class="text-white">
+                <p class="mb-3 mbr-fonts-style foot-title display-7">
                     TabOverSpace
-                </a><br><br>
+                </p>
                 <a href="#" class="text-white">Compete</a><br>
                 <a href="{% url 'explore:index' %}" class="text-white">Explore</a><br>
                 <a href="{% url 'practice:index' %}" class="text-white">Practice</a><br>
@@ -342,85 +304,6 @@
     </div>
 </section>
 
-<script>
-          // var list = []
-          var subdomains = []
-          {% for x in section.track.subdomain_set.all %}
-            // list.push('{{ x.name }}')
-            subdomains.push({selection:"no", name:'{{ x.name }}', link:"{% url 'practice:subdomain' track=track subdomain=x.name %}"},)
-          {% endfor %}
-          /*
-          var subdomains = [
-
-            {selection:"no", name:list[0], link:"{% url 'practice:subdomain' track=track subdomain='warmup' %}"},
-            {selection:"no", name:list[1],link:"{% url 'practice:subdomain' track=track subdomain='implementation' %}"},
-            {selection:"no", name:list[2], link:"{% url 'practice:subdomain' track=track subdomain='strings' %}"},
-            {selection:"no", name:list[3], link:"{% url 'practice:subdomain' track=track subdomain='sorting' %}"},
-            {selection:"no", name:list[4], link:"{% url 'practice:subdomain' track=track subdomain='search' %}"},
-            {selection:"no", name:list[5],link:"{% url 'practice:subdomain' track=track subdomain='greedy' %}"},
-            {selection:"no", name:list[6], link:"{% url 'practice:subdomain' track=track subdomain='recursion' %}"},
-
-          ]
-          */
-          for (var x = 0; x < subdomains.length; x++) {
-            if (subdomains[x].name=='{{ section.name }}') {
-                subdomains[x].selection = 'yes';
-            }
-          }
-
-          var questions = []
-          {% for x in section.question_set.all %}
-            questions.push({usually:"10", question:'{{ x.question }}', link:"{% url 'practice:question' track=track subdomain=section.name question=x.question|custom_url %}", difficulty:"Easy"},)
-          {% endfor %}
-
-           var app = angular.module("myApp",[]);
-               app.controller("myCtrl", function($scope){
-
-                   $scope.myObj = subdomains
-
-                   /*
-                   $scope.update = function(x) {
-			                  for(var i = 0; i<$scope.myObj.length; i++){
-				                $scope.myObj[i].selection = 'no';
-			                  }
-			                  x.selection = 'yes'
-
-		               }
-                   */
-
-                    /*
-                    $scope.myObj2 = [
-                      {usually:"10 min", question:"Solve Me First", link:"", difficulty:"Easy"},
-                      {usually:"20 min", question:"Simple Array Sum",link:"", difficulty:"Moderate"},
-                      {usually:"30 min", question:"Compare the Triplets", link:"", difficulty:"Hard"},
-                      {usually:"35 min", question:"A Very Big Sum", link:"", difficulty:"Hard"},
-                      {usually:"15 min", question:"Diagonal Difference", points:"20", link:"", difficulty:"Easy"},
-                      {usually:"20 min", question:"Plus Minus", points:"1", link:"", difficulty:"Moderate"},
-                      {usually:"10 min", question:"Staircase", points:"0", link:"", difficulty:"Easy"},
-                      {usually:"25 min", question:"Mini-Max Sum", link:"", difficulty:"Moderate"},
-                      {usually:"20 min", question:"Birthday Cake Candles", link:"", difficulty:"Easy"}
-                   ]
-                  */
-                  $scope.myObj2 = questions
-
-
-               });
-    </script>
-
-    <script>
-
-      $('.table1').click(function() {
-        var id1 = this.id;
-      	var all = document.getElementsByClassName('table1');
-        for (var i = 0; i < all.length; i++) {
-        		all[i].style.border = 'none';
-        }
-        document.getElementById(id1).style.border = 'solid aqua';
-        });
-
-
-
-   </script>
 
   {% load staticfiles %}
   <script type="text/javascript" src="{% static 'home/assets/web/assets/jquery/jquery.min.js' %}"></script>
