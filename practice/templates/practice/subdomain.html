@@ -25,112 +25,112 @@
   <link rel="stylesheet" type="text/css" href="{% static 'home/assets/mobirise/css/mbr-additional.css' %}">
 
   <style type="text/css">
-   @import url('https://fonts.googleapis.com/css?family=Raleway');
-      .login {
-        color: aqua;
-      }
+  @import url('https://fonts.googleapis.com/css?family=Raleway');
+  .login {
+    color: aqua;
+  }
 
-      .sign-in {
-        color: aqua;
-      }
-      .raleway {
-        font-family:'Raleway', 'sans-serif';
-      }
-      .practice-box{
-          box-shadow: 1px 1px 1px #888888;
-          padding: 12px;
-          border-radius: 4px;
-          color: white;
-          background-image: url('{% static "home/assets/images/markus-spiske-153537-unsplash.jpg" %}');
-          background-size: cover;
-          align-content: flex-end;
-          border-color: aliceblue;
-      }
-      .box{
-          width:80px;
-          height: 1px;
-          background-color: aqua;
-          margin: auto;
-      }
-      .line{
-          width: 40%;
-          height: 1px;
-          background-color: aqua;
-          margin: auto;
-      }
+  .sign-in {
+    color: aqua;
+  }
+  .raleway {
+    font-family:'Raleway', 'sans-serif';
+  }
+  .practice-box{
+    box-shadow: 1px 1px 1px #888888;
+    padding: 12px;
+    border-radius: 4px;
+    color: white;
+    background-image: url('{% static "home/assets/images/markus-spiske-153537-unsplash.jpg" %}');
+    background-size: cover;
+    align-content: flex-end;
+    border-color: aliceblue;
+  }
+  .box{
+    width:80px;
+    height: 1px;
+    background-color: aqua;
+    margin: auto;
+  }
+  .line{
+    width: 40%;
+    height: 1px;
+    background-color: aqua;
+    margin: auto;
+  }
 
-     .practice-box:hover {
-         transition: 0.5s;
-          transform: translate(0, -5px);
-      }
+  .practice-box:hover {
+    transition: 0.5s;
+    transform: translate(0, -5px);
+  }
 
-      .table_options{
-          color:aliceblue;
-          margin-left: 12px;
-      }
+  .table_options{
+    color:aliceblue;
+    margin-left: 12px;
+  }
 
-      .table_first{
-          background-color: aqua;
-          width: 10px;
-          height:5px;
-      }
+  .table_first{
+    background-color: aqua;
+    width: 10px;
+    height:5px;
+  }
 
-      table {
-            border-collapse: collapse;
-      }
+  table {
+    border-collapse: collapse;
+  }
 
-      td {
-            padding-top: 10px;
-            padding-bottom: 10px;
-      }
+  td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 
-      .box2{
-          margin-left: 80px;
-      }
+  .box2{
+    margin-left: 80px;
+  }
 
-      .question-box{
-          border: solid white;
-          color: black;
-          border-radius: 2px;
-          background-color: white;
-          height: 120px;
-          width: 800px;
-          padding: 6px;
-          min-width: 600px;
-      }
+  .question-box{
+    border: solid white;
+    color: black;
+    border-radius: 2px;
+    background-color: white;
+    height: 120px;
+    width: 800px;
+    padding: 6px;
+    min-width: 600px;
+  }
 
-      .green{
-        border: none;
-        color: white;
-        padding: 4px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 15px;
-        float: right;
-        background-color: #4CAF50;
-        -webkit-transition-duration: 0.4s; /* Safari */
-        transition-duration: 0.4s;
-      }
+  .green{
+    border: none;
+    color: white;
+    padding: 4px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    float: right;
+    background-color: #4CAF50;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }
 
-      .green:hover {
-        background-color: #119137; /* Green */
-        color: white;
-      }
+  .green:hover {
+    background-color: #119137; /* Green */
+    color: white;
+  }
 
-       .usually{
-          float: left;
-          margin-top: 8px;
-          color: black;
-      }
-      a.button {
-          -webkit-appearance: button;
-          -moz-appearance: button;
-          appearance: button;
+  .usually{
+    float: left;
+    margin-top: 8px;
+    color: black;
+  }
+  a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
 
-          text-decoration: none;
-          color: initial;
-      }
+    text-decoration: none;
+    color: initial;
+  }
 
   </style>
 </head>
@@ -142,215 +142,276 @@
 
 
     <nav   class="navbar navbar-expand beta-menu navbar-dropdown  navbar-fixed-top navbar-toggleable-sm bg-color transparent">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </button>
-        <div class="menu-logo">
-            <div class="navbar-brand">
-                <span class="navbar-logo">
-                    <a href="{% url 'home:index' %}">
-                         <img src="{% static 'home/assets/images/imageedit-2.gif' %}" title="" style="height: 3.8rem;">
-                    </a>
-                </span>
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="{% url 'home:index' %}">
-                        TabOverSpace</a></span>
-            </div>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+
+            <li class="nav-item dropdown">
+              <a class="nav-link link dropdown-toggle display-4" style="color:white" href="" data-toggle="dropdown-submenu" aria-expanded="false"><span class="mbri-edit2 mbr-iconfont mbr-iconfont-btn"></span>Practice</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item text-white display-4" href="" aria-expanded="false"></a>
+                <div class="dropdown">
+                  <a class="dropdown-item dropdown-toggle text-white display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false">Programming Languages</a>
+                  <div class="dropdown-menu dropdown-submenu">
+                    <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='java' subdomain='advanced' %}">Java</a>
+                    <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='python' subdomain='classes' %}">Python</a>
+                    <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='cpp' subdomain='introduction' %}">C++</a>
+                  </div>
+                </div>
+                <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='algorithms' subdomain='warmup' %}" aria-expanded="false">Algorithms<br></a>
+                <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='data_structures' subdomain='advanced' %}" aria-expanded="false">Data-Structures</a>
+                <a class="dropdown-item text-white display-4" href="" aria-expanded="false">BioInformatics</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link text-white display-4" href="" aria-expanded="false"><span class="mbri-edit mbr-iconfont mbr-iconfont-btn"></span>Simulation</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link link text-white display-4" href="{% url 'leaderboard:index' %}" aria-expanded="false"><span class="mbri-rocket mbr-iconfont mbr-iconfont-btn"></span>Leaderboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link text-white display-4" href="{% url 'explore:index' %}" aria-expanded="false"><span class="mbri-globe mbr-iconfont mbr-iconfont-btn"></span>Explore</a>
+            </li>
+
+            {% if user.username %}
+            <li class="nav-item dropdown">
+              <a class="nav-link link dropdown-toggle display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false" style="color:aqua">{{user.username}}</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item text-white display-4" href="" aria-expanded="false"></a>
+                <div class="">
+                  <a class="dropdown-item text-white display-4" href="{% url 'home:logout_user' %}" aria-expanded="false" >Logout</a>
+                  <div style="width:80%;height:1px;background:white;margin:auto"></div>
+                  <a class="dropdown-item text-white display-4"  aria-expanded="false"><span style="color:aqua">28</span> Points</a>
+                </div>
+              </div>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link link login display-4" href="{% url 'home:login' %}" aria-expanded="false">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link sign-in display-4" href="{% url 'home:register' %}" aria-expanded="false">Sign Up</a>
+            </li>
+            {% endif %}
+
+          </ul>
+
+        </button>
+        <div class="menu-logo">
+          <div class="navbar-brand">
+            <span class="navbar-logo">
+              <a href="{% url 'home:index' %}">
+                <img src="{% static 'home/assets/images/imageedit-2.gif' %}" title="" style="height: 3.8rem;">
+              </a>
+            </span>
+            <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="{% url 'home:index' %}">
+              TabOverSpace</a></span>
+            </div>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+
+              <li class="nav-item dropdown">
+                <a class="nav-link link dropdown-toggle text-white display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false"><span class="mbri-edit2 mbr-iconfont mbr-iconfont-btn"></span>Practice</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item text-white display-4" href="" aria-expanded="false"></a>
+                  <div class="dropdown">
+                    <a class="dropdown-item dropdown-toggle text-white display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false">Programming Languages</a>
+                    <div class="dropdown-menu dropdown-submenu">
+                      <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='java' subdomain='advanced' %}">Java</a>
+                      <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='python' subdomain='classes' %}">Python</a>
+                      <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='cpp' subdomain='introduction' %}">C++</a>
+                    </div>
+                  </div>
+                  <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='algorithms' subdomain='warmup' %}" aria-expanded="false">Algorithms<br></a>
+                  <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='data_structures' subdomain='advanced' %}" aria-expanded="false">Data-Structures</a>
+                  <a class="dropdown-item text-white display-4" href="" aria-expanded="false">BioInformatics</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link text-white display-4" href="" aria-expanded="false"><span class="mbri-edit mbr-iconfont mbr-iconfont-btn"></span>Simulation</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link link text-white display-4" href="{% url 'leaderboard:index' %}" aria-expanded="false"><span class="mbri-rocket mbr-iconfont mbr-iconfont-btn"></span>Leaderboard</a>
+              </li>
               <li class="nav-item">
                 <a class="nav-link link text-white display-4" href="{% url 'explore:index' %}" aria-expanded="false"><span class="mbri-globe mbr-iconfont mbr-iconfont-btn"></span>Explore</a>
               </li>
-              <li class="nav-item dropdown">
-                    <a class="nav-link link dropdown-toggle display-4" style="color:white" href="" data-toggle="dropdown-submenu" aria-expanded="false"><span class="mbri-edit2 mbr-iconfont mbr-iconfont-btn"></span>Practice</a>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item text-white display-4" href="" aria-expanded="false"></a>
-                          <div class="dropdown">
-                            <a class="dropdown-item dropdown-toggle text-white display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false">Programming Languages</a>
-                            <div class="dropdown-menu dropdown-submenu">
-                              <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='java' subdomain='advanced' %}">Java</a>
-                              <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='python' subdomain='classes' %}">Python</a>
-                              <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='cpp' subdomain='introduction' %}">C++</a>
-                            </div>
-                          </div>
-                        <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='algorithms' subdomain='warmup' %}" aria-expanded="false">Algorithms<br></a>
-                        <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='data_structures' subdomain='advanced' %}" aria-expanded="false">Data-Structures</a>
-                        <a class="dropdown-item text-white display-4" href="" aria-expanded="false">BioInformatics</a>
-                      </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link link text-white display-4" href="{% url 'leaderboard:index' %}" aria-expanded="false"><span class="mbri-rocket mbr-iconfont mbr-iconfont-btn"></span>Leaderboard &nbsp;&nbsp;</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link link text-white display-4" href="" aria-expanded="false"><span class="socicon socicon-myspace mbr-iconfont mbr-iconfont-btn"></span>Compete</a>
-              </li>
 
               {% if user.username %}
-                <li class="nav-item">
-                  <a class="nav-link link login display-4" href="" aria-expanded="false">{{ user.username }}</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link link sign-in display-4" href="{% url 'home:logout_user' %}" aria-expanded="false">logout</a>
-                </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link link dropdown-toggle display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false" style="color:aqua">{{user.username}}</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item text-white display-4" href="" aria-expanded="false"></a>
+                  <div class="">
+                    <a class="dropdown-item text-white display-4" href="{% url 'home:logout_user' %}" aria-expanded="false" >Logout</a>
+                    <div style="width:80%;height:1px;background:white;margin:auto"></div>
+                    <a class="dropdown-item text-white display-4"  aria-expanded="false"><span style="color:aqua">28</span> Points</a>
+                  </div>
+                </div>
+              </li>
               {% else %}
-                <li class="nav-item">
-                  <a class="nav-link link login display-4" href="{% url 'home:login' %}" aria-expanded="false">Login</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link link sign-in display-4" href="{% url 'home:register' %}" aria-expanded="false">Sign Up</a>
-                </li>
+              <li class="nav-item">
+                <a class="nav-link link login display-4" href="{% url 'home:login' %}" aria-expanded="false">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link sign-in display-4" href="{% url 'home:register' %}" aria-expanded="false">Sign Up</a>
+              </li>
               {% endif %}
 
             </ul>
 
+          </div>
+        </nav>
+      </section>
+
+      <div id="Leaderboard" class="raleway" style="text-align:center; margin-top:150px; color:aqua;margin-bottom:px;"><h1>Practice</h1></div>
+      <div class="container raleway" >
+        <p style="color:grey;text-align:center;margin-top:20px;">Practicing Topic : <span style="color:white"> &nbsp;{{ section.track }} - {{ section.name }} </span></p>
+
+        <div class="line"></div>
+
+
+        {% verbatim %}
+        <div class="row" style="margin-bottom:20px;" ng-app="myApp" ng-controller="myCtrl" ng-cloak >
+
+          <table>
+            <tr>
+              <td></td>
+              <td style="color:aqua;margin-top:20px;font-size:20px">Subdomains</td>
+              <td></td>
+            </tr>
+            <tr ng-repeat="x in myObj" class="table_options">
+              <td style="background-color:aqua;width:1px;opacity:0" ng-style="{ 'background' : (x.selection == 'yes') ? 'aqua' : '#1C363E'}"></td>
+              <td ng-click="update(x)" ng-style="{ 'color' : (x.selection == 'yes') ? 'white' : 'white',
+              'border' : (x.selection == 'yes') ? 'solid aqua' : '0px'}" class="table1">&nbsp;&nbsp;&nbsp;<a href={{x.link}}>{{x.name}}</a></td>
+            </tr>
+          </table>
+          <div class="box2"></div>
+          <table>
+            <td style="color:aqua;top:20px;font-size:20px">Questions</td>
+            <tr ng-repeat="x in myObj2" class="table_options">
+              <td >
+                <div class="question-box">
+                  <h5 class="question" style="margin-left:4px;margin-top:4px">{{x.question}}</h3>
+                    <p><span style="color:#1C363E;font-weight:500;font-size:15px;margin-left:4px;">{{x.difficulty}}</span> </p>
+
+                    <div class="usually" style="font-size:15px !important;margin-left:4px;">
+                      <span style="color:black">{{x.usually}}</span> tabs
+                    </div>
+
+                    <a class="green" style="font-weight:800" id="button" href={{x.link}}>Attempt</a>
+
+                  </div>
+                  {% endverbatim %}
+                </td>
+              </tr>
+            </table>
+          </div>
         </div>
-    </nav>
-</section>
-
-<div id="Leaderboard" class="raleway" style="text-align:center; margin-top:150px; color:aqua;margin-bottom:px;"><h1>Practice</h1></div>
-                <div class="container raleway" >
-                    <p style="color:grey;text-align:center;margin-top:20px;">Practicing Topic : <span style="color:white"> &nbsp;{{ section.track }} - {{ section.name }} </span></p>
-
-                    <div class="line"></div>
 
 
-                  {% verbatim %}
-                    <div class="row" style="margin-bottom:20px;" ng-app="myApp" ng-controller="myCtrl" ng-cloak >
+        <section class="engine"><a href="https://mobirise.ws">Mobirise</a></section><script src="assets/web/assets/jquery/jquery.min.js"></script>
 
-                        <table>
-                    <tr>
-                        <td></td>
-                        <td style="color:aqua;margin-top:20px;font-size:20px">Subdomains</td>
-                        <td></td>
-                    </tr>
-                    <tr ng-repeat="x in myObj" class="table_options">
-                        <td style="background-color:aqua;width:1px;opacity:0" ng-style="{ 'background' : (x.selection == 'yes') ? 'aqua' : '#1C363E'}"></td>
-                        <td ng-click="update(x)" ng-style="{ 'color' : (x.selection == 'yes') ? 'white' : 'white',
-                                      'border' : (x.selection == 'yes') ? 'solid aqua' : '0px'}" class="table1">&nbsp;&nbsp;&nbsp;<a href={{x.link}}>{{x.name}}</a></td>
-                    </tr>
-                        </table>
-                                                                                                <div class="box2"></div>
-                        <table>
-                                        <td style="color:aqua;top:20px;font-size:20px">Questions</td>
-                        <tr ng-repeat="x in myObj2" class="table_options">
-                        <td >
-                        <div class="question-box">
-                            <h5 class="question" style="margin-left:4px;margin-top:4px">{{x.question}}</h3>
-                            <p><span style="color:#1C363E;font-weight:500;font-size:15px;margin-left:4px;">{{x.difficulty}}</span> </p>
-
-                            <div class="usually" style="font-size:15px !important;margin-left:4px;">
-                                <span style="color:black">{{x.usually}}</span> tabs
-                            </div>
-
-                            <a class="green" style="font-weight:800" id="button" href={{x.link}}>Attempt</a>
-
-                        </div>
-                      {% endverbatim %}
-                        </td>
-                        </tr>
-                        </table>
-                      </div>
-                </div>
-
-
-  <section class="engine"><a href="https://mobirise.ws">Mobirise</a></section><script src="assets/web/assets/jquery/jquery.min.js"></script>
-
-<section class="footer4 cid-qNJ6q8uWVQ" id="footer4-p">
+        <section class="footer4 cid-qNJ6q8uWVQ" id="footer4-p">
 
 
 
 
 
-    <div class="container">
-        <div class="media-container-row content mbr-white">
-            <div class="col-md-3 col-sm-4">
+          <div class="container">
+            <div class="media-container-row content mbr-white">
+              <div class="col-md-3 col-sm-4">
                 <div class="mb-3 img-logo">
-                    <a href="">
-                        <img src="{% static 'home/assets/images/imageedit-2.gif' %}" alt="Mobirise" title="">
-                    </a>
+                  <a href="">
+                    <img src="{% static 'home/assets/images/imageedit-2.gif' %}" alt="Mobirise" title="">
+                  </a>
                 </div>
                 <a href="{% url 'home:index' %}" class="text-white">
-                    TabOverSpace
+                  TabOverSpace
                 </a><br><br>
                 <a href="#" class="text-white">Compete</a><br>
                 <a href="{% url 'explore:index' %}" class="text-white">Explore</a><br>
                 <a href="{% url 'practice:index' %}" class="text-white">Practice</a><br>
                 <a href="{% url 'leaderboard:index' %}" class="text-white">Leaderboard</a>
-            </div>
-            <div class="col-md-4 col-sm-8">
+              </div>
+              <div class="col-md-4 col-sm-8">
                 <p class="mb-4 foot-title mbr-fonts-style display-7">
-                    WHATS BREWING ?</p>
-                <p class="mbr-text mbr-fonts-style foot-text display-7">If you have any valuable suggestion for this website, please do drop us an email. We hope you dont face any unnecessary hack during coding.<br>
+                  WHATS BREWING ?</p>
+                  <p class="mbr-text mbr-fonts-style foot-text display-7">If you have any valuable suggestion for this website, please do drop us an email. We hope you dont face any unnecessary hack during coding.<br>
                     <br>If this site has inspired you and you want to be a part of it, we are open to candidates !</p>
-            </div>
-            <div class="col-md-4 offset-md-1 col-sm-12">
-                <p class="mb-4 foot-title mbr-fonts-style display-7">
-                    SUBSCRIBE
-                </p>
-                <p class="mbr-text mbr-fonts-style form-text display-7">
-                    Get monthly updates and free resources.
-                </p>
-                <div class="media-container-column" data-form-type="formoid">
-                    <div data-form-alert="" hidden="" class="align-center">
+                  </div>
+                  <div class="col-md-4 offset-md-1 col-sm-12">
+                    <p class="mb-4 foot-title mbr-fonts-style display-7">
+                      SUBSCRIBE
+                    </p>
+                    <p class="mbr-text mbr-fonts-style form-text display-7">
+                      Get monthly updates and free resources.
+                    </p>
+                    <div class="media-container-column" data-form-type="formoid">
+                      <div data-form-alert="" hidden="" class="align-center">
                         Thanks for filling out the form!
-                    </div>
+                      </div>
 
-                    <form class="form-inline" action="" method="post" data-form-title="Mobirise Form">
+                      <form class="form-inline" action="" method="post" data-form-title="Mobirise Form">
                         <input type="hidden" value="EiXLQG72fPCjZI8XXCehXc8S6yeCextEcVMbo0V1JfCQzLe3TDR4MLUAFLbgUYs+CGZW0Y39SIRd3oYJKaQf3HV+Wvva3bnaIc0zCwb9+nDz+4zrBmEEjyqDBoWHLYDH" data-form-email="true">
                         <div class="form-group">
-                            <input type="email" class="form-control input-sm input-inverse my-2" name="email" required="" data-form-field="Email" placeholder="Email" id="email-footer4-p">
+                          <input type="email" class="form-control input-sm input-inverse my-2" name="email" required="" data-form-field="Email" placeholder="Email" id="email-footer4-p">
                         </div>
                         <div class="input-group-btn m-2">
-                            <button href="" class="btn btn-primary display-4" type="submit" role="button">Subscribe</button>
+                          <button href="" class="btn btn-primary display-4" type="submit" role="button">Subscribe</button>
                         </div>
-                    </form>
+                      </form>
+                    </div>
+                    <p class="mb-4 mbr-fonts-style foot-title display-7">
+                      CONNECT WITH US
+                    </p>
+                    <div class="social-list pl-0 mb-0">
+                      <div class="soc-item">
+                        <a href="" target="_blank">
+                          <span class="mbr-iconfont mbr-iconfont-social socicon-linkedin socicon"></span>
+                        </a>
+                      </div>
+                      <div class="soc-item">
+                        <a href="" target="_blank">
+                          <span class="socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
+                        </a>
+                      </div>
+                      <div class="soc-item">
+                        <a href="" target="_blank">
+                          <span class="mbr-iconfont mbr-iconfont-social socicon-github socicon"></span>
+                        </a>
+                      </div>
+                      <div class="soc-item">
+                        <a href="" target="_blank">
+                          <span class="mbr-iconfont mbr-iconfont-social socicon-google socicon"></span>
+                        </a>
+                      </div>
+
+
+                    </div>
+                  </div>
                 </div>
-                <p class="mb-4 mbr-fonts-style foot-title display-7">
-                    CONNECT WITH US
-                </p>
-                <div class="social-list pl-0 mb-0">
-                        <div class="soc-item">
-                            <a href="" target="_blank">
-                                <span class="mbr-iconfont mbr-iconfont-social socicon-linkedin socicon"></span>
-                            </a>
-                        </div>
-                        <div class="soc-item">
-                            <a href="" target="_blank">
-                                <span class="socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
-                            </a>
-                        </div>
-                        <div class="soc-item">
-                            <a href="" target="_blank">
-                                <span class="mbr-iconfont mbr-iconfont-social socicon-github socicon"></span>
-                            </a>
-                        </div>
-                        <div class="soc-item">
-                            <a href="" target="_blank">
-                                <span class="mbr-iconfont mbr-iconfont-social socicon-google socicon"></span>
-                            </a>
-                        </div>
+              </div>
+            </section>
 
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<script>
-          // var list = []
-          var subdomains = []
-          {% for x in section.track.subdomain_set.all %}
+            <script>
+            // var list = []
+            var subdomains = []
+            {% for x in section.track.subdomain_set.all %}
             // list.push('{{ x.name }}')
             subdomains.push({selection:"no", name:'{{ x.name }}', link:"{% url 'practice:subdomain' track=track subdomain=x.name %}"},)
-          {% endfor %}
-          /*
-          var subdomains = [
+            {% endfor %}
+            /*
+            var subdomains = [
 
             {selection:"no", name:list[0], link:"{% url 'practice:subdomain' track=track subdomain='warmup' %}"},
             {selection:"no", name:list[1],link:"{% url 'practice:subdomain' track=track subdomain='implementation' %}"},
@@ -364,76 +425,76 @@
           */
           for (var x = 0; x < subdomains.length; x++) {
             if (subdomains[x].name=='{{ section.name }}') {
-                subdomains[x].selection = 'yes';
+              subdomains[x].selection = 'yes';
             }
           }
 
           var questions = []
           {% for x in section.question_set.all %}
-            questions.push({usually:"10", question:'{{ x.question }}', link:"{% url 'practice:question' track=track subdomain=section.name question=x.question|custom_url %}", difficulty:"Easy"},)
+          questions.push({usually:"10", question:'{{ x.question }}', link:"{% url 'practice:question' track=track subdomain=section.name question=x.question|custom_url %}", difficulty:"Easy"},)
           {% endfor %}
 
-           var app = angular.module("myApp",[]);
-               app.controller("myCtrl", function($scope){
+          var app = angular.module("myApp",[]);
+          app.controller("myCtrl", function($scope){
 
-                   $scope.myObj = subdomains
+            $scope.myObj = subdomains
 
-                   /*
-                   $scope.update = function(x) {
-			                  for(var i = 0; i<$scope.myObj.length; i++){
-				                $scope.myObj[i].selection = 'no';
-			                  }
-			                  x.selection = 'yes'
+            /*
+            $scope.update = function(x) {
+            for(var i = 0; i<$scope.myObj.length; i++){
+            $scope.myObj[i].selection = 'no';
+          }
+          x.selection = 'yes'
 
-		               }
-                   */
+        }
+        */
 
-                    /*
-                    $scope.myObj2 = [
-                      {usually:"10 min", question:"Solve Me First", link:"", difficulty:"Easy"},
-                      {usually:"20 min", question:"Simple Array Sum",link:"", difficulty:"Moderate"},
-                      {usually:"30 min", question:"Compare the Triplets", link:"", difficulty:"Hard"},
-                      {usually:"35 min", question:"A Very Big Sum", link:"", difficulty:"Hard"},
-                      {usually:"15 min", question:"Diagonal Difference", points:"20", link:"", difficulty:"Easy"},
-                      {usually:"20 min", question:"Plus Minus", points:"1", link:"", difficulty:"Moderate"},
-                      {usually:"10 min", question:"Staircase", points:"0", link:"", difficulty:"Easy"},
-                      {usually:"25 min", question:"Mini-Max Sum", link:"", difficulty:"Moderate"},
-                      {usually:"20 min", question:"Birthday Cake Candles", link:"", difficulty:"Easy"}
-                   ]
-                  */
-                  $scope.myObj2 = questions
+        /*
+        $scope.myObj2 = [
+        {usually:"10 min", question:"Solve Me First", link:"", difficulty:"Easy"},
+        {usually:"20 min", question:"Simple Array Sum",link:"", difficulty:"Moderate"},
+        {usually:"30 min", question:"Compare the Triplets", link:"", difficulty:"Hard"},
+        {usually:"35 min", question:"A Very Big Sum", link:"", difficulty:"Hard"},
+        {usually:"15 min", question:"Diagonal Difference", points:"20", link:"", difficulty:"Easy"},
+        {usually:"20 min", question:"Plus Minus", points:"1", link:"", difficulty:"Moderate"},
+        {usually:"10 min", question:"Staircase", points:"0", link:"", difficulty:"Easy"},
+        {usually:"25 min", question:"Mini-Max Sum", link:"", difficulty:"Moderate"},
+        {usually:"20 min", question:"Birthday Cake Candles", link:"", difficulty:"Easy"}
+      ]
+      */
+      $scope.myObj2 = questions
 
 
-               });
+    });
     </script>
 
     <script>
 
-      $('.table1').click(function() {
-        var id1 = this.id;
-      	var all = document.getElementsByClassName('table1');
-        for (var i = 0; i < all.length; i++) {
-        		all[i].style.border = 'none';
-        }
-        document.getElementById(id1).style.border = 'solid aqua';
-        });
+    $('.table1').click(function() {
+      var id1 = this.id;
+      var all = document.getElementsByClassName('table1');
+      for (var i = 0; i < all.length; i++) {
+        all[i].style.border = 'none';
+      }
+      document.getElementById(id1).style.border = 'solid aqua';
+    });
 
 
 
-   </script>
+    </script>
 
-  {% load staticfiles %}
-  <script type="text/javascript" src="{% static 'home/assets/web/assets/jquery/jquery.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'home/assets/popper/popper.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'home/assets/tether/tether.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'home/assets/bootstrap/js/bootstrap.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'home/assets/smoothscroll/smooth-scroll.js' %}"></script>
-  <script type="text/javascript" src="{% static 'home/assets/touchswipe/jquery.touch-swipe.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'home/assets/parallax/jarallax.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'home/assets/viewportchecker/jquery.viewportchecker.js' %}"></script>
-  <script type="text/javascript" src="{% static 'home/assets/dropdown/js/script.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'home/assets/theme/js/script.js' %}"></script>
-  <script type="text/javascript" src="{% static 'home/assets/formoid/formoid.min.js' %}"></script>
+    {% load staticfiles %}
+    <script type="text/javascript" src="{% static 'home/assets/web/assets/jquery/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'home/assets/popper/popper.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'home/assets/tether/tether.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'home/assets/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'home/assets/smoothscroll/smooth-scroll.js' %}"></script>
+    <script type="text/javascript" src="{% static 'home/assets/touchswipe/jquery.touch-swipe.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'home/assets/parallax/jarallax.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'home/assets/viewportchecker/jquery.viewportchecker.js' %}"></script>
+    <script type="text/javascript" src="{% static 'home/assets/dropdown/js/script.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'home/assets/theme/js/script.js' %}"></script>
+    <script type="text/javascript" src="{% static 'home/assets/formoid/formoid.min.js' %}"></script>
 
-</body>
-</html>
+  </body>
+  </html>
