@@ -10,7 +10,7 @@
   <meta name="description" content="Web Site Generator Description">
   <title>Question</title>
 
-     {% load staticfiles %}
+  {% load staticfiles %}
   <link rel="stylesheet" type="text/css" href="{% static 'home/assets/web/assets/mobirise-icons/mobirise-icons.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'home/assets/tether/tether.min.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'home/assets/bootstrap/css/bootstrap.min.css' %}">
@@ -20,124 +20,133 @@
   <link rel="stylesheet" type="text/css" href="{% static 'home/assets/dropdown/css/style.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'home/assets/theme/css/style.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'home/assets/mobirise/css/mbr-additional.css' %}">
-   <script type="text/javascript" src="{% static 'home/assets/web/assets/jquery/jquery.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'home/assets/web/assets/jquery/jquery.min.js' %}"></script>
 
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
   <style type="text/css">
-          @import url('https://fonts.googleapis.com/css?family=Raleway');
+  @import url('https://fonts.googleapis.com/css?family=Raleway');
 
-                  .login{
+  .login{
 
-                      color: aqua;
-                  }
-                  .sign-in{
-                      color: aqua;
+    color: aqua;
+  }
+  .sign-in{
+    color: aqua;
 
-                  }
-      .practice-box{
-          box-shadow: 1px 1px 1px #888888;
-          padding: 12px;
-          border-radius: 4px;
-          color: white;
-          background-image: url(assets/images/markus-spiske-153537-unsplash.jpg);
-          background-size: cover;
-          align-content: flex-end;
-          border-color: aliceblue;
-      }
-      .box{
-          width:80px;
-          height: 1px;
-          background-color: aqua;
-          margin: auto;
-      }
-      .line{
-          width: 40%;
-          height: 1px;
-          background-color: aqua;
-          margin: auto;
-      }
+  }
+  .practice-box{
+    box-shadow: 1px 1px 1px #888888;
+    padding: 12px;
+    border-radius: 4px;
+    color: white;
+    background-image: url(assets/images/markus-spiske-153537-unsplash.jpg);
+    background-size: cover;
+    align-content: flex-end;
+    border-color: aliceblue;
+  }
+  .box{
+    width:80px;
+    height: 1px;
+    background-color: aqua;
+    margin: auto;
+  }
+  .line{
+    width: 40%;
+    height: 1px;
+    background-color: aqua;
+    margin: auto;
+  }
 
-     .practice-box:hover {
-         transition: 0.5s;
-          transform: translate(0, -5px);
-        }
-       #editor{
-          margin-top: 0px;
-          width:78%;
-          height:600px;
-          font-size: 20px;
-          padding: 12px;
-          box-shadow: 1px 1px 1px #888888;
-          border-radius: 7px;
-      }
-      .question-box{
-          width:500px;
-          height:800px;
-      }
-      .nav-tabs>.active>a, .nav-tabs>.active>a:hover, .nav-tabs>.active>a:focus {
+  .practice-box:hover {
+    transition: 0.5s;
+    transform: translate(0, -5px);
+  }
+  .editor{
+    margin-top: 0px;
+    width:670px;
+    height:800px;
+    font-size: 20px;
+    padding: 12px;
+    box-shadow: 1px 1px 1px #888888;
+    border-radius: 7px;
+  }
+  .question-box{
+    width:500px;
+    height:800px;
+  }
+  .nav-tabs>.active>a, .nav-tabs>.active>a:hover, .nav-tabs>.active>a:focus {
     border-color: aqua;
     color: aqua;
     border-bottom-color: transparent;
-}
-.nav-tabs {
-   border-bottom: 1px solid aqua;
-   padding-bottom: 12px;
+  }
+  .nav-tabs {
+    border-bottom: 1px solid aqua;
+    padding-bottom: 12px;
     color: aqua;
     padding-right: 12px;
-}
-      .question{
-          width: 100%;
-          height:100%;
-          padding-top: 16px;
-          padding-left: 16px;
-          padding-right:16px;
-          border-radius: 7px;
-          margin-bottom: 20px;
-          background-color: white;
-          color: black;
-          margin-top: 20px;
-      }
-
-          table {
-            border-collapse: collapse;
-        }
-
-        td {
-            padding-top: 10px;
-            padding-bottom: 8px;
-        }
-
-      #submit{
-           font-weight: 600;
-      }
-      .aiju{
-          background: aqua   !important;
-          border: solid aqua !important;
-          color : black !important;
-          font-weight: bold !important;
-      }
-      .width{
-          min-width: 1200px;
-      }
-     .dropdown-menu {
+  }
+  .question{
+    width: 100%;
+    height:100%;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-right:16px;
+    padding-bottom: 16px;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    background-color: white;
     color: black;
-}
+    margin-top: 20px;
+  }
 
-      body .ace_scrollbar {
+  table {
+    border-collapse: collapse;
+  }
+
+  td {
+    padding-top: 10px;
+    padding-bottom: 8px;
+  }
+
+  #submit{
+    font-weight: 600;
+  }
+  .aiju{
+    background: aqua   !important;
+    border: solid aqua !important;
+    color : black !important;
+    font-weight: bold !important;
+  }
+  .width{
+    min-width: 1200px;
+  }
+  .dropdown-menu {
+    color: black;
+  }
+
+  body .ace_scrollbar {
     -webkit-transition: opacity .3s ease-in-out;
-       -moz-transition: opacity .3s ease-in-out;
-        -ms-transition: opacity .3s ease-in-out;
-         -o-transition: opacity .3s ease-in-out;
-            transition: opacity .3s ease-in-out;
+    -moz-transition: opacity .3s ease-in-out;
+    -ms-transition: opacity .3s ease-in-out;
+    -o-transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
     opacity: 0;
-}
-body .ace_editor:hover .ace_scrollbar {
+  }
+  body .ace_editor:hover .ace_scrollbar {
     opacity: 1;
-}
-    </style>
-
-
+  }
+  </style>
+  <script>
+  SEC_HTTPS = true;
+  SEC_BASE = "compilers.widgets.sphere-engine.com";
+  (function(d, s, id){ SEC = window.SEC || (window.SEC = []);
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return; js = d.createElement(s); js.id = id;
+    js.src = (SEC_HTTPS ? "https" : "http") + "://" + SEC_BASE + "/static/sdk/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, "script", "sphere-engine-compilers-jssdk"));
+  </script>
 </head>
 
 <body style="background:#1C363E;font-family:'Raleway', 'sans-serif'" class="width">
@@ -146,46 +155,100 @@ body .ace_editor:hover .ace_scrollbar {
 
 
     <nav   class="navbar navbar-expand beta-menu navbar-dropdown  navbar-fixed-top navbar-toggleable-sm bg-color transparent">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </button>
-        <div class="menu-logo">
-            <div class="navbar-brand">
-                <span class="navbar-logo">
-                    <a href="{% url 'home:index' %}">
-                         <img src="{% static 'home/assets/images/imageedit-2.gif' %}" title="" style="height: 3.8rem;">
-                    </a>
-                </span>
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="{% url 'home:index' %}">
-                        TabOverSpace</a></span>
-            </div>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+
+            <li class="nav-item dropdown">
+              <a class="nav-link link dropdown-toggle display-4" style="color:white" href="" data-toggle="dropdown-submenu" aria-expanded="false"><span class="mbri-edit2 mbr-iconfont mbr-iconfont-btn"></span>Practice</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item text-white display-4" href="" aria-expanded="false"></a>
+                <div class="dropdown">
+                  <a class="dropdown-item dropdown-toggle text-white display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false">Programming Languages</a>
+                  <div class="dropdown-menu dropdown-submenu">
+                    <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='java' subdomain='advanced' %}">Java</a>
+                    <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='python' subdomain='classes' %}">Python</a>
+                    <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='cpp' subdomain='introduction' %}">C++</a>
+                  </div>
+                </div>
+                <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='algorithms' subdomain='warmup' %}" aria-expanded="false">Algorithms<br></a>
+                <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='data_structures' subdomain='advanced' %}" aria-expanded="false">Data-Structures</a>
+                <a class="dropdown-item text-white display-4" href="" aria-expanded="false">BioInformatics</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link text-white display-4" href="" aria-expanded="false"><span class="mbri-edit mbr-iconfont mbr-iconfont-btn"></span>Simulation</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link link text-white display-4" href="{% url 'leaderboard:index' %}" aria-expanded="false"><span class="mbri-rocket mbr-iconfont mbr-iconfont-btn"></span>Leaderboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link text-white display-4" href="{% url 'explore:index' %}" aria-expanded="false"><span class="mbri-globe mbr-iconfont mbr-iconfont-btn"></span>Explore</a>
+            </li>
+
+            {% if user.username %}
+            <li class="nav-item dropdown">
+              <a class="nav-link link dropdown-toggle display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false" style="color:aqua">{{user.username}}</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item text-white display-4" href="" aria-expanded="false"></a>
+                <div class="">
+                  <a class="dropdown-item text-white display-4" href="{% url 'home:logout_user' %}" aria-expanded="false" >Logout</a>
+                  <div style="width:80%;height:1px;background:white;margin:auto"></div>
+                  <a class="dropdown-item text-white display-4"  aria-expanded="false"><span style="color:aqua">28</span> Points</a>
+                </div>
+              </div>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link link login display-4" href="{% url 'home:login' %}" aria-expanded="false">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link sign-in display-4" href="{% url 'home:register' %}" aria-expanded="false">Sign Up</a>
+            </li>
+            {% endif %}
+
+          </ul>
+
+        </button>
+        <div class="menu-logo">
+          <div class="navbar-brand">
+            <span class="navbar-logo">
+              <a href="{% url 'home:index' %}">
+                <img src="{% static 'home/assets/images/imageedit-2.gif' %}" title="" style="height: 3.8rem;">
+              </a>
+            </span>
+            <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="{% url 'home:index' %}">
+              TabOverSpace</a></span>
+            </div>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link link dropdown-toggle display-4" style="color:white" href="" data-toggle="dropdown-submenu" aria-expanded="false"><span class="mbri-edit2 mbr-iconfont mbr-iconfont-btn"></span>Practice</a>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item text-white display-4" href="" aria-expanded="false"></a>
-                          <div class="dropdown">
-                            <a class="dropdown-item dropdown-toggle text-white display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false">Programming Languages</a>
-                            <div class="dropdown-menu dropdown-submenu">
-                              <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='java' subdomain='advanced' %}">Java</a>
-                              <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='python' subdomain='classes' %}">Python</a>
-                              <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='cpp' subdomain='introduction' %}">C++</a>
-                            </div>
-                          </div>
-                        <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='algorithms' subdomain='warmup' %}" aria-expanded="false">Algorithms<br></a>
-                        <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='data_structures' subdomain='advanced' %}" aria-expanded="false">Data-Structures</a>
-                        <a class="dropdown-item text-white display-4" href="" aria-expanded="false">BioInformatics</a>
-                      </div>
+              <li class="nav-item dropdown">
+                <a class="nav-link link dropdown-toggle text-white display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false"><span class="mbri-edit2 mbr-iconfont mbr-iconfont-btn"></span>Practice</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item text-white display-4" href="" aria-expanded="false"></a>
+                  <div class="dropdown">
+                    <a class="dropdown-item dropdown-toggle text-white display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false">Programming Languages</a>
+                    <div class="dropdown-menu dropdown-submenu">
+                      <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='java' subdomain='advanced' %}">Java</a>
+                      <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='python' subdomain='classes' %}">Python</a>
+                      <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='cpp' subdomain='introduction' %}">C++</a>
+                    </div>
+                  </div>
+                  <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='algorithms' subdomain='warmup' %}" aria-expanded="false">Algorithms<br></a>
+                  <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='data_structures' subdomain='advanced' %}" aria-expanded="false">Data-Structures</a>
+                  <a class="dropdown-item text-white display-4" href="" aria-expanded="false">BioInformatics</a>
+                </div>
               </li>
-                <li class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link link text-white display-4" href="" aria-expanded="false"><span class="mbri-edit mbr-iconfont mbr-iconfont-btn"></span>Simulation</a>
               </li>
 
@@ -197,58 +260,58 @@ body .ace_editor:hover .ace_scrollbar {
               </li>
 
               {% if user.username %}
-                 <li class="nav-item dropdown">
-                    <a class="nav-link link dropdown-toggle display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false" style="color:aqua">{{user.username}}</a>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item text-white display-4" href="" aria-expanded="false"></a>
-                          <div class="">
-                            <a class="dropdown-item text-white display-4" href="{% url 'home:logout_user' %}" aria-expanded="false" >Logout</a>
-                            <div style="width:80%;height:1px;background:white;margin:auto"></div>
-                            <a class="dropdown-item text-white display-4"  aria-expanded="false"><span style="color:aqua">28</span> Points</a>
-                          </div>
-                      </div>
+              <li class="nav-item dropdown">
+                <a class="nav-link link dropdown-toggle display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false" style="color:aqua">{{user.username}}</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item text-white display-4" href="" aria-expanded="false"></a>
+                  <div class="">
+                    <a class="dropdown-item text-white display-4" href="{% url 'home:logout_user' %}" aria-expanded="false" >Logout</a>
+                    <div style="width:80%;height:1px;background:white;margin:auto"></div>
+                    <a class="dropdown-item text-white display-4"  aria-expanded="false"><span style="color:aqua">28</span> Points</a>
+                  </div>
+                </div>
               </li>
               {% else %}
-                <li class="nav-item">
-                  <a class="nav-link link login display-4" href="{% url 'home:login' %}" aria-expanded="false">Login</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link link sign-in display-4" href="{% url 'home:register' %}" aria-expanded="false">Sign Up</a>
-                </li>
+              <li class="nav-item">
+                <a class="nav-link link login display-4" href="{% url 'home:login' %}" aria-expanded="false">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link sign-in display-4" href="{% url 'home:register' %}" aria-expanded="false">Sign Up</a>
+              </li>
               {% endif %}
 
             </ul>
 
-        </div>
-    </nav>
-</section>
- <div id="Leaderboard" class="raleway" style="text-align:center; margin-top:150px; color:aqua;margin-bottom:px;"><h1>Practice</h1></div>
-                <div class="container">
-                    <p style="color:grey;text-align:center;margin-top:20px;">Practicing Question : <span style="color:white"> &nbsp;{{ question }} </span></p>
-                    <div class="line" style="margin-bottom:20px;"></div>
-             <div style="">
-             <ul class="nav nav-tabs">
-                  <li class="nav-item">
-                    <a class="nav-link active" href="#tab1" data-toggle="tab">Question</a>
-                  </li>
-                  <li class="nav-item" style="">
-                    <a class="nav-link" href="#tab2" data-toggle="tab">Notes</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#tab3" data-toggle="tab">Code</a>
-                </li>
+          </div>
+        </nav>
+      </section>
+      <div id="Leaderboard" class="raleway" style="text-align:center; margin-top:150px; color:aqua;margin-bottom:px;"><h1>Practice</h1></div>
+      <div class="container">
+        <p style="color:grey;text-align:center;margin-top:20px;">Practicing Question : <span style="color:white"> &nbsp;{{ question }} </span></p>
+        <div class="line" style="margin-bottom:20px;"></div>
+        <div style="">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" href="#tab1" data-toggle="tab">Question</a>
+            </li>
+            <li class="nav-item" style="">
+              <a class="nav-link" href="#tab2" data-toggle="tab">Notes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tab3" data-toggle="tab">Code</a>
+            </li>
 
-                  <li class="nav-item" style="margin-left:auto" id="submit">
-                    <a class="nav-link active aiju" href="#tab3" id="submit">SUBMIT</a>
-                </li>
+            <li class="nav-item" style="margin-left:auto" id="submit">
+              <a class="nav-link active aiju" href="#tab3" id="submit">SUBMIT</a>
+            </li>
 
-                </ul>
-                 <div class="tab-content" style="padding-bottom: 9px;">
+          </ul>
+          <div class="tab-content" style="padding-bottom: 9px;">
             <div class="tab-pane fade-in active" id="tab1">
               <div class="question">
 
                 <h1>{{ question }}</h1>
-                  <p>Recently Watson learned the concept of coprime numbers and now he wonders given an array A1, A2 . . . AN what is the size of the largest subset of the array such that the each pair of elements in the subset is coprime.
+                <p>Recently Watson learned the concept of coprime numbers and now he wonders given an array A1, A2 . . . AN what is the size of the largest subset of the array such that the each pair of elements in the subset is coprime.
 
                   Watson asks Sherlock for help and in turn Sherlock needs you.</p>
                   <h3 style="margin-top:40px;">Explanation</h3>
@@ -259,309 +322,93 @@ body .ace_editor:hover .ace_scrollbar {
 
                     Output
                     For each test case, output the required answer in one line.
-<br><br>
+                    <br><br>
                     Constraints:
                     <br>1 ≤ T ≤ 10
                     <br>25% test data: 1 ≤ N ≤ 10
                     <br>75% test data: 1 ≤ N ≤ 50
                     1 ≤ Ai ≤ 50</p>
 
-                                  <h3 style="margin-top:40px;">Sample Input</h3>
-                  <p style="background:lightgrey;width:200px;padding:4px;font-family:monospace">1<br>
-5<br>
-2 3 2 3 2</p>
-                  <h3 style="margin-top:40px;">Sample Output</h3>
-                  <p style="background:lightgrey;width:200px;padding:4px;font-family:monospace">2
-                </div>
-            </div>
-            <div class="tab-pane fade" id="tab2">
-              <textarea style="width:100%;margin-top:20px;margin-bottom:20px;border-radius:7px;padding:12px;height:600px"> &#9679; Make quick notes here !
-                </textarea>
-                </div>
-            <div class="tab-pane fade" style="padding:0px" id="tab3">
+                    <h3 style="margin-top:40px;">Sample Input</h3>
+                    <p style="background:lightgrey;width:200px;padding:4px;font-family:monospace">1<br>
+                      5<br>
+                      2 3 2 3 2</p>
+                      <h3 style="margin-top:40px;">Sample Output</h3>
+                      <p style="background:lightgrey;width:200px;padding:4px;font-family:monospace;margin-bottom:20px;">2
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab2">
+                      <textarea style="width:100%;margin-top:20px;margin-bottom:20px;border-radius:7px;padding:12px;height:600px"> &#9679; Make quick notes here !
+                      </textarea>
+                    </div>
+                    <div class="tab-pane fade" style="padding:0px" id="tab3">
 
 
-                <div class="row" style="margin-left:auto;padding:20px;margin-bottom:20px;">
-                    <div class="column">
+                      <div class="row" style="margin-left:auto;padding:20px;margin-bottom:20px;">
+                        <!--
+                        <div class="column">
                         <div class="dropdown" style="margin-left:0px;min-width:180px;padding-right:25px">
-                <button class="btn btn-sm btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color:aqua;width:100%">Theme
-                <span class="caret"></span></button>
+                        <button class="btn btn-sm btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color:aqua;width:100%">Theme
+                        <span class="caret"></span></button>
 
-                <ul class="dropdown-menu" id="themes" style="padding:12px;color:black">
-                  <li ><a href="#" style="color:black">Dark Hover</a></li>
-                  <li><a href="#" style="color:black">Light Saber</a></li>
-                </ul>
-              </div>
+                        <ul class="dropdown-menu" id="themes" style="padding:12px;color:black">
+                        <li ><a href="#" style="color:black">Dark Hover</a></li>
+                        <li><a href="#" style="color:black">Light Saber</a></li>
+                      </ul>
+                    </div>
                     <div class="dropdown" style="margin-left:0px;min-width:180px;padding-right:25px">
-                <button class="btn btn-sm btn-primary dropdown-toggle" id="text-lang" type="button" data-toggle="dropdown" style="background-color:aqua;width:100%">
-                <span class="caret">Java</span></button>
+                    <button class="btn btn-sm btn-primary dropdown-toggle" id="text-lang" type="button" data-toggle="dropdown" style="background-color:aqua;width:100%">
+                    <span class="caret">Java</span></button>
 
-                <ul class="dropdown-menu" id="languages" style="padding:12px;color:black">
-                  <li><a href="#" style="color:black">Java</a></li>
-                  <li><a href="#" style="color:black">C++</a></li>
-                  <li><a href="#" style="color:black">JavaScript</a></li>
-                  <li><a href="#" style="color:black">Python</a></li>
-                  <li><a href="#" style="color:black">PHP</a></li>
-                  <li><a href="#" style="color:black">Objective-C</a></li>
+                    <ul class="dropdown-menu" id="languages" style="padding:12px;color:black">
+                    <li><a href="#" style="color:black">Java</a></li>
+                    <li><a href="#" style="color:black">C++</a></li>
+                    <li><a href="#" style="color:black">JavaScript</a></li>
+                    <li><a href="#" style="color:black">Python</a></li>
+                    <li><a href="#" style="color:black">PHP</a></li>
+                    <li><a href="#" style="color:black">Objective-C</a></li>
 
-                </ul>
-              </div>
-                           <div class="dropdown" style="margin-top:20px;min-width:180px;padding-right:25px">
+                  </ul>
+                </div>
+                <div class="dropdown" style="margin-top:20px;min-width:180px;padding-right:25px">
                 <button class="btn btn-sm btn-primary aiju"  type="button" data-toggle="dropdown" style="background-color:aqua;width:100%;">Save
-                </button>
+              </button>
 
-              </div>
-
-                        <div class="dropdown" style="margin-left:0px;min-width:180px;padding-right:25px">
-                <button class="btn btn-sm btn-primary aiju"  type="button" data-toggle="dropdown" style="background-color:aqua;width:100%">Upload
-                </button>
-
-              </div>
-                </div>
-
-                <div id="editor"></div>
             </div>
-            </div>
-          </div>
 
+            <div class="dropdown" style="margin-left:0px;min-width:180px;padding-right:25px">
+            <button class="btn btn-sm btn-primary aiju"  type="button" data-toggle="dropdown" style="background-color:aqua;width:100%">Upload
+          </button>
 
-                 </div>
+        </div>
+      </div>
+    -->
 
-                </div>
+    <div id="edit">
+      <div class="sec-widget" data-widget="87649aa99546ab19cdd11918abb0ebf5"></div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<section class="engine"><a href="https://mobirise.ws">Mobirise</a></section><script src="assets/web/assets/jquery/jquery.min.js"></script>
+<section class="footer4 cid-qNJ6q8uWVQ" id="footer4-p">
 
-
-  <section class="engine"><a href="https://mobirise.ws">Mobirise</a></section><script src="assets/web/assets/jquery/jquery.min.js"></script>
-  <section class="footer4 cid-qNJ6q8uWVQ" id="footer4-p">
-
-
-
-
-
-    
 </section>
 
-    <script src="{% static 'practice/assets/ace-builds-master/src-noconflict/ace.js' %}" type="text/javascript" charset="utf-8"></script>
-                    <script>
-                        var value2 = "";
-                        var editor = ace.edit("editor");
-                        editor.setTheme("ace/theme/gruvbox");
-                        editor.resize();
-                        editor.session.setMode('ace/mode/java')
-                        editor.setValue(`/* IMPORTANT: Multiple classes and nested static classes are supported */
 
-/*
- * uncomment this if you want to read input.
-//imports for BufferedReader
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-
-//import for Scanner and other utility classes
-import java.util.*;
-*/
-
-// Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
-
-class TestClass {
-    public static void main(String args[] ) throws Exception {
-        /* Sample code to perform I/O:
-         * Use either of these methods for input
-
-        //BufferedReader
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String name = br.readLine();                // Reading input from STDIN
-        System.out.println("Hi, " + name + ".");    // Writing output to STDOUT
-
-        //Scanner
-        Scanner s = new Scanner(System.in);
-        String name = s.nextLine();                 // Reading input from STDIN
-        System.out.println("Hi, " + name + ".");    // Writing output to STDOUT
-
-        */
-
-        // Write your code here
-
-    }
-}
-`,-1)
-                        editor.setOptions({scrollPastEnd:0, autoScrollEditorIntoView:true, fixedWidthGutter: false, fontSize: "12pt", fontFamily: "monospace"
-});
-
-                        $("#languages li a").click(function(){
-                          var x = $(this).text();
-                          var mode = "";
-
-                          if(x=="C++"){
-                             mode = "c_cpp" ;
-                               value2 = `
-Sample code to perform I/O:
-
-#include <iostream>
-
-using namespace std;
-
-int main() {
-	int num;
-	cin >> num;										// Reading input from STDIN
-	cout << "Input number is " << num << endl;		// Writing output to STDOUT
-}
-
- Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
-
-
- Write your code here
-`
-                          }
-                         if(x=="JavaScript"){
-                             mode = "javascript"  ;
-                             value2 = `/*
-// Below is a sample code to process input from STDIN.
-// Equivalent in effect to the Java declaration import java.io.*;
-importPackage(java.io);
-importPackage(java.lang);
-importPackage(java.math);
-importPackage(java.util);
-
-var sc = new Scanner(System['in']);					// Reading input from STDIN
-
-var my_name = sc.nextLine();
-System.out.println("Hi, " + my_name + ".");			// Writing output to STDOUT
-// End of input processing code.
-
-// Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
-*/
-
-// Write your code here`
-                          }
-                         if(x=="Python"){
-                             mode = "python" ;
-                             value2 = `'''
-# Sample code to perform I/O:
-
-name = raw_input()          # Reading input from STDIN
-print 'Hi, %s.' % name      # Writing output to STDOUT
-
-# Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
-'''
-
-# Write your code here
-`
-
-                          }
-                         if(x=="Java"){
-                             mode = "java" ;
-                             value2 = `/* IMPORTANT: Multiple classes and nested static classes are supported */
-
-/*
- * uncomment this if you want to read input.
-//imports for BufferedReader
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-
-//import for Scanner and other utility classes
-import java.util.*;
-*/
-
-// Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
-
-class TestClass {
-    public static void main(String args[] ) throws Exception {
-        /* Sample code to perform I/O:
-         * Use either of these methods for input
-
-        //BufferedReader
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String name = br.readLine();                // Reading input from STDIN
-        System.out.println("Hi, " + name + ".");    // Writing output to STDOUT
-
-        //Scanner
-        Scanner s = new Scanner(System.in);
-        String name = s.nextLine();                 // Reading input from STDIN
-        System.out.println("Hi, " + name + ".");    // Writing output to STDOUT
-
-        */
-
-        // Write your code here
-
-    }
-}
-`,-1
-                          }
-                         if(x=="Objective-C"){
-                             mode = "objectivec" ;
-                             value2 = `/*
-// Sample code to perform I/O:
-
-# include<stdio.h>
-
-int main(){
-    int num;
-
-    scanf("%s", &num);                              // Reading input from STDIN
-    printf("Input number is %s.\n", &num);           // Writing output to STDOUT
-
-}
-
-// Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
-*/
-
-// Write your code here
-`
-                          }
-                         if(x=="PHP"){
-                             mode = "php" ;
-                             value2 = `<?php
-/*
-// Sample code to perform I/O:
-
-fscanf(STDIN, "%s\n", $name);           // Reading input from STDIN
-echo "Hi, ".$name.".\n";                // Writing output to STDOUT
-
-// Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
-*/
-
-// Write your code here
-
-?>`
-                        }
-                         $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
-                         $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
-                         editor.session.setMode('ace/mode/'+mode);
-                         editor.setValue(''+value2,-1);
-
-                        });
-
-
-                        $("#themes li a").click(function(){
-
-                        var x = $(this).text();
-                        var theme = "";
-                        if(x == "Dark Hover"){
-                            theme = "gruvbox";
-                        }
-                        if(x == "Light Saber"){
-                            theme = "github";
-                        }
-                            editor.setTheme('ace/theme/'+theme);
-                        });
-
-
-                    </script>
-
-
-
-
-
-  {% load staticfiles %}
-  <script type="text/javascript" src="{% static 'home/assets/popper/popper.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'home/assets/tether/tether.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'home/assets/bootstrap/js/bootstrap.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'home/assets/smoothscroll/smooth-scroll.js' %}"></script>
-  <script type="text/javascript" src="{% static 'home/assets/touchswipe/jquery.touch-swipe.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'home/assets/parallax/jarallax.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'home/assets/viewportchecker/jquery.viewportchecker.js' %}"></script>
-  <script type="text/javascript" src="{% static 'home/assets/dropdown/js/script.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'home/assets/theme/js/script.js' %}"></script>
-  <script type="text/javascript" src="{% static 'home/assets/formoid/formoid.min.js' %}"></script>
+{% load staticfiles %}
+<script type="text/javascript" src="{% static 'home/assets/popper/popper.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'home/assets/tether/tether.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'home/assets/bootstrap/js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'home/assets/smoothscroll/smooth-scroll.js' %}"></script>
+<script type="text/javascript" src="{% static 'home/assets/touchswipe/jquery.touch-swipe.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'home/assets/parallax/jarallax.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'home/assets/viewportchecker/jquery.viewportchecker.js' %}"></script>
+<script type="text/javascript" src="{% static 'home/assets/dropdown/js/script.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'home/assets/theme/js/script.js' %}"></script>
+<script type="text/javascript" src="{% static 'home/assets/formoid/formoid.min.js' %}"></script>
 
 
 
