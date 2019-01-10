@@ -99,79 +99,135 @@
 
 
     <nav   class="navbar navbar-expand beta-menu navbar-dropdown  navbar-fixed-top navbar-toggleable-sm bg-color transparent">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </button>
-        <div class="menu-logo">
-            <div class="navbar-brand">
-                <span class="navbar-logo">
-                    <a href="{% url 'home:index' %}">
-                         <img src="{% static 'home/assets/images/imageedit-2.gif' %}" title="" style="height: 3.8rem;">
-                    </a>
-                </span>
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="{% url 'home:index' %}">
-                        TabOverSpace</a></span>
-            </div>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+
+            <li class="nav-item dropdown">
+              <a class="nav-link link dropdown-toggle display-4" style="color:white" href="" data-toggle="dropdown-submenu" aria-expanded="false"><span class="mbri-edit2 mbr-iconfont mbr-iconfont-btn"></span>Practice</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item text-white display-4" href="" aria-expanded="false"></a>
+                <div class="dropdown">
+                  <a class="dropdown-item dropdown-toggle text-white display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false">Programming Languages</a>
+                  <div class="dropdown-menu dropdown-submenu">
+                    <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='java' subdomain='advanced' %}">Java</a>
+                    <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='python' subdomain='classes' %}">Python</a>
+                    <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='cpp' subdomain='introduction' %}">C++</a>
+                  </div>
+                </div>
+                <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='algorithms' subdomain='warmup' %}" aria-expanded="false">Algorithms<br></a>
+                <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='data_structures' subdomain='advanced' %}" aria-expanded="false">Data-Structures</a>
+                <a class="dropdown-item text-white display-4" href="" aria-expanded="false">BioInformatics</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link text-white display-4" href="" aria-expanded="false"><span class="mbri-edit mbr-iconfont mbr-iconfont-btn"></span>Simulation</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link link text-white display-4" href="{% url 'leaderboard:index' %}" aria-expanded="false"><span class="mbri-rocket mbr-iconfont mbr-iconfont-btn"></span>Leaderboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link text-white display-4" href="{% url 'explore:index' %}" aria-expanded="false"><span class="mbri-globe mbr-iconfont mbr-iconfont-btn"></span>Explore</a>
+            </li>
+
+            {% if user.username %}
+            <li class="nav-item dropdown">
+              <a class="nav-link link dropdown-toggle display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false" style="color:aqua">{{user.username}}</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item text-white display-4" href="" aria-expanded="false"></a>
+                <div class="">
+                  <a class="dropdown-item text-white display-4" href="{% url 'home:logout_user' %}" aria-expanded="false" >Logout</a>
+                  <div style="width:80%;height:1px;background:white;margin:auto"></div>
+                  <a class="dropdown-item text-white display-4"  aria-expanded="false"><span style="color:aqua">28</span> Points</a>
+                </div>
+              </div>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link link login display-4" href="{% url 'home:login' %}" aria-expanded="false">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link sign-in display-4" href="{% url 'home:register' %}" aria-expanded="false">Sign Up</a>
+            </li>
+            {% endif %}
+
+          </ul>
+
+        </button>
+        <div class="menu-logo">
+          <div class="navbar-brand">
+            <span class="navbar-logo">
+              <a href="{% url 'home:index' %}">
+                <img src="{% static 'home/assets/images/imageedit-2.gif' %}" title="" style="height: 3.8rem;">
+              </a>
+            </span>
+            <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="{% url 'home:index' %}">
+              TabOverSpace</a></span>
+            </div>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+
+              <li class="nav-item dropdown">
+                <a class="nav-link link dropdown-toggle text-white display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false"><span class="mbri-edit2 mbr-iconfont mbr-iconfont-btn"></span>Practice</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item text-white display-4" href="" aria-expanded="false"></a>
+                  <div class="dropdown">
+                    <a class="dropdown-item dropdown-toggle text-white display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false">Programming Languages</a>
+                    <div class="dropdown-menu dropdown-submenu">
+                      <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='java' subdomain='advanced' %}">Java</a>
+                      <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='python' subdomain='classes' %}">Python</a>
+                      <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='cpp' subdomain='introduction' %}">C++</a>
+                    </div>
+                  </div>
+                  <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='algorithms' subdomain='warmup' %}" aria-expanded="false">Algorithms<br></a>
+                  <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='data_structures' subdomain='advanced' %}" aria-expanded="false">Data-Structures</a>
+                  <a class="dropdown-item text-white display-4" href="" aria-expanded="false">BioInformatics</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link text-white display-4" href="" aria-expanded="false"><span class="mbri-edit mbr-iconfont mbr-iconfont-btn"></span>Simulation</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link link text-white display-4" href="{% url 'leaderboard:index' %}" aria-expanded="false"><span class="mbri-rocket mbr-iconfont mbr-iconfont-btn"></span>Leaderboard</a>
+              </li>
               <li class="nav-item">
                 <a class="nav-link link text-white display-4" href="{% url 'explore:index' %}" aria-expanded="false"><span class="mbri-globe mbr-iconfont mbr-iconfont-btn"></span>Explore</a>
               </li>
-              <li class="nav-item dropdown">
-                    <a class="nav-link link dropdown-toggle display-4" style="color:white" href="" data-toggle="dropdown-submenu" aria-expanded="false"><span class="mbri-edit2 mbr-iconfont mbr-iconfont-btn"></span>Practice</a>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item text-white display-4" href="" aria-expanded="false"></a>
-                          <div class="dropdown">
-                            <a class="dropdown-item dropdown-toggle text-white display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false">Programming Languages</a>
-                            <div class="dropdown-menu dropdown-submenu">
-                              <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='java' subdomain='advanced' %}">Java</a>
-                              <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='python' subdomain='classes' %}">Python</a>
-                              <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='cpp' subdomain='introduction' %}">C++</a>
-                            </div>
-                          </div>
-                        <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='algorithms' subdomain='warmup' %}" aria-expanded="false">Algorithms<br></a>
-                        <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='data_structures' subdomain='advanced' %}" aria-expanded="false">Data-Structures</a>
-                        <a class="dropdown-item text-white display-4" href="" aria-expanded="false">BioInformatics</a>
-                      </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link link text-white display-4" href="{% url 'leaderboard:index' %}" aria-expanded="false"><span class="mbri-rocket mbr-iconfont mbr-iconfont-btn"></span>Leaderboard &nbsp;&nbsp;</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link link text-white display-4" href="" aria-expanded="false"><span class="socicon socicon-myspace mbr-iconfont mbr-iconfont-btn"></span>Compete</a>
-              </li>
 
               {% if user.username %}
-                <li class="nav-item dropdown">
-                    <a class="nav-link link dropdown-toggle display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false" style="color:aqua">{{user.username}}</a>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item text-white display-4" href="" aria-expanded="false"></a>
-                          <div class="">
-                            <a class="dropdown-item text-white display-4" href="{% url 'home:logout_user' %}" aria-expanded="false" >Logout</a>
-                            <div style="width:80%;height:1px;background:white;margin:auto"></div>
-                            <a class="dropdown-item text-white display-4"  aria-expanded="false"><span style="color:aqua">28</span> Points</a>
-                          </div>
-                      </div>
+              <li class="nav-item dropdown">
+                <a class="nav-link link dropdown-toggle display-4" href="" data-toggle="dropdown-submenu" aria-expanded="false" style="color:aqua">{{user.username}}</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item text-white display-4" href="" aria-expanded="false"></a>
+                  <div class="">
+                    <a class="dropdown-item text-white display-4" href="{% url 'home:logout_user' %}" aria-expanded="false" >Logout</a>
+                    <div style="width:80%;height:1px;background:white;margin:auto"></div>
+                    <a class="dropdown-item text-white display-4"  aria-expanded="false"><span style="color:aqua">28</span> Points</a>
+                  </div>
+                </div>
               </li>
               {% else %}
-                <li class="nav-item">
-                  <a class="nav-link link login display-4" href="{% url 'home:login' %}" aria-expanded="false">Login</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link link sign-in display-4" href="{% url 'home:register' %}" aria-expanded="false">Sign Up</a>
-                </li>
+              <li class="nav-item">
+                <a class="nav-link link login display-4" href="{% url 'home:login' %}" style="color:aqua" aria-expanded="false">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link sign-in display-4" href="{% url 'home:register' %}" style="color:aqua" aria-expanded="false">Sign Up</a>
+              </li>
               {% endif %}
 
             </ul>
 
-        </div>
-    </nav>
+          </div>
+        </nav>
 </section>
 
 <div id="Leaderboard" class="raleway" style="text-align:center; margin-top:150px; color:aqua;margin-bottom:px;"><h1>Explore</h1></div>
