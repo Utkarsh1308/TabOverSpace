@@ -63,12 +63,56 @@
                 background-color: aqua;
                 margin: auto;
             }
+            .main_card{
+                padding: 80px;
+                box-shadow: 0px 0px 2px;
+                background-color: lightblue;
+            }
+            .minor_card{
+                box-shadow: 0px 0px 10px;
+                height: 300px;
+                background-color: white;
+                border-radius: 5px;
+                font-weight: 500;
+                outline: none;
+            }
+            .line_box{
+                background:black ; 
+                color: aqua;
+                height: 1px;
+                text-align: center;
+                width: auto;
+                margin: auto;
+                opacity:0.4;
+            }
+            .minor_card:hover{
+                box-shadow: 0px 0px 20px;
+                -webkit-transition:  0.2s;
+                -moz-transition: margin 1s;
+                transform: margin 1s;
+                transform: scale(1.01);
+            }
+            .heads{
+                color: white;
+                background: #232323;
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+            }
+            a{
+                color: black;
+            }
 
+            a:hover{
+                color: black;
+            }
         </style>
     </head>
     <body style="background:#1C363E">
 
         <section class="menu cid-qNIIFHaxZY" once="menu" id="menu1-e">
+
+
+
             <nav   class="navbar navbar-expand beta-menu navbar-dropdown  navbar-fixed-top navbar-toggleable-sm bg-color transparent">
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <div class="hamburger">
@@ -96,9 +140,6 @@
                                     <a class="dropdown-item text-white display-4" href="{% url 'practice:subdomain' track='data_structures' subdomain='advanced' %}" aria-expanded="false">Data-Structures</a>
                                     <a class="dropdown-item text-white display-4" href="" aria-expanded="false">BioInformatics</a>
                                 </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link link text-white display-4" href="" aria-expanded="false"><span class="mbri-edit mbr-iconfont mbr-iconfont-btn"></span>Simulation</a>
                             </li>
 
                             <li class="nav-item">
@@ -163,9 +204,6 @@
                                     <a class="dropdown-item text-white display-4" href="" aria-expanded="false">BioInformatics</a>
                                 </div>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link link text-white display-4" href="" aria-expanded="false"><span class="mbri-edit mbr-iconfont mbr-iconfont-btn"></span>Simulation</a>
-                            </li>
 
                             <li class="nav-item">
                                 <a class="nav-link link text-white display-4" href="{% url 'leaderboard:index' %}" aria-expanded="false"><span class="mbri-rocket mbr-iconfont mbr-iconfont-btn"></span>Leaderboard</a>
@@ -201,134 +239,338 @@
                     </nav>
                 </section>
 
-            <div id="Leaderboard" class="raleway" style="text-align:center; margin-top:150px; color:aqua;margin-bottom:px;"><h1>Practice</h1></div>
-            <div class="container">
-                <p style="color:grey;text-align:center;margin-top:20px;">Last topic you practiced : <span style="color:white"> &nbsp;Algorithms - Merge Sort </span></p>
-                <div class="line"></div>
-                <div class="row" style="margin:12px;padding:20px;margin-bottom:20px;">
+            <div id="Leaderboard" class="raleway display-4" style="text-align:center; margin-top:150px; color:aqua;margin-bottom:px;"><h1>Practice</h1></div>
+            <div class="container display-4">
 
-                    <p class="col-md-2 practice-box" ><span style="display: block;">
-                        Problem Solving<br><br>
-                        <a href="{% url 'practice:subdomain' track='algorithms' subdomain='warmup' %}"><span style="color:aqua">Algorithms</span></a><br><br>
-                        <a href="{% url 'practice:subdomain' track='data_structures' subdomain='advanced' %}"><span style="color:aqua">Data Structures</span></a><br><br></span>
-                    </p>
+                <div style="width:100%;height:auto;margin-bottom: 190px">
 
-                    <div class="box"></div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <nav class="col-md-12">
+                            <nav class="row">
+                                <nav class="col-md-12">
+                                    <div style="background:#1C363E ; color: aqua;height: 100px;text-align: center">
+                                        <p style="position: relative;top: 70%" class="display-4">Problem Solving</p>
+                                    </div>
+                                </nav>
+                            </nav>
+                            <div style="background:white ; color: aqua;height: 1px;text-align: center;width: 100px;margin: auto">
+                            </div>
+                            <nav class="row" style="margin-top: 20px;">
+                                <nav class="col-md-3">
 
-                    <p class="col-md-2 practice-box"><span style="display: block;">
-                        Languages<br><br>
-                        <a href = "{% url 'practice:subdomain' track='cpp' subdomain='introduction' %}"><span style="color:aqua">C++</span></a><br><br>
-                        <a href = "{% url 'practice:subdomain' track='java' subdomain='advanced' %}"><span style="color:aqua">Java</span></a><br><br>
-                        <a href = "{% url 'practice:subdomain' track='python' subdomain='classes' %}"><span style="color:aqua">Python</span></a><br><br><br></span>
-                    </p>
+                                    <div class="minor_card">
+                                        <a href="{% url 'practice:subdomain' track='data_structures' subdomain='advanced' %}">
+                                            <div>
 
-                    <div class="box"></div>
+                                                <p style="text-align: center;margin: auto;padding: 20px" class="heads">Data Structures</p>
+                                                <div class="line_box">
+                                                </div>
+                                                <p style="padding: 20px;line-height: 20px">
 
-                    <p class="col-md-2 practice-box"><span style="display: block;">
-                        Specialized Skills<br><br><a href = ""><span style="color:aqua">Bioinformatics</span></a><br><br></span>
-                    </p>
+                                                    <code style="color: black;;opacity: 0.6"><span style="color: darkgreen;font-weight: 600">stack</span>&lt;<span style="color: darkblue;font-weight: 600">int</span>&gt; stack_1;
+                                                        <br>
+                                                        stack_1<span style="color: deeppink">.</span>push<span style="color: deeppink">(1)</span>;
+                                                        <br>
+                                                        stack_1<span style="color: deeppink">.</span>push<span style="color: deeppink">(2)</span>;
+                                                        <br>
+                                                        stack_1<span style="color: deeppink">.</span>push<span style="color: deeppink">(3)</span>;
+                                                        <br>
+                                                        stack_1<span style="color: deeppink">.</span>push<span style="color: deeppink">(4)</span>;
+                                                        <br>
+                                                        ...
+                                                        <br>
+                                                        <br>
+                                                    </code>
+                                                    Solve problems related to<span style="color: black;font-weight: 700"> Data Structures.</span>
+
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </nav>
+
+                                <nav class="col-md-3">
+                                    <div class="minor_card">
+                                        <a href="{% url 'practice:subdomain' track='algorithms' subdomain='warmup' %}">
+                                            <p style="text-align: center;margin: auto;padding: 20px;" class="heads">Algorithms</p>
+
+                                            <div class="line_box">
+                                            </div>
+                                            <p style="padding: 20px;line-height: 20px">
+
+                                                <code style="color: black;opacity: 0.6">
+                                                    <span style="color: darkblue;font-weight: 600">def</span> <span style="color:darkgreen;font-weight: 600">Fibonacci</span>(n): 
+                                                    <br>
+                                                    <span style="color: darkblue;font-weight: 600">if</span> n&lt;0
+                                                    <br>
+                                                    <span style="color: darkblue;font-weight: 600">print</span>("Incorrect input") 
+                                                    <br>
+                                                    <span style="color: darkblue;font-weight: 600">elif</span> n==1: 
+                                                    <br>
+                                                    <span style="color: darkblue;font-weight: 600">return</span> 0
+                                                    <br>
+                                                    ...
+                                                    <br>
+                                                    <br>
+                                                </code>
+                                                Solve problems related to <span style="color: black;font-weight: 700">Algorithms</span>
+                                            </p>
+                                        </a>
+                                    </div>
+                                </nav>
+                            </nav>
+                        </nav>
+                    </div>
+
+                    <div class="row" style="margin-bottom: 20px;">
+                        <nav class="col-md-12">
+                            <nav class="row">
+                                <nav class="col-md-12">
+                                    <div style="background:#1C363E ; color: aqua;height: 100px;text-align: center">
+                                        <p style="position: relative;top: 70%">Languages</p>
+                                    </div>
+                                </nav>
+                            </nav>
+                            <div style="background:white ; color: aqua;height: 1px;text-align: center;width: 70px;margin: auto">
+                            </div>
+                            <nav class="row" style="margin-top: 20px;">
+                                <nav class="col-md-3">
+                                    <div class="minor_card">
+                                        <a href = "{% url 'practice:subdomain' track='cpp' subdomain='introduction' %}">
+                                            <div>
+                                                <p style="text-align: center;margin: auto;padding: 20px;"  class="heads">C++</p>
+
+                                                <div class="line_box">
+                                                </div>
+
+                                                <p style="padding: 20px;line-height: 20px">
+
+                                                    <code style="color: black;opacity: 0.6">
+                                                        <span style="color: darkblue;font-weight: 600">string</span> a: 
+                                                        <br>
+                                                        <span style="color: darkblue;font-weight: 600">string</span> b;
+                                                        <br>
+                                                        <span style="color: darkblue;font-weight: 600">a</span> = "Hello"; 
+                                                        <br>
+                                                        <span style="color: darkblue;font-weight: 600">b</span> = "World": 
+                                                        <br>
+                                                        <span style="color: darkblue;font-weight: 600">cout &lt;&lt; </span> a + b;
+                                                        <br>
+                                                        ...
+                                                        <br>
+                                                        <br>
+                                                    </code>
+                                                    Solve coding problems using <span style="color: black;font-weight: 700">C++</span>
+
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </nav>
+
+                                <nav class="col-md-3">
+                                    <div class="minor_card">
+                                        <a href = "{% url 'practice:subdomain' track='java' subdomain='advanced' %}">
+                                            <p style="text-align: center;margin: auto;padding: 20px;" class="heads">Java</p>
+
+                                            <div class="line_box">
+                                            </div>
+                                            <p style="padding: 20px;line-height: 20px">
+
+                                                <code style="color: black;opacity: 0.6">
+                                                    String a = "Hello";
+                                                    <br>
+                                                    String b = "World";
+                                                    <br>
+                                                    <br>
+                                                    <span style="color: darkblue;font-weight: 600"> System.out.println</span>(a+b); 
+                                                    <br>
+                                                    ...
+                                                    <br>
+                                                    ...
+                                                    <br>
+                                                    <br>
+                                                </code>
+                                                Solve coding problems using <span style="color: black;font-weight: 700">Java</span>
+
+                                            </p>
+                                        </a>
+                                    </div>
+                                </nav>
+                                <nav class="col-md-3">
+                                    <div class="minor_card">
+                                        <a href = "{% url 'practice:subdomain' track='python' subdomain='classes' %}">
+                                            <p style="text-align: center;margin: auto;padding: 20px;" class="heads">Python</p>
+
+                                            <div class="line_box">
+                                            </div>
+                                            <p style="padding: 20px;line-height: 20px">
+
+                                                <code style="color: black;opacity: 0.6">
+                                                    a = "Hello";
+                                                    <br>
+                                                    b = "World";
+                                                    <br>
+                                                    <br>
+                                                    <span style="color: darkblue;font-weight: 600"> print</span> (a+b); 
+                                                    <br>
+                                                    ...
+                                                    <br>
+                                                    ...
+                                                    <br>
+                                                    <br>
+                                                </code>
+                                                Solve coding problems using <span style="color: black;font-weight: 700">Python</span>
+
+                                            </p>
+                                        </a>
+                                    </div>
+
+                                </nav>
+                            </nav>
+                        </nav>
+                    </div>
+
+                    <div class="row" style="margin-bottom: 20px;">
+                        <nav class="col-md-12">
+                            <nav class="row">
+                                <nav class="col-md-12">
+                                    <div style="background:#1C363E ; color: aqua;height: 100px;text-align: center">
+                                        <p style="position: relative;top: 70%" class="display-4">Specialised Skills</p>
+                                    </div>
+                                </nav>
+                            </nav>
+                            <div style="background:white ; color: aqua;height: 1px;text-align: center;width: 100px;margin: auto">
+                            </div>
+                            <nav class="row" style="margin-top: 20px;">
+                                <nav class="col-md-3">
+                                    <div class="minor_card">
+
+                                        <p style="text-align: center;margin: auto;padding: 20px;" class="heads">Bioinformatics</p>
+
+                                        <div class="line_box">
+                                        </div>
+                                        <p style="padding: 20px;line-height: 20px">
+
+                                            <code style="color: black;opacity: 0.6">
+                                                ATOM&nbsp;   1  N &nbsp;N GLN A 39
+                                                <br>
+                                                ATOM&nbsp;   2  CA C GLN A 39
+
+                                                <br>
+                                                ATOM&nbsp;   3  C &nbsp;C GLN A 39
+
+                                                <br>
+                                                ATOM&nbsp;   4  O &nbsp;O GLN A 39
+
+                                                <br>
+                                                ATOM&nbsp;   2  CA C GLN A 39
+                                                <br>
+                                                ..
+                                                <br>
+                                                <br>
+                                            </code>
+                                            <span style="color: black">Solve</span> <span style="color:black;font-weight: 700">Bioinforamtics</span> problems.
+
+                                        </p>
+                                    </div>
+                                </nav>
+                            </nav>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+                    <section class="engine"><a href="https://mobirise.ws">Mobirise</a></section><script src="assets/web/assets/jquery/jquery.min.js"></script>
+
+<section class="footer4 cid-qNJ6q8uWVQ" id="footer4-p">
+    <div class="container">
+        <div class="media-container-row content mbr-white">
+            <div class="col-md-3 col-sm-4">
+                <div class="mb-3 img-logo">
+                    <a href="">
+                        <img src="{% static 'home/assets/images/imageedit-2.gif' %}" alt="Mobirise" title="">
+                    </a>
+                </div>
+                <p class="mb-3 mbr-fonts-style foot-title display-7">
+                    TabOverSpace
+                </p>
+                <a href="#" class="text-white">Compete</a><br>
+                <a href="{% url 'explore:index' %}" class="text-white">Explore</a><br>
+                <a href="{% url 'practice:index' %}" class="text-white">Practice</a><br>
+                <a href="{% url 'leaderboard:index' %}" class="text-white">Leaderboard</a>
+            </div>
+            <div class="col-md-4 col-sm-8">
+                <p class="mb-4 foot-title mbr-fonts-style display-7">
+                    WHATS BREWING ?</p>
+                <p class="mbr-text mbr-fonts-style foot-text display-7">If you have any valuable suggestion for this website, please do drop us an email. We hope you dont face any unnecessary hack during coding.<br>
+                    <br>If this site has inspired you and you want to be a part of it, we are open to candidates !</p>
+            </div>
+            <div class="col-md-4 offset-md-1 col-sm-12">
+                <p class="mb-4 foot-title mbr-fonts-style display-7">
+                    SUBSCRIBE
+                </p>
+                <p class="mbr-text mbr-fonts-style form-text display-7">
+                    Get monthly updates and free resources.
+                </p>
+                <div class="media-container-column" data-form-type="formoid">
+                    <div data-form-alert="" hidden="" class="align-center">
+                        Thanks for filling out the form!
+                    </div>
+
+                    <form class="form-inline" action="" method="post" data-form-title="Mobirise Form">
+                        <input type="hidden" value="EiXLQG72fPCjZI8XXCehXc8S6yeCextEcVMbo0V1JfCQzLe3TDR4MLUAFLbgUYs+CGZW0Y39SIRd3oYJKaQf3HV+Wvva3bnaIc0zCwb9+nDz+4zrBmEEjyqDBoWHLYDH" data-form-email="true">
+                        <div class="form-group">
+                            <input type="email" class="form-control input-sm input-inverse my-2" name="email" required="" data-form-field="Email" placeholder="Email" id="email-footer4-p">
+                        </div>
+                        <div class="input-group-btn m-2">
+                            <button href="" class="btn btn-primary display-4" type="submit" role="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+                <p class="mb-4 mbr-fonts-style foot-title display-7">
+                    CONNECT WITH US
+                </p>
+                <div class="social-list pl-0 mb-0">
+                        <div class="soc-item">
+                            <a href="" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-linkedin socicon"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="" target="_blank">
+                                <span class="socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-github socicon"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-google socicon"></span>
+                            </a>
+                        </div>
 
 
                 </div>
             </div>
+        </div>
+    </div>
+</section>
 
+                {% load staticfiles %}
+                <script type="text/javascript" src="{% static 'home/assets/web/assets/jquery/jquery.min.js' %}"></script>
+                <script type="text/javascript" src="{% static 'home/assets/popper/popper.min.js' %}"></script>
+                <script type="text/javascript" src="{% static 'home/assets/tether/tether.min.js' %}"></script>
+                <script type="text/javascript" src="{% static 'home/assets/bootstrap/js/bootstrap.min.js' %}"></script>
+                <script type="text/javascript" src="{% static 'home/assets/smoothscroll/smooth-scroll.js' %}"></script>
+                <script type="text/javascript" src="{% static 'home/assets/touchswipe/jquery.touch-swipe.min.js' %}"></script>
+                <script type="text/javascript" src="{% static 'home/assets/parallax/jarallax.min.js' %}"></script>
+                <script type="text/javascript" src="{% static 'home/assets/viewportchecker/jquery.viewportchecker.js' %}"></script>
+                <script type="text/javascript" src="{% static 'home/assets/dropdown/js/script.min.js' %}"></script>
+                <script type="text/javascript" src="{% static 'home/assets/theme/js/script.js' %}"></script>
+                <script type="text/javascript" src="{% static 'home/assets/formoid/formoid.min.js' %}"></script>
 
-
-            <section class="engine"><a href="https://mobirise.ws">Mobirise</a></section><script src="assets/web/assets/jquery/jquery.min.js"></script>
-            <section class="footer4 cid-qNJ6q8uWVQ" id="footer4-p">
-
-
-
-
-
-                <div class="container">
-                    <div class="media-container-row content mbr-white">
-                        <div class="col-md-3 col-sm-4">
-                            <div class="mb-3 img-logo">
-                                <a href="{% url 'home:index' %}">
-                                    <img src="{% static 'home/assets/images/imageedit-2.gif' %}" alt="Mobirise" title="">
-                                </a>
-                            </div>
-                            <a href="{% url 'home:index' %}" class="text-white">
-                                TabOverSpace
-                            </a><br><br>
-                            <a href="#" class="text-white">Compete</a><br>
-                            <a href="{% url 'explore:index' %}" class="text-white">Explore</a><br>
-                            <a href="{% url 'practice:index' %}" class="text-white">Practice</a><br>
-                            <a href="{% url 'leaderboard:index' %}" class="text-white">Leaderboard</a>
-                        </div>
-                        <div class="col-md-4 col-sm-8">
-                            <p class="mb-4 foot-title mbr-fonts-style display-7">
-                                WHATS BREWING ?</p>
-                            <p class="mbr-text mbr-fonts-style foot-text display-7">If you have any valuable suggestion for this website, please do drop us an email. We hope you dont face any unnecessary hack during coding.<br>
-                                <br>If this site has inspired you and you want to be a part of it, we are open to candidates !</p>
-                        </div>
-                        <div class="col-md-4 offset-md-1 col-sm-12">
-                            <p class="mb-4 foot-title mbr-fonts-style display-7">
-                                SUBSCRIBE
-                            </p>
-                            <p class="mbr-text mbr-fonts-style form-text display-7">
-                                Get monthly updates and free resources.
-                            </p>
-                            <div class="media-container-column" data-form-type="formoid">
-                                <div data-form-alert="" hidden="" class="align-center">
-                                    Thanks for filling out the form!
-                                </div>
-
-                                <form class="form-inline" action="" method="post" data-form-title="Mobirise Form">
-                                    <input type="hidden" value="EiXLQG72fPCjZI8XXCehXc8S6yeCextEcVMbo0V1JfCQzLe3TDR4MLUAFLbgUYs+CGZW0Y39SIRd3oYJKaQf3HV+Wvva3bnaIc0zCwb9+nDz+4zrBmEEjyqDBoWHLYDH" data-form-email="true">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control input-sm input-inverse my-2" name="email" required="" data-form-field="Email" placeholder="Email" id="email-footer4-p">
-                                    </div>
-                                    <div class="input-group-btn m-2">
-                                        <button href="" class="btn btn-primary display-4" type="submit" role="button">Subscribe</button>
-                                    </div>
-                                </form>
-                            </div>
-                            <p class="mb-4 mbr-fonts-style foot-title display-7">
-                                CONNECT WITH US
-                            </p>
-                            <div class="social-list pl-0 mb-0">
-                                <div class="soc-item">
-                                    <a href="" target="_blank">
-                                        <span class="mbr-iconfont mbr-iconfont-social socicon-linkedin socicon"></span>
-                                    </a>
-                                </div>
-                                <div class="soc-item">
-                                    <a href="" target="_blank">
-                                        <span class="socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
-                                    </a>
-                                </div>
-                                <div class="soc-item">
-                                    <a href="" target="_blank">
-                                        <span class="mbr-iconfont mbr-iconfont-social socicon-github socicon"></span>
-                                    </a>
-                                </div>
-                                <div class="soc-item">
-                                    <a href="" target="_blank">
-                                        <span class="mbr-iconfont mbr-iconfont-social socicon-google socicon"></span>
-                                    </a>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {% load staticfiles %}
-            <script type="text/javascript" src="{% static 'home/assets/web/assets/jquery/jquery.min.js' %}"></script>
-            <script type="text/javascript" src="{% static 'home/assets/popper/popper.min.js' %}"></script>
-            <script type="text/javascript" src="{% static 'home/assets/tether/tether.min.js' %}"></script>
-            <script type="text/javascript" src="{% static 'home/assets/bootstrap/js/bootstrap.min.js' %}"></script>
-            <script type="text/javascript" src="{% static 'home/assets/smoothscroll/smooth-scroll.js' %}"></script>
-            <script type="text/javascript" src="{% static 'home/assets/touchswipe/jquery.touch-swipe.min.js' %}"></script>
-            <script type="text/javascript" src="{% static 'home/assets/parallax/jarallax.min.js' %}"></script>
-            <script type="text/javascript" src="{% static 'home/assets/viewportchecker/jquery.viewportchecker.js' %}"></script>
-            <script type="text/javascript" src="{% static 'home/assets/dropdown/js/script.min.js' %}"></script>
-            <script type="text/javascript" src="{% static 'home/assets/theme/js/script.js' %}"></script>
-            <script type="text/javascript" src="{% static 'home/assets/formoid/formoid.min.js' %}"></script>
-
-            </body>
-        </html>
+                </body>
+            </html>
