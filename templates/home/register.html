@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+  <title>TabOverSpace | Sign Up</title>
+
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/images/imageedit-2.gif' %}">
+
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+  <script src="{% static 'js/account.js' %}"></script>
+</head>
+<body>
+  <div class='buttons font-class'>
+    <a id="login-form" style="background-color: #14262B;">Login</a>
+    <a id="signup-form" class="active" style="color:black">Sign Up</a>
+  </div>
+  <div class="wrapper font-class">
+    <p style="font-size:40px;color:white;">Register Account</p>
+    <p>To sign-up with us, please fill-up the below form.</p>
+
+    <form class="form font-class" method="post" action="">
+      {% csrf_token %}
+      <input type="text" class="username" name="username" placeholder="Username">
+      <div>
+        <p class="username-help help">Please enter your Username.</p>
+      </div>
+      <input type="email" class="email" name="email" placeholder="Email">
+       <div>
+        <p class="email-help help">Please enter your current email address.</p>
+      </div>
+      <input type="password" class="password" name="password" placeholder="Password">
+      <div>
+      <p class="password-help help">Please enter your password.</p>
+      </div>
+     <input type="password" class="confirm_password" placeholder="Confirm Password">
+      <div>
+      <p class="confirm_password-help help">Please enter your password again for confirmation.</p>
+      </div>
+      <input type="submit" class="submit" value="Register">
+    </form>
+  </div>
+</body>
+</html>
