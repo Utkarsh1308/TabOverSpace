@@ -5,5 +5,6 @@ app_name="explore"
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('exp_article', views.exp_article, name='exp_article')
+    path('<slug:subtopic>/', views.subtopic, name='subtopic'),
+    path('<slug:subtopic>/<slug:article>/', views.article, name='article'),
 ]
