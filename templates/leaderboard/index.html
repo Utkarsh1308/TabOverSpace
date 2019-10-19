@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+  TabOverSpace | Leaderboard
+{% endblock %}
+
+{% block add-css-files %}
+  <style>
+    .question-box{
+      width: 600px;
+      margin-bottom: 10px;
+      background-color: white;
+      height:auto;
+    }
+  </style>
+{% endblock %}
+
+{% block add-js-files %}
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+  <script>
+     var app = angular.module("myApp",[]);
+     app.controller("myCtrl", function($scope){
+       $scope.myObj2 = [
+         {rank:"1", name:"Sanyog Ghosh"},
+         {rank:"2", name:"Hodor Sharma"},
+         {rank:"3", name:"Shashwat Mishra"},
+         {rank:"4", name:"Satyam Singh Saanp"}
+       ]
+     })
+   </script>
+{% endblock %}
+
+{% block main-content %}
+  <div id="Leaderboard" class="raleway" style="text-align:center; margin-top:150px; color:aqua"><h1>Leaderboard</h1></div>
+    <div class="container" >
+      <p style="color:grey;text-align:center;margin-top:20px;">Latest Leader : <span style="color:white"> &nbsp;Sanyog Ghosh </span></p>
+      <div class="line"></div>
+      {% verbatim %}
+        <div class="row" style="margin-bottom:20px;" ng-app="myApp" ng-controller="myCtrl" >
+          <div class="box2"></div>
+          <table style="margin-left:20%">
+            <tr ng-repeat="x in myObj2" class="table_optionsA" ng-cloak>
+              <td>
+                <div class="question-box" style="padding:30px !important;height:100px;margin-left:15%">
+                    <div class="row">
+                    <div class="col-md-2">
+                      <p style="font-size:20px;font-weight:600">{{x.rank}}</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p style="font-size:21px;font-weight:300">{{x.name}}</p>
+                    </div>
+                    </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+    </div>
+    {% endverbatim %}
+{% endblock %}

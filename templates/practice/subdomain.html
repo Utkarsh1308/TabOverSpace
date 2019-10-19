@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load custom_url %}
+
+{% block title %}
+  TabOverSpace | Practice
+{% endblock %}
+
+{% block add-css-files %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/practice.css' %}">
+{% endblock %}
+
+{% block add-js-files %}
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+  <script>
+    var subdomains = [];
+    {% for x in section.track.subdomain_set.all %}
+    subdomains.push({selection:"no", name:'{{ x.name }}', link:"{% url 'practice:subdomain' track=track subdomain=x.name %}"},);
+    {% endfor %}
+    for (var x = 0; x < subdomains.length; x++) {
+      if (subdomains[x].name==='{{ section.name }}') {
+        subdomains[x].selection = 'yes';
+      }
+    }
+
+    var questions = [];
+    {% for x in section.question_set.all %}
+    questions.push({usually:"10", question:'{{ x.question }}', link:"{% url 'practice:question' track=track subdomain=section.name question=x.question|custom_url %}", difficulty:"Easy"},)
+    {% endfor %}
+
+    var app = angular.module("myApp",[]);
+    app.controller("myCtrl", function($scope){
+
+      $scope.myObj = subdomains;
+      $scope.myObj2 = questions
+    });
+
+    $('.table1').click(function() {
+      var id1 = this.id;
+      var all = document.getElementsByClassName('table1');
+      for (var i = 0; i < all.length; i++) {
+        all[i].style.border = 'none';
+      }
+      document.getElementById(id1).style.border = 'solid aqua';
+    });
+
+  </script>
+{% endblock %}
+
+{% block main-content %}
+  <div id="Leaderboard" class="raleway" style="text-align:center; margin-top:150px; color:aqua;"><h1>Practice</h1></div>
+  <div class="container raleway" >
+    <p style="color:grey;text-align:center;margin-top:20px;">Practicing Topic : <span style="color:white"> &nbsp;{{ section.track }} - {{ section.name }} </span></p>
+    <div class="line"></div>
+    {% verbatim %}
+    <div class="row" style="margin-bottom:20px;" ng-app="myApp" ng-controller="myCtrl" ng-cloak>
+      <table>
+        <tr>
+          <td></td>
+          <td style="color:aqua;margin-top:20px;font-size:20px">Subdomains</td>
+          <td></td>
+        </tr>
+        <tr ng-repeat="x in myObj" class="table_options">
+          <td style="background-color:aqua;width:1px;opacity:0" ng-style="{ 'background' : (x.selection == 'yes') ? 'aqua' : '#1C363E'}"></td>
+          <td ng-click="update(x)" ng-style="{ 'color' : (x.selection == 'yes') ? 'white' : 'white',
+          'border' : (x.selection == 'yes') ? 'solid aqua' : '0px'}" class="table1">&nbsp;&nbsp;&nbsp;<a href={{x.link}}>{{x.name}}</a></td>
+        </tr>
+      </table>
+      <div class="box2"></div>
+      <table>
+        <tr><td style="color:aqua;top:20px;font-size:20px">Questions</td></tr>
+        <tr ng-repeat="x in myObj2" class="table_options">
+          <td>
+            <div class="question-box">
+              <h5 style="margin-left:4px;margin-top:4px">{{x.question}}</h5>
+              <p><span style="color:#1C363E;font-weight:500;font-size:15px;margin-left:4px;">{{x.difficulty}}</span> </p>
+              <div class="usually" style="font-size:15px !important">
+                <span style="color:black">{{x.usually}}</span> tabs
+              </div>
+              <a class="green" style="font-weight:800" id="button" href={{x.link}}>Attempt</a>
+            </div>
+          {% endverbatim %}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+{% endblock %}
