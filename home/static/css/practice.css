@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
+
 .aiju{
     background: aqua   !important;
     border: solid aqua !important;
     color : black !important;
     font-weight: bold !important;
+}
+#editor { 
+    width: 500px;
+    margin: auto;
+    height: 300px;
 }
 body .ace_scrollbar {
     -webkit-transition: opacity .3s ease-in-out;
@@ -16,6 +22,7 @@ body .ace_scrollbar {
 body .ace_editor:hover .ace_scrollbar {
     opacity: 1;
 }
+
 .box{
     width:80px;
     height: 1px;

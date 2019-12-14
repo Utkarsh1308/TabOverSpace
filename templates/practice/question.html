@@ -6,88 +6,89 @@
 {% endblock %}
 
 {% block add-css-files %}
-  <link rel="stylesheet" type="text/css" href="{% static 'css/practice.css' %}">
-{% endblock %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/practice.css' %}" >
 
+{% endblock %}
 {% block add-js-files %}
-  <script>
-    SEC_HTTPS = true;
-    SEC_BASE = "compilers.widgets.sphere-engine.com";
-    (function(d, s, id){ SEC = window.SEC || (window.SEC = []);
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return; js = d.createElement(s); js.id = id;
-      js.src = (SEC_HTTPS ? "https" : "http") + "://" + SEC_BASE + "/static/sdk/sdk.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, "script", "sphere-engine-compilers-jssdk"));
-  </script>
+
 {% endblock %}
 
 {% block main-content %}
-  <div id="Leaderboard" class="raleway" style="text-align:center; margin-top:150px; color:aqua">
+<div id="Leaderboard" class="raleway" style="text-align:center; margin-top:150px; color:aqua">
     <h1><span style="color:white"> &nbsp;{{ question }} </span></h1>
-  </div>
-  <div class="container">
+</div>
+<div class="container">
     <p style="text-align:center;"><span style="text-align:center; color:white">Back to <span style="color:aqua;text-transform: capitalize"><a onclick="history.back()">{{section.name}}</a></span></span></p>
-      <div class="line" style="margin-bottom:20px;"></div>
-      <div style="">
+    <div class="line" style="margin-bottom:20px;"></div>
+    <div style="">
         <ul class="nav nav-tabs">
-          <li class="nav-item">
-            <a class="nav-link active" href="#tab1" data-toggle="tab">Problem</a>
-          </li>
-          <li class="nav-item" style="">
-            <a class="nav-link" href="#tab2" data-toggle="tab">Notes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#tab3" data-toggle="tab">Code</a>
-          </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#tab1" data-toggle="tab">Problem</a>
+            </li>
+            <li class="nav-item" style="">
+                <a class="nav-link" href="#tab2" data-toggle="tab">Notes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#tab3" data-toggle="tab">Code</a>
+            </li>
 
-          <li class="nav-item" style="margin-left:auto" id="submit">
-            <a class="nav-link active aiju" href="#tab3" id="submit">SUBMIT</a>
-          </li>
+            <li class="nav-item" style="margin-left:auto" id="submit">
+                <a class="nav-link active aiju" href="#tab3" id="submit">SUBMIT</a>
+            </li>
         </ul>
-      <div class="tab-content" style="padding-bottom: 9px;">
-        <div class="tab-pane fade-in active" id="tab1">
-          <div class="question">
-            <h3>Question</h3>
-            <p>
-              Recently Watson learned the concept of coprime numbers and now he wonders given an array A1, A2 . . . AN what is the size of the largest subset of the array such that the each pair of elements in the subset is coprime.<br>
-              Watson asks Sherlock for help and in turn Sherlock needs you.
-            </p>
-            <h3 style="margin-top:40px;">Explanation</h3>
-            <p>
-                Input<br>
-                First line contains T, the number of test cases.<br>
-                Each test case contains N in one line, number of elements in the array.<br>
-                Next line contains N space separated elements A1, A2 . . . AN.<br>
+        <div class="tab-content" style="padding-bottom: 9px;">
+            <div class="tab-pane fade-in active" id="tab1">
+                <div class="question">
+                    <h3>Question</h3>
+                    <p>
+                        Recently Watson learned the concept of coprime numbers and now he wonders given an array A1, A2 . . . AN what is the size of the largest subset of the array such that the each pair of elements in the subset is coprime.<br>
+                        Watson asks Sherlock for help and in turn Sherlock needs you.
+                    </p>
+                    <h3 style="margin-top:40px;">Explanation</h3>
+                    <p>
+                        Input<br>
+                        First line contains T, the number of test cases.<br>
+                        Each test case contains N in one line, number of elements in the array.<br>
+                        Next line contains N space separated elements A1, A2 . . . AN.<br>
 
-                Output<br>
-                For each test case, output the required answer in one line.
-                <br><br>
-                Constraints:
-                <br>1 ≤ T ≤ 10
-                <br>25% test data: 1 ≤ N ≤ 10
-                <br>75% test data: 1 ≤ N ≤ 50
-                1 ≤ Ai ≤ 50
-            </p>
-            <h3 style="margin-top:40px;">Sample Input</h3>
-            <p style="background:lightgrey;width:200px;padding:4px;font-family:monospace">1<br>
-              5<br>
-              2 3 2 3 2</p>
-              <h3 style="margin-top:40px;">Sample Output</h3>
-              <p style="background:lightgrey;width:200px;padding:4px;font-family:monospace;margin-bottom:20px;">2
-          </div>
-        </div>
-        <div class="tab-pane fade" id="tab2">
-          <textarea style="width:100%;margin-top:20px;margin-bottom:20px;border-radius:7px;padding:12px;height:600px"> &#9679; Make quick notes here !</textarea>
-        </div>
-        <div class="tab-pane fade" style="padding:0" id="tab3">
-          <div class="row" style="margin-left:auto;padding:20px;margin-bottom:20px;">
-            <div id="edit">
-              <div class="sec-widget" data-widget="87649aa99546ab19cdd11918abb0ebf5"></div>
+                        Output<br>
+                        For each test case, output the required answer in one line.
+                        <br><br>
+                        Constraints:
+                        <br>1 ≤ T ≤ 10
+                        <br>25% test data: 1 ≤ N ≤ 10
+                        <br>75% test data: 1 ≤ N ≤ 50
+                        1 ≤ Ai ≤ 50
+                    </p>
+                    <h3 style="margin-top:40px;">Sample Input</h3>
+                    <p style="background:lightgrey;width:200px;padding:4px;font-family:monospace">1<br>
+                        5<br>
+                        2 3 2 3 2</p>
+                    <h3 style="margin-top:40px;">Sample Output</h3>
+                    <p style="background:lightgrey;width:200px;padding:4px;font-family:monospace;margin-bottom:20px;">2
+                </div>
             </div>
-          </div>
+            <div class="tab-pane fade" id="tab2">
+                <textarea style="width:100%;margin-top:20px;margin-bottom:20px;border-radius:7px;padding:12px;height:600px"> &#9679; Make quick notes here !</textarea>
+            </div>
+            <div class="tab-pane fade" style="padding:0" id="tab3">
+                <div class="row" style="margin-left:auto;padding:20px;margin-bottom:0px;">
+                    <div id="editor">some text</div>
+
+                    <!--
+                    <div id="edit">
+                        <div class="sec-widget" data-widget="87649aa99546ab19cdd11918abb0ebf5"></div>
+                    </div>
+                    -->
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
+<script src="{% static 'js/ace-builds-master/src-noconflict/ace.js' %}" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/chrome");
+    editor.session.setMode("ace/mode/javascript");
+</script>
 {% endblock %}
