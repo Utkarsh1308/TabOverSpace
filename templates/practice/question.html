@@ -73,14 +73,15 @@
             </div>
             <div class="tab-pane fade" style="padding:0" id="tab3">
                 <div class="row" style="margin-left:auto;padding:20px;margin-bottom:0px;">
-                    <div id="editor">some text</div>
-
-                    <!--
-                    <div id="edit">
-                        <div class="sec-widget" data-widget="87649aa99546ab19cdd11918abb0ebf5"></div>
-                    </div>
-                    -->
+                  <form class="form font" method="post" action="">
+                    {% csrf_token %}
+                    <input type="hidden" class="username" id="code" name="username">
+                    <div id="editor" onkeyup="myFunction()"></div>
+                    <br>
+                    <input type="submit" class="submit" value="Compile">
+                  </form>
                 </div>
+                <p style="color:white">{{ query }}</p>
             </div>
         </div>
     </div>
@@ -90,5 +91,12 @@
     var editor = ace.edit("editor");
     editor.setTheme("ace/theme/chrome");
     editor.session.setMode("ace/mode/javascript");
+
+    function myFunction() {
+      var code = editor.getValue();
+      var username = document.getElementById("code")
+      username.value = code
+    }
+
 </script>
 {% endblock %}
