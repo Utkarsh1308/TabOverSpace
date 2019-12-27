@@ -54,6 +54,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'website.urls'
 
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+# A more secure way needs to be used for calling this
+EMAIL_HOST_USER = 'help.taboverspace@gmail.com'
+EMAIL_HOST_PASSWORD = 'Piedpiper224kkc'
+EMAIL_PORT = 587
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
