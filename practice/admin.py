@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Track, Subdomain, Question
+from .models import Track, Subdomain, Question, TestCases
 # Register your models here.
 
 class QuestionInline(admin.StackedInline):
@@ -27,3 +27,5 @@ class TrackAdmin(admin.ModelAdmin):
 
 admin.site.register(Subdomain, SubdomainAdmin)
 admin.site.register(Track, TrackAdmin)
+admin.site.register(Question)
+admin.site.register(TestCases)

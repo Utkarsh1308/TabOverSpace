@@ -1,6 +1,10 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
+from django.urls import reverse_lazy, reverse
+from django.views.generic import CreateView, FormView
 
-from .models import Track, Subdomain, Question
+from .models import Track, Subdomain, Question, TestCases
+from .forms import AddQuestionForm, AddTestCaseForm
 
 import requests, json
 
@@ -9,7 +13,6 @@ def index(request):
     return render(request, 'practice/index.html', {})
 
 def subdomain(request, track, subdomain):
-
     def section(x):
         if '_' in str(x):
             sections = x.split('_')
@@ -59,7 +62,6 @@ def question(request, subdomain, question, track):
     if request.method == "POST":
         username = request.POST['username']
         if username is not None:
-
             url = 'https://api.jdoodle.com/v1/execute'
 
             # API credentials are globally visible. Needs to be changed before
@@ -80,9 +82,36 @@ def question(request, subdomain, question, track):
 
     return render(request, 'practice/question.html', context)
 
+
 def jdoodle(url, params):
     response = requests.get(url, json=params)
 
     if response.status_code == 200:
         return json.loads(response.text)
     return {'output': 'Failure'}
+
+
+class AddQuestion(CreateView):
+    form_class = AddQuestionForm
+    template_name = 'practice/add_model_data.html'
+    success_url = reverse_lazy('practice:add_question')
+
+
+class AddTestCase(FormView):
+    form_class = AddTestCaseForm
+    template_name = 'practice/add_model_data.html'
+
+    def form_valid(self, form):
+        data = form.cleaned_data
+        existing_cases = TestCases.objects.filter(question_id=data[
+            'question_id']).count()
+        TestCases.objects.create(
+            question_id=data['question_id'],
+            number=existing_cases + 1,
+            input=data['input'],
+            output=data['output']
+        )
+        return HttpResponseRedirect(self.get_success_url())
+
+    def get_success_url(self):
+        return reverse('practice:add_test_case')
