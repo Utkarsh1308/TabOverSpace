@@ -92,10 +92,6 @@ body .ace_editor:hover .ace_scrollbar {
 table {
     border-collapse: collapse;
 }
-td {
-    padding-top: 10px;
-    padding-bottom: 8px;
-}
 .table_options{
     color:aliceblue;
     margin-left: 12px;
