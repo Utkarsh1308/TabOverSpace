@@ -6,10 +6,12 @@
     color : black !important;
     font-weight: bold !important;
 }
-#editor { 
-    width: 500px;
+#editor {
+    width: 819px;
     margin: auto;
-    height: 300px;
+    border: 0px 0px 6px 6px;
+    box-shadow: 10px 10px #000;
+    height: 500px;
 }
 body .ace_scrollbar {
     -webkit-transition: opacity .3s ease-in-out;
