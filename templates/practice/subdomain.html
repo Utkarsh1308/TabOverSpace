@@ -139,7 +139,7 @@
 
     var questions = [];
     {% for x in section.question_set.all %}
-    questions.push({usually:"10", question:'{{ x.question }}', link:"{% url 'practice:question' track=track subdomain=section.name question=x.question|custom_url %}", difficulty:"Easy"},)
+    questions.push({usually:"10", question:'{{ x.title }}', link:"{% url 'practice:question' track=track subdomain=section.name question=x.title|custom_url %}", difficulty:"Easy"},)
     {% endfor %}
 
     var app = angular.module("myApp",[]);
@@ -265,7 +265,7 @@
                                             <tr>
                                                 <td style="padding: 0px">
                                                     <div class="tagBox" style="background-color: #7e5ef0;color: white">Searching</div>
-                                                </td>                                               
+                                                </td>
                                             </tr>
 
                                         </table>
@@ -332,11 +332,11 @@
                             <p style="color: aliceblue;font-weight: 200;margin-top: 10px;margin-left: 0px;width: auto;overflow-x: hidden;text-align: right">122/1250Q</p>
                         </td>
                     </tr>
-                </table>   
+                </table>
                 <progress value="52" max="125" style="width:233px;height: 10px;margin-bottom: 110px"></progress>
             </div>
         <!--    <canvas style="margin-left: 38px;margin-top: 40px" id="myChart" width="400" height="400"></canvas> -->
-        </div> 
+        </div>
     </div>
 </div>
 <script>
